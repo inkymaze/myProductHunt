@@ -13,6 +13,10 @@
 
     }
   }
+  userProfile: {
+    username: "john",
+    image_url: "",
+  }
   discussion: {
     1: {
       product_id: 1,
