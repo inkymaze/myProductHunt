@@ -8,6 +8,9 @@
 
 User.destroy_all
 
-user1 = User.create(username: "john123", password: "123456" )
-user2 = User.create(username: "elvispresley", password: "theking")
-user3 = User.create(username: "genghiskhan", password: "mongol")
+user1 = User.create(username: "john123", password: "123456", image_url: "")
+user2 = User.create(username: "elvispresley", password: "theking", image_url: "")
+user3 = User.create(username: "genghiskhan", password: "mongol", image_url: "")
+user4 = User.create(username: "abelincoln", password: "emancipate", image_url: "")
+user5 = User.create(username: "inkymaze", password: "cheeseburger", image_url: "")
+user6 = User.create(username: "alexander", password: "thegreat", image_url: "")
