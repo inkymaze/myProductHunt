@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+
+a {
+  color: #da552f;
+  background-color: blue;
+}
+
+.login {
+  color: #000;
+  background-color: white;
+  border-radius: 3px;
+  font-family: Helvetica,Arial,sans-serif;
+  padding-right: 5px;
+}
+
+.signup {
+  color: white;
+  font-family: Helvetica,Arial,sans-serif;
+  background-color: #da552f
+}
+
+.login-form-container {
+  border-radius: 10px;
+  border: 1px, black;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
