@@ -19,17 +19,10 @@
 | image_url | string |
 
 
-## Discussion
-|  column name | data type | details |
-|---------|-----------|---------|
-| id      | integer | not null, primary key |
-| product_id | integer | not null, indexed, foreign key |
-
-
 ## Comments
 |  column name | data type | details |
 |---------|-----------|---------|
-| id      | integer | not null, primary key |
-| discussion_id | integer | not null, indexed, foreign key |
+| id | integer | not null, primary key |
+|product_id | integer | not null, indexed, foreign key |
 | user_id | integer | not null, indexed, foreign key |
 | text | string | not null |
