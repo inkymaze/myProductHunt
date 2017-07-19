@@ -22,7 +22,7 @@ a {
 .login {
   color: #000;
   background-color: white;
-  border: 1px,
+  border: 1px;
   border-radius: 3px;
   font-family: Helvetica,Arial,sans-serif;
   padding-right: 5px;
@@ -63,7 +63,6 @@ a {
 
 .login-input input[type="text"] {
   border: 2px solid black;
-
 }
 
 header {
