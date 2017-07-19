@@ -41,6 +41,8 @@ a {
   flex-wrap: nowrap;
 }
 
+
+
 .login-form input[type="submit"] {
   display: flex;
   justify-content: center;
@@ -50,6 +52,7 @@ a {
   border: 2px solid #da552f;
   font-size: 12px;
   border-radius: 5px;
+  
 }
 
 .header-button {
@@ -73,6 +76,7 @@ header {
 .login-form-box {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 2px solid black;
   border-radius: 10px;
 }
