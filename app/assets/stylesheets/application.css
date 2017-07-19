@@ -26,12 +26,16 @@ a {
   border-radius: 3px;
   font-family: Helvetica,Arial,sans-serif;
   padding-right: 5px;
+  font-size: 12px;
+  border-radius: 3px;
 }
 
 .signup {
   color: white;
   font-family: Helvetica,Arial,sans-serif;
   background-color: #da552f;
+  font-size: 12px;
+  border-radius: 3px;
 }
 
 .login-form-box {
@@ -52,7 +56,9 @@ a {
   border: 2px solid #da552f;
   font-size: 12px;
   border-radius: 5px;
-  
+  transform: translate(65px)
+
+
 }
 
 .header-button {
@@ -64,8 +70,10 @@ a {
   border-radius: 5px;
 }
 
-.login-input input[type="text"] {
-  border: 2px solid black;
+input.login-input {
+  border: 1px solid black;
+  flex-flow: center;
+
 }
 
 header {
