@@ -99,6 +99,10 @@ input.login-input {
 header {
   display: flex;
   justify-content: space-between;
+  border-bottom: #e8e8e8;
+  padding: 15px 0;
+  position: relative;
+  height: 32px;
 }
 
 .login-form-box {

@@ -3,5 +3,5 @@ class AddHunterId < ActiveRecord::Migration[5.0]
     add_column :products, :hunter_id, :integer
   end
 
-  add_index :products, :hunter_id, unique: true
+  
 end
