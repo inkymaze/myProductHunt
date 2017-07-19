@@ -23,6 +23,15 @@ class SessionForm extends React.Component {
     });
   }
 
+  demoAccount(e){
+   this.setState({
+     username: "maggie",
+     password: "secretpw"
+   });
+   const user = { username: "maggie", password: "secretpw" };
+   this.props.demo({ user });
+ }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
@@ -57,7 +66,7 @@ class SessionForm extends React.Component {
 
           <div className="login-form">
             <br/>
-            <label>Username
+            <label>Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -65,7 +74,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Password
+            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -73,8 +82,12 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <div className="submit-guestlogin-button">
+              <input type="submit" value="SUBMIT" />
+              <input type="submit" className="submit" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
+            </div>
             {this.renderErrors()}
+
           </div>
         </form>
       </div>

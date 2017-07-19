@@ -39,17 +39,29 @@ a {
 }
 
 .login-form-box {
+  display: flex;
+  justify-content: center;
+
   border-radius: 10px;
   border: 1px, black;
   align-items: center;
+  width: 400px;
   flex-wrap: nowrap;
+  box-sizing: border-box
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
 }
 
 
 
 .login-form input[type="submit"] {
   display: flex;
-  justify-content: center;
+
+
+
   color: white;
   background-color: #da552f;
   font-family: Helvetica,Arial,sans-serif;
@@ -57,8 +69,6 @@ a {
   font-size: 12px;
   border-radius: 5px;
   transform: translate(65px)
-
-
 }
 
 .header-button {
@@ -74,6 +84,12 @@ input.login-input {
   border: 1px solid black;
   flex-flow: center;
 
+
+}
+submit-guestlogin-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -87,4 +103,11 @@ header {
   align-items: center;
   border: 2px solid black;
   border-radius: 10px;
+
+}
+
+.login-form label {
+  display: flex;
+  justify-content: center;
+  flex-basis: :
 }

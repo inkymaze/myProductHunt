@@ -1,5 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 import {
   Route,
   Redirect,
@@ -15,7 +17,7 @@ const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link">
-        <h1>Pinpoint</h1>
+        <h2>PinPoint</h2>
       </Link>
       <GreetingContainer />
     </header>
