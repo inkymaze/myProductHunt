@@ -17,12 +17,12 @@
 
 a {
   color: #da552f;
-  background-color: blue;
 }
 
 .login {
   color: #000;
   background-color: white;
+  border: 1px,
   border-radius: 3px;
   font-family: Helvetica,Arial,sans-serif;
   padding-right: 5px;
@@ -31,18 +31,49 @@ a {
 .signup {
   color: white;
   font-family: Helvetica,Arial,sans-serif;
-  background-color: #da552f
+  background-color: #da552f;
 }
 
-.login-form-container {
+.login-form-box {
   border-radius: 10px;
   border: 1px, black;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+.login-form input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 2px solid #da552f;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.header-button {
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 2px solid #da552f;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.login-input input[type="text"] {
+  border: 2px solid black;
 
 }
 
-.nav-buttons {
+header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.login-form-box {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
 }

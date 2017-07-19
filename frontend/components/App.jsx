@@ -19,10 +19,10 @@ const App = () => (
       </Link>
       <GreetingContainer />
     </header>
-    <Switch>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
-    </Switch>
+      <Switch>
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SessionFormContainer} />
+      </Switch>
   </div>
 );
 
