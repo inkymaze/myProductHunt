@@ -86,10 +86,14 @@ input.login-input {
 
 
 }
-submit-guestlogin-button {
-  display: flex;
+.submit-guestlogin-button input {
+  display: block;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+  margin: 5px;
 }
 
 header {
@@ -101,6 +105,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
   border: 2px solid black;
   border-radius: 10px;
 
@@ -110,4 +115,10 @@ header {
   display: flex;
   justify-content: center;
   flex-basis: :
+}
+
+
+.ReactModal__Body--open {
+  overflow: hidden;
+  // width: 80%;
 }

@@ -83,8 +83,8 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <div className="submit-guestlogin-button">
-              <input type="submit" value="SUBMIT" />
-              <input type="submit" className="submit" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
+              <input type="submit" className="signup-buttons" value="SUBMIT" />
+              <input type="submit" className="signup-buttons" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
             </div>
             {this.renderErrors()}
 
