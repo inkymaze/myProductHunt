@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+        <div onSubmit={this.handleSubmit} className="login-form-box">
 
 
           <div className="login-form">
@@ -88,7 +88,7 @@ class SessionForm extends React.Component {
 
             <br/>
 
-            <div className="form-buttons"> 
+            <div className="form-buttons">
               <input type="submit" className="signup-buttons" value="SUBMIT" />
             <br/>
               <input type="submit" className="signup-buttons" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
@@ -98,7 +98,7 @@ class SessionForm extends React.Component {
             {this.renderErrors()}
 
           </div>
-        </form>
+        </div>
 
       </div>
     );

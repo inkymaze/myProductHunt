@@ -7,7 +7,6 @@ import {  RECEIVE_PRODUCTS,
 
 const _defaultState ={
 
-
 };
 
 const ProductReducer = (state = _defaultState, action) => {

@@ -23,10 +23,12 @@ const App = () => (
       <input type="text"  class="search-bar" placeholder="Discover your next favorite thing..."></input>
       <GreetingContainer />
     </header>
+      <body>
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
       </Switch>
+      </body>
   </div>
 );
 
