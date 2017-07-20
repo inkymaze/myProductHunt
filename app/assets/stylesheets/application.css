@@ -13,7 +13,7 @@
 
  *= require_self
  */
- @import "./reset";
+ @import 'reset';
 
 
 a {
