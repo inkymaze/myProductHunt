@@ -5,7 +5,6 @@ import SessionForm from '../session_form/session_form';
 const sessionLinks = () => (
   <nav>
     <ul className="nav-buttons">
-    
       <Link className="login" to="/login">LOG IN</Link>
       <Link className="signup" to="/signup">SIGN UP</Link>
     </ul>

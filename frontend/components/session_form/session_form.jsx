@@ -88,10 +88,11 @@ class SessionForm extends React.Component {
 
             <br/>
 
-            <div className="submit-guestlogin-button">
+
               <input type="submit" className="signup-buttons" value="SUBMIT" />
+            <br/>
               <input type="submit" className="signup-buttons" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
-            </div>
+            
             <br/>
 
             {this.renderErrors()}
