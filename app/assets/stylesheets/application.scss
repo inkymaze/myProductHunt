@@ -134,6 +134,11 @@ input.login-input {
 
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .login-form-box {
   display: flex;
   justify-content: center;
@@ -144,9 +149,9 @@ input.login-input {
 }
 
 .login-form{
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // align-items: center;
+  margin: auto;
 }
