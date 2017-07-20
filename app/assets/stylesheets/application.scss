@@ -20,6 +20,7 @@ a {
   color: #da552f;
 }
 
+
 .login {
   color: #000;
   background-color: white;
@@ -39,17 +40,16 @@ a {
   border-radius: 3px;
 }
 
-.login-form-box {
+form.login-form-box {
   display: flex;
-  justify-content: center;
-
   border-radius: 10px;
-  border: 1px, black;
+  position: relative;
   align-items: center;
   width: 400px;
   flex-wrap: nowrap;
   box-sizing: border-box
 }
+
 
 .login-form-container {
   display: flex;
@@ -61,7 +61,7 @@ a {
   background-color: #da552f;
   font-family: Helvetica,Arial,sans-serif;
   border: 2px solid #da552f;
-  font-size: 12px;
+  font-size: 11px;
   border-radius: 5px;
   transform: translate(65px)
 }
@@ -77,20 +77,23 @@ a {
 
 input.login-input {
   border: 1px solid black;
+  display: flex;
   flex-flow: center;
 }
 
-.submit-guestlogin-button input {
-  display: block;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+.submit-guestlogin-button {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 5px;
+  justify-content: center;
+
+
+  margin: 3%;
+
   cursor: pointer;
-  align-items: flex-end;
+}
+
+
+.submit-guestlogin-button input {
+  margin: 2%;
 }
 
 header {
@@ -108,19 +111,32 @@ a.login:hover {
   background-color: #e8e8e8;
 }
 
+input.login-input {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+}
 
+.login-form input[value="Username"] {
+  opacity: .5;
+}
+
+.login-form input[value="Password"] {
+  opacity: .5;
+
+}
 
 .login-form-box {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border: 2px solid black;
+  min-width: 50%;
+  border: 1px solid gray;
   border-radius: 10px;
-
 }
 
-.login-form label {
+.login-form{
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
