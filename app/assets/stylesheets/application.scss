@@ -56,13 +56,7 @@ a {
   justify-content: center;
 }
 
-
-
 .login-form input[type="submit"] {
-  display: flex;
-
-
-
   color: white;
   background-color: #da552f;
   font-family: Helvetica,Arial,sans-serif;
@@ -89,12 +83,15 @@ input.login-input {
 }
 .submit-guestlogin-button input {
   display: block;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   display: flex;
- flex-direction: column;
- justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 5px;
+  cursor: pointer;
+  align-items: flex-end;
 }
 
 header {
@@ -104,7 +101,15 @@ header {
   padding: 15px 0;
   position: relative;
   height: 32px;
+  padding: 5px;
+
 }
+
+a.login:hover {
+  background-color: #e8e8e8;
+}
+
+
 
 .login-form-box {
   display: flex;
@@ -119,10 +124,4 @@ header {
 .login-form label {
   display: flex;
   justify-content: center;
-}
-
-
-.ReactModal__Body--open {
-  overflow: hidden;
-  // width: 80%;
 }

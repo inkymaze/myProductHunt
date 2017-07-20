@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Modal from 'react-modal';
 import SessionForm from '../session_form/session_form';
 
 const sessionLinks = () => (
@@ -22,5 +21,7 @@ const personalGreeting = (currentUser, logout) => (
 const Greeting = ({ currentUser, logout }) => (
   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
 );
+
+
 
 export default Greeting;
