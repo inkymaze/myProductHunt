@@ -126,7 +126,7 @@ form.login-form-box {
   border-radius: 3px;
   padding: 7px 13px;
   font-weight: 500;
-
+  flex-wrap: wrap;
   &:hover{
    background-color: #da552f;
    opacity: 0.8;
@@ -148,7 +148,7 @@ form.login-form-box {
   font-size: 11px;
   border-radius: 3px;
   margin-right: 3px;
-  transform: translate(65px)
+
 }
 
 .header-button {
@@ -197,7 +197,7 @@ a.login:hover {
 input.login-input {
   // border-bottom: 1px solid gray;
   text-decoration: none;
-
+  border-radius: 3px
 }
 input.signup-buttons {
   display: flex;
@@ -216,9 +216,8 @@ input.signup-buttons {
 
 .form-buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+justify-content: center;
+align-items: center;
 }
 
 .login-form-box {
@@ -228,12 +227,13 @@ input.signup-buttons {
   min-width: 50%;
   border: 1px solid #e8e8e8;
   border-radius: 10px;
+
 }
 
 .login-form{
-  // display: flex;
-  // flex-direction: column;
-  // // justify-content: space-around;
-  // align-items: center;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
 }
