@@ -13,16 +13,22 @@ const _defaultState ={
 
 const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-
+  let byId, allIds, nextState;
 
   switch(action.type) {
     case RECEIVE_PRODUCTS:
-
+      action.products.forEach( product => {
+        byId[product.id] = product;
+        allIds.push(product.id);
+      });
+      return merge({}, state, { byId }, { allIds });
 
     case RECEIVE_PRODUCT:
+      return merge({},
+        state,{ byId: {[action.product.id]: action.product} });
 
     case RECEIVE_PRODUCT_ERRORS:
-
+      return merge({}, state, { errors: action.errors });
 
     default:
       return state;
