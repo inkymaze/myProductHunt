@@ -24,3 +24,37 @@ export const receiveProductErrors = (errors) => ({
   type: RECEIVE_PRODUCT_ERRORS,
   errors
 });
+
+
+export const requestProducts = () => dispatch => {
+  return APIUtil.fetchProducts().then( products => {
+      dispatch(receiveProducts(products));
+    },
+    errors => dispatch(receiveProductErrors(errors))
+  );
+};
+
+export const requestProduct = (id) => dispatch => {
+  return APIUtil.fetchProduct(id).then( product => {
+      dispatch(receiveProduct(product));
+    },
+    errors => dispatch(receiveProductErrors(errors))
+  );
+};
+
+export const requestCreateProduct = (product) => dispatch => {
+  return APIUtil.createProduct(product).then( prod => {
+        dispatch(receiveProduct(prod));
+      },
+    errors => dispatch(receiveProductErrors(errors))
+  );
+};
+
+
+export const requestUpdateProduct = (product) => dispatch => {
+  return APIUtil.updateProduct(product).then( prod => {
+        dispatch(receiveProduct(prod));
+      },
+    errors => dispatch(receiveProductErrors(errors))
+  );
+};
