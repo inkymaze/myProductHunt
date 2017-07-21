@@ -9,7 +9,7 @@ const intro = () => (
       It's a place for product-loving enthusiasts to share and
       geek out about the latest mobile apps, websites,
       hardware projects, and tech creations</h6>
-    <Link className="intro-signup" to="/signup">SIGN UP</Link>
+
   </div>
   <div className="kitty">
     <img src="https://s3.producthunt.com/static/kitty_265x244%402x.png"/>
@@ -26,3 +26,6 @@ const Welcome = ({ currentUser }) => (
 );
 
 export default Welcome;
+
+
+// <Link className="intro-signup" to="/signup">SIGN UP</Link>
