@@ -199,6 +199,11 @@ input.login-input {
   text-decoration: none;
 
 }
+input.signup-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .login-form input[value="Username"] {
   opacity: .5;
@@ -211,7 +216,8 @@ input.login-input {
 
 .form-buttons {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -220,7 +226,7 @@ input.login-input {
   justify-content: center;
   align-items: center;
   min-width: 50%;
-  border: 1px solid gray;
+  border: 1px solid #e8e8e8;
   border-radius: 10px;
 }
 
