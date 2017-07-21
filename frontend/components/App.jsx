@@ -19,7 +19,7 @@ const App = () => (
         <img src="http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,h_65,q_100,w_65/v1500499099/logo_pjzgg0.jpg"/>
       </Link>
 
-      <input type="text"  class="search-bar" placeholder="Discover your next favorite thing..."></input>
+      <input type="text"  className="search-bar" placeholder="Discover your next favorite thing..."></input>
       <GreetingContainer />
     </header>
       <WelcomeContainer />

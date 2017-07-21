@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import ProductList from './product_list';
-import { selectAllProducts } from '../../reducers/selectors';
+// import { selectAllProducts } from '../../reducers/selectors';
+import requestProducts from '../../actions/product_actions';
 
-
-const mapStateToProps = state => ({
-  products: selectAllProducts(state),
+const mapStateToProps = ({ products }) => ({
+  products
 });
 
 const mapDispatchToProps = dispatch => ({
-  
+  requestProducts: () => dispatch(requestProducts())
 });
 
 
