@@ -2,58 +2,156 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 
-const customStyle = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    opacity               : '0',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+const customStyles = {
+  overlay : {
+  position        : 'fixed',
+  top             : 0,
+  left            : 0,
+  right           : 0,
+  bottom          : 0,
+  backgroundColor : 'rgba(0, 0, 0, 0.8)',
+  zIndex          : 10
+},
+content : {
+  position                   : 'absolute',
+  height: "400px",
+  width: "250px",
+  top                        : '50%',
+  left                       : '50%',
+  border                     : '1px solid black',
+  "transform"                : 'translate(-50%, -50%)',
+  padding                    : '36px',
+  overflow                   : 'auto',
+  WebkitOverflowScrolling    : 'touch',
+  outline                    : 'none',
+  borderRadius               : '3px',
+  zIndex          : 11,
+  opacity         : 100,
+  transition      : 'opacity 0.5s'
+}
 };
-
 class SessionForm extends React.Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
-    this.state = {modalOpen: false, formType: "login"};
-    this.handleClick = this.handleClick.bind(this);
-    this.onModalClose = this.onModalClose.bind(this);
-  }
-
-  handleClick(formType) {
-    return () => {
-      this.setState({modalOpen: true, formType: formType});
+    this.state = {
+      modalIsOpen: true,
+      username: '',
+      password: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
-  onModalClose() {
-    this.setState({modalOpen: false});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  openModal() {
     this.props.clearErrors();
-    customStyle.content.opacity = 0;
+    this.setState({modalIsOpen: true});
   }
 
-  onModalOpen() {
-    customStyle.content.opacity = 75;
+  closeModal() {
+    this.props.clearErrors();
+    this.setState({modalIsOpen: false});
+    this.props.history.push('/');
   }
+
+  demoAccount(e){
+   this.setState({
+     username: "maggie",
+     password: "secretpw"
+   });
+   const user = { username: "maggie", password: "secretpw" };
+   this.props.demo({ user });
+ }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = this.state;
+    this.props.processForm({user});
+  }
+
+  navLink() {
+    if (this.props.formType === 'login') {
+      return <Link to="/signup">SIGN UP</Link>;
+    } else {
+      return <Link to="/login">LOG IN</Link>;
+    }
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
   render() {
+    if (this.state.modalIsOpen === undefined){
+      this.openModal();
+    }
 
 
     return (
       <Modal
-        isOpen={ this.state.modalOpen }
-        onAfterOpen = { this.onModalOpen }
-        onRequestClose={ this.onModalClose }
-        contentLabel="Modal"
-        >
-        <h1>Modal Content</h1>
-          <p>Etc.</p>
-      </Modal>
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="SessionForm Modal">
+          <button
+            className="modalCloseButton"
+            onClick={this.onModalClose}>
+            {'X'}
+          </button>
+        <div className="login-form-container">
+          <div onSubmit={this.handleSubmit} className="login-form-box">
+            <div className="login-form">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                  placeholder="Username"
+                />
+              <br/>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                  placeholder="Password"
+                  />
+              <br/>
 
+              <div className="form-buttons">
+                <input type="submit" className="signup-buttons" value={this.props.formType} onClick={(e) => this.handleSubmit(e)} />
+              <br/>
+                <input type="submit" className="signup-buttons" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
+              </div>
+              <br/>
+
+
+            </div>
+          </div>
+        </div>
+      </Modal>
     );
   }
+
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;

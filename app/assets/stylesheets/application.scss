@@ -20,6 +20,42 @@ a {
   color: #da552f;
 }
 
+.ReactModal__Content.ReactModal__Content--after-open {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid black;
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 9px;
+    outline: none;
+    /* padding: 36px; */
+    /* height: 400px; */
+    width: 250px;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    opacity: 39;
+    transition: opacity 0.5s;
+
+}
+.modalCloseButton {
+  // display: block;
+  // font-size: 16px;
+  // text-align: start;
+  // font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 200;
+    background: #bbbbbb;
+    border-radius: 50%;
+    padding: 14px 14px 13px 14px;
+    width: 12px;
+    height: 12px;
+}
+
 body {
   padding-top: 10px
 }
@@ -227,8 +263,8 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   min-width: 50%;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
+  // border: 1px solid #e8e8e8;
+  // border-radius: 10px;
 
 }
 
