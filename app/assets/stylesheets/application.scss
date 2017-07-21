@@ -65,6 +65,49 @@ form.login-form-box {
 
 }
 
+.intro-greeting {
+  width: 48%;
+  margin-left: 10px;
+}
+
+.intro-span {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between
+}
+
+.kitty img{
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+.intro-signup {
+  text-decoration: none;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 7px 13px;
+  font-weight: 500;
+}
+
+.intro-greeting h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  display: block;
+    margin-bottom: 15px
+}
+
+.intro-greeting h6 {
+  font-size: 15px;
+    line-height: 25px;
+    color: #999;
+    font-weight: 200;
+    margin: 10px 0 20px
+}
 .nav-buttons .signup{
   text-decoration: none;
   color: white;
@@ -102,20 +145,11 @@ form.login-form-box {
   border: 2px solid #da552f;
   font-size: 11px;
   border-radius: 3px;
-
-}
-
-input.login-input {
-  border: 1px solid black;
-
 }
 
 .submit-guestlogin-button {
-
   cursor: pointer;
 }
-
-
 
 .submit-guestlogin-button input {
   margin: 2%;
@@ -148,7 +182,8 @@ a.login:hover {
 }
 
 input.login-input {
-  border: 1px solid gray;
+  // border-bottom: 1px solid gray;
+  text-decoration: none;
 
 }
 
@@ -163,7 +198,7 @@ input.login-input {
 
 .form-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
 }
 
