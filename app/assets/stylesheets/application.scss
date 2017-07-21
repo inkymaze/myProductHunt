@@ -89,8 +89,11 @@ form.login-form-box {
   border: 1px solid #da552f;
   font-size: 12px;
   border-radius: 3px;
-  padding: 7px 13px;
+
   font-weight: 500;
+  font-size: 13px;
+    height: 42px;
+    padding: 10px 28px;
   &:hover{
    background-color: #da552f;
    opacity: 0.8;
