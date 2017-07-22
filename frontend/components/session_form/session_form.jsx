@@ -14,19 +14,19 @@ const customStyles = {
 },
 content : {
   position                   : 'absolute',
-  height: "400px",
+  height: "150px",
   width: "250px",
   top                        : '50%',
   left                       : '50%',
-  border                     : '1px solid black',
+  border                     : '1px solid #e8e8e8',
   "transform"                : 'translate(-50%, -50%)',
   padding                    : '36px',
   overflow                   : 'auto',
   WebkitOverflowScrolling    : 'touch',
   outline                    : 'none',
-  borderRadius               : '3px',
+  borderRadius               : '10px',
   zIndex          : 11,
-  opacity         : 100,
+  opacity         : 70,
   transition      : 'opacity 0.5s'
 }
 };
@@ -61,9 +61,8 @@ class SessionForm extends React.Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
     this.props.clearErrors();
-
+    this.setState({modalIsOpen: false});
     this.props.history.push('/');
   }
 
@@ -77,7 +76,7 @@ class SessionForm extends React.Component {
  }
 
   handleSubmit(e) {
-  
+    e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
   }
@@ -118,6 +117,7 @@ class SessionForm extends React.Component {
 
         <div className="login-form-container">
           <div onSubmit={this.handleSubmit} className="login-form-box">
+
             <div className="login-form">
                 <input type="text"
                   value={this.state.username}
@@ -140,8 +140,9 @@ class SessionForm extends React.Component {
                 <input type="submit" className="signup-buttons" value="GUEST LOGIN" onClick={(e) => this.demoAccount(e)}/>
               </div>
               <br/>
-
-
+              <div className="auth-errors">
+                {this.renderErrors()}
+              </div>
             </div>
           </div>
         </div>
@@ -151,7 +152,7 @@ class SessionForm extends React.Component {
 
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
 
 
 // <button
