@@ -19,7 +19,7 @@ class ProductList extends React.Component {
         </ul>
 
         <Route exact path="/" component={AddProductFormContainer} />
-        <Route path="/product/:productId" component={ProductDetailContainer} />
+        <Route path="/products/:productId" component={ProductDetailContainer} />
       </section>
     );
   }
