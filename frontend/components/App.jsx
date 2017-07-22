@@ -11,6 +11,8 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import WelcomeContainer from './intro/intro_container';
+import AddProductFormContainer from './product/add_product_form_container';
+import
 
 const App = () => (
   <div>
@@ -26,6 +28,8 @@ const App = () => (
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
+        <ProtectedRoute exact path='/products/new' component={AddProductFormContainer} />
+
       </Switch>
 
   </div>

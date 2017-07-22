@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 import {  RECEIVE_PRODUCTS,
           RECEIVE_PRODUCT,
           RECEIVE_PRODUCT_ERRORS,
+          CLEAR_PRODUCT_ERRORS
        } from '../actions/product_actions';
 
 const _defaultState ={
@@ -16,6 +17,7 @@ const ProductReducer = (state = _defaultState, action) => {
   let byId, allIds, nextState;
 
   switch(action.type) {
+
     case RECEIVE_PRODUCTS:
       action.products.forEach( product => {
         byId[product.id] = product;
@@ -29,6 +31,9 @@ const ProductReducer = (state = _defaultState, action) => {
 
     case RECEIVE_PRODUCT_ERRORS:
       return merge({}, state, { errors: action.errors });
+
+    case CLEAR_PRODUCT_ERRORS:
+       return merge({}, state, { errors: null });
 
     default:
       return state;
