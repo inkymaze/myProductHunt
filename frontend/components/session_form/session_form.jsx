@@ -61,8 +61,9 @@ class SessionForm extends React.Component {
   }
 
   closeModal() {
-    this.props.clearErrors();
     this.setState({modalIsOpen: false});
+    this.props.clearErrors();
+
     this.props.history.push('/');
   }
 
@@ -76,7 +77,7 @@ class SessionForm extends React.Component {
  }
 
   handleSubmit(e) {
-    e.preventDefault();
+  
     const user = this.state;
     this.props.processForm({user});
   }
@@ -114,11 +115,7 @@ class SessionForm extends React.Component {
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel="SessionForm Modal">
-          <button
-            className="modalCloseButton"
-            onClick={this.onModalClose}>
-            {'X'}
-          </button>
+
         <div className="login-form-container">
           <div onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-form">
@@ -155,3 +152,10 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
+
+
+// <button
+//   className="modalCloseButton"
+//   onClick={this.onModalClose}>
+//   X
+// </button>

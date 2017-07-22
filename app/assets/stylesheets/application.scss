@@ -20,31 +20,32 @@ a {
   color: #da552f;
 }
 
-.ReactModal__Content.ReactModal__Content--after-open {
+
+
+div.ReactModal__Content--after-open {
   position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 40px;
-    bottom: 40px;
-    border: 1px solid black;
-    background: rgb(255, 255, 255);
+
+width: 250px;
+left: 50%;
+border: 1px solid black;
+transform: translate(-50%, -50%);
+padding: 30px;
+overflow: auto;
+outline: none;
+border-radius: 10px;
+z-index: 11;
+opacity: 100;
+transition: opacity 0.5s;
+    background: white;
     overflow: auto;
-    border-radius: 9px;
+    border-radius: 20px;
     outline: none;
-    /* padding: 36px; */
-    /* height: 400px; */
-    width: 250px;
-    transform: translate(-50%, -50%);
-    z-index: 11;
-    opacity: 39;
-    transition: opacity 0.5s;
+
+
 
 }
 .modalCloseButton {
-  // display: block;
-  // font-size: 16px;
-  // text-align: start;
-  // font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+   
   position: absolute;
     top: 5px;
     left: 5px;
