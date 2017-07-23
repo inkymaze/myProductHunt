@@ -1,7 +1,7 @@
 class Api::ProductsController < ApplicationController
 
   before_action :require_logged_in, only: [:create]
-  
+
   def create
     @product = Product.new(product_params)
     @product.hunter_id = current_user.id
@@ -14,10 +14,12 @@ class Api::ProductsController < ApplicationController
 
   def show
     @product = Product.find_by(id: params[:id])
+    render "api/products/show"
   end
 
   def index
     @products = Product.all
+    render "api/products/index"
   end
 
 
