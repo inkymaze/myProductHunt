@@ -19,6 +19,7 @@ const ProductReducer = (state = _defaultState, action) => {
   switch(action.type) {
 
     case RECEIVE_PRODUCTS:
+    // probably can't iterate over an array of objects
       action.products.forEach( product => {
         byId[product.id] = product;
         allIds.push(product.id);

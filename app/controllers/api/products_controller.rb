@@ -2,7 +2,7 @@ class Api::ProductsController < ApplicationController
 
   before_action :require_signed_in!, only: [:create]
 
-  
+
 
   def create
     @product = Product.new(product_params)
@@ -15,7 +15,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
     render "api/products/show"
   end
 
@@ -28,6 +28,6 @@ class Api::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :desc, :image_url, :product_url, :hunter_id)
+    params.require(:product).permit(:name, :desc, :image_url, :product_url)
   end
 end
