@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let store;
   if (window.currentUser) {
-    const preloadedState = { session: { currentUser: window.currentUser } };
+    const preloadedState = { session: { currentUser: window.currentUser, errors: null} };
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

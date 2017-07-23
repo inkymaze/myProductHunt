@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import AddProductForm from './add_product_form';
-import { createProduct } from '../../actions/product_actions';
+import { requestCreateProduct } from '../../actions/product_actions';
 
-const mapStateToProps = ({ errors }) => ({
-  errors
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser.id,
+  errors: state.products.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  createProduct: product => dispatch(createProduct(product))
+  requestCreateProduct: product => dispatch(requestCreateProduct(product))
 });
 
 export default connect(

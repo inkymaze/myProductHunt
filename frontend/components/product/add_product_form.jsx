@@ -13,6 +13,7 @@ class AddProductForm extends React.Component {
      hunter_id: ""
    };
    this.handleSubmit = this.handleSubmit.bind(this);
+   this.update = this.update.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +29,16 @@ class AddProductForm extends React.Component {
   update(field) {
       return e => this.setState({
         [field]: e.currentTarget.value
+      });
+    }
+
+    handleCloudinary(e) {
+      e.preventDefault();
+      cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (error, results) => {
+        if(error)
+          console.log(error);
+        else
+          this.setState({ image_url: results[0].url });
       });
     }
 
@@ -80,4 +91,4 @@ class AddProductForm extends React.Component {
 
 
 
-export default AddProductForm;
+export default withRouter(AddProductForm);

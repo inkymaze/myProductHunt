@@ -18,7 +18,7 @@ content : {
   width: "250px",
   top                        : '50%',
   left                       : '50%',
-  border                     : '1px solid #e8e8e8',
+  border                     : '5px solid #e8e8e8',
   "transform"                : 'translate(-50%, -50%)',
   padding                    : '36px',
   overflow                   : 'auto',
