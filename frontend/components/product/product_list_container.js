@@ -5,7 +5,6 @@ import requestProducts from '../../actions/product_actions';
 
 const mapStateToProps = ({ products }) => ({
   products
-
 });
 
 const mapDispatchToProps = dispatch => ({

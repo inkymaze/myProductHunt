@@ -32,9 +32,6 @@ class ProductDetail extends React.Component {
           </li>
           <li>Description: {products.desc}</li>
         </ul>
-
-
-
       </section>
     );
   }

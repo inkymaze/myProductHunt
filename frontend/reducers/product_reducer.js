@@ -14,17 +14,33 @@ const _defaultState ={
 
 const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-  let byId, allIds, nextState;
+  let byId = {};
+  let allIds = [];
+  let nextState;
 
   switch(action.type) {
 
     case RECEIVE_PRODUCTS:
-    // probably can't iterate over an array of objects
-      action.products.forEach( product => {
-        byId[product.id] = product;
+
+    // console.log(byId);
+    // console.log(allIds);
+    // nextState = Object.assign({}, _defaultState, action.products);
+    //   return nextState;
+  //     action.products.forEach( product => {
+  //       byId[product.id] = product;
+  //       allIds.push(product.id);
+  //     });
+    let allProducts = Object.keys(action.products);
+      // console.log(allProducts);
+      Object.keys(allProducts).forEach( product => {
         allIds.push(product.id);
+        byId[product.id] = product;
       });
+  // //   //   //
+  // //     // console.log(allIds);
+  // //     // console.log(byId);
       return merge({}, state, { byId }, { allIds });
+      // return merge({}, state, action.products);
 
     case RECEIVE_PRODUCT:
       return merge({},

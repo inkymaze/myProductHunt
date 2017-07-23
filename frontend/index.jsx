@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import Modal from 'react-modal';
-import { receiveProducts } from './actions/product_actions';
+import { receiveProducts, receiveProduct, requestProducts } from './actions/product_actions';
 import * as APIUtil from './util/product_api_util';
 
 
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let store;
   if (window.currentUser) {
+    // add product slice of state below?
     const preloadedState = { session: { currentUser: window.currentUser, errors: null} };
     store = configureStore(preloadedState);
     delete window.currentUser;
@@ -20,8 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
+  window.requestProducts = requestProducts;
   window.receiveProducts = receiveProducts;
+  window.receiveProduct = receiveProduct;
   window.fetchProducts = APIUtil.fetchProducts;
+  window.fetchProduct = APIUtil.fetchProduct;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.store = store;

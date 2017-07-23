@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  validates :name, :desc, :product_url, :hunter_id, presence: true
+  validates :name, :desc, :product_url, presence: true
   validates :name, uniqueness: true
 
   belongs_to :user,
