@@ -23,7 +23,6 @@ const App = () => (
     <header>
       <Link to="/" className="header-link">
         <img src="http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,h_65,q_100,w_65/v1500499099/logo_pjzgg0.jpg"/>
-
       </Link>
 
 

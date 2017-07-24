@@ -4,7 +4,7 @@ import ProductList from './product_list';
 import {requestProducts} from '../../actions/product_actions';
 
 const mapStateToProps = ({ products }) => ({
-  products: { byId: {}, allIds: [] }
+  products
 });
 
 const mapDispatchToProps = dispatch => ({

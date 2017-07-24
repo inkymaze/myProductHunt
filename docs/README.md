@@ -20,7 +20,7 @@ This clone is of Product Hunt and the features will be products, profile page, p
   **Objective:** Ability to add and view products
     - Product Model
     - Jbuilder API views for products
-    - Build components for AddProductForm, ProductDetail, ProductList
+    - Build components for AddProductForm, ProductListItem, ProductList, ProductListContainer
     - apply CSS to components
     - Seed Products
 
