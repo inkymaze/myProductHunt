@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import ProductList from './product_list';
 // import { selectAllProducts } from '../../reducers/selectors';
-import requestProducts from '../../actions/product_actions';
+import {requestProducts} from '../../actions/product_actions';
 
 const mapStateToProps = ({ products }) => ({
-  products
+  products: { byId: {}, allIds: [] }
 });
 
 const mapDispatchToProps = dispatch => ({

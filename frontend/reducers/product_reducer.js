@@ -16,49 +16,19 @@ const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   let byId = {};
   let allIds = [];
-  // let nextState;
 
   switch(action.type) {
 
     case RECEIVE_PRODUCTS:
-    // console.log(byId);
-    // console.log(allIds);
-    // nextState = Object.assign({}, _defaultState, action.products);
-    //   return nextState;
-        action.products.forEach( product => {
-          byId[product.id] = product;
-          allIds.push(product.id);
-        });
+      const newObj = merge({},state);
+      newObj.byId = action.products;
+      newObj.allIds = Object.keys(action.products);
 
-        return merge({}, state, { byId }, { allIds });
-          //  const byId = {};
-          //  Object.keys(action.products).forEach(product => {
-          //    console.log(product);
-          //      byId[product.id] = product;
-          //  });
-           //
-          //  let allIds = Object.keys(action.products).map(product => product.id);
-          //  return merge({},
-          //      state,
-          //      {byId},
-          //      {allIds});
-
-  //   let allProducts = Object.keys(action.products);
-  //     // console.log(allProducts);
-  //     allProducts.forEach( product => {
-  //       // console.log(product);
-  //       allIds.push(product.id);
-  //       byId[product.id] = product;
-  //     });
-  // //   //   //
-  // //     // console.log(allIds);
-  // //     // console.log(byId);
-
-      // return merge({}, state, action.products);
+      return newObj;
 
     case RECEIVE_PRODUCT:
       return merge({},
-        state,{ byId: {[action.product.id]: action.product} });
+        state,{ byId: {[action.products.id]: action.products} });
 
     case RECEIVE_PRODUCT_ERRORS:
       return merge({}, state, { errors: action.errors });
