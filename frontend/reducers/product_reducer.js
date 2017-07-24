@@ -14,15 +14,13 @@ const _defaultState ={
 
 const ProductReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-
+  let byId = {};
+  let allIds = [];
   // let nextState;
 
   switch(action.type) {
 
     case RECEIVE_PRODUCTS:
-
-        const byId = {};
-        const allIds = [];
     // console.log(byId);
     // console.log(allIds);
     // nextState = Object.assign({}, _defaultState, action.products);

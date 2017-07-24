@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import ProductListItem from './product_list_item';
 import AddProductFormContainer from './add_product_form_container';
 import ProductDetailContainer from './product_detail_container';
@@ -25,4 +25,4 @@ class ProductList extends React.Component {
   }
 }
 
-export default ProductList;
+export default withRouter(ProductList);

@@ -8,11 +8,11 @@ export const CLEAR_PRODUCT_ERRORS = "CLEAR_PRODUCT_ERRORS";
 
 export const receiveProducts = (products) => ({
   type: RECEIVE_PRODUCTS,
-  products:
-  {
-    byId: {},
-    allIds: []
-  }
+  products
+  // :{
+  //   byId: {},
+  //   allIds: []
+  // }
 });
 
 export const receiveProduct = (product) => ({

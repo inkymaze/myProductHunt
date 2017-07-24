@@ -9,22 +9,22 @@ const customStyles = {
   left            : 0,
   right           : 0,
   bottom          : 0,
-  backgroundColor : 'rgba(0, 0, 0, 0.8)',
+  background: 'rgba(255,255,255,0.97)',
+
   zIndex          : 10
 },
 content : {
   position                   : 'absolute',
-  height: "150px",
-  width: "250px",
+  height: "250px",
+  width: "350px",
   top                        : '50%',
   left                       : '50%',
-  border                     : '5px solid #e8e8e8',
   "transform"                : 'translate(-50%, -50%)',
   padding                    : '36px',
   overflow                   : 'auto',
   WebkitOverflowScrolling    : 'touch',
   outline                    : 'none',
-  borderRadius               : '10px',
+
   zIndex          : 11,
   opacity         : 70,
   transition      : 'opacity 0.5s'
@@ -109,6 +109,8 @@ class SessionForm extends React.Component {
 
 
     return (
+      <div>
+      <button className="modalCloseButton" onClick={this.onModalClose}>X</button>
       <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
@@ -147,16 +149,10 @@ class SessionForm extends React.Component {
           </div>
         </div>
       </Modal>
+    </div>
     );
   }
 
 }
 
 export default withRouter(SessionForm);
-
-
-// <button
-//   className="modalCloseButton"
-//   onClick={this.onModalClose}>
-//   X
-// </button>
