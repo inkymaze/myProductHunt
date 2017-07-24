@@ -31,10 +31,11 @@ const ProductReducer = (state = _defaultState, action) => {
   //       allIds.push(product.id);
   //     });
     let allProducts = Object.keys(action.products);
-      // console.log(allProducts);
-      Object.keys(allProducts).forEach( product => {
-        allIds.push(product.id);
-        byId[product.id] = product;
+      console.log(allProducts);
+      allProducts.forEach( product => {
+        console.log(product);
+        allIds.push(product["id"]);
+        byId[product["id"]] = product;
       });
   // //   //   //
   // //     // console.log(allIds);
