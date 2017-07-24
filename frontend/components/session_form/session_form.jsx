@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
 
     return (
       <div>
-      <button className="modalCloseButton" onClick={this.onModalClose}>X</button>
+      <button className="modalCloseButton" onClick={this.closeModal}>X</button>
       <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
