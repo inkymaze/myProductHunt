@@ -16,6 +16,45 @@
  @import 'reset';
 
 
+.product-detail {
+  background: #fff;
+    padding: 20px;
+    border-radius: 3px;
+  border: 1px solid #e8e8e8;
+    justify-content: space-between;
+    position: relative;
+    font-family: sans-serif;
+    display: flex;
+
+}
+
+.product-show-name {
+  font-size: 20px;
+font-weight: 300;
+letter-spacing: .4px;
+line-height: 24px;
+color: #000000;
+padding-bottom: 8px;
+text-decoration: none;
+}
+
+.product-show-desc {
+  font-family: sans-serif;
+  font-size: 13px;
+  text-align: left;
+  line-height: 18px;
+  color: #999999;
+
+}
+
+.product-show {
+  background-color: #f9f9f9;
+padding-left: 200px;
+padding-right: 200px;
+padding-top: 25px;
+min-width: 550px;
+}
+
 .auth-errors {
   display: flex;
   justify-content: center;

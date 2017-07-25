@@ -24,20 +24,21 @@ class ProductDetail extends React.Component {
     if (!products) return null;
 
     return (
-      <section className="product-detail">
+      <div className="product-show">
+        <section className="product-detail">
         <figure>
           <img src={products.image_url} alt={products.name} />
         </figure>
         <ul>
-          <li><h2>{products.name}</h2></li>
-          <li>{products.desc}</li>
+          <li className="product-show-name">{products.name}</li>
+          <li className="product-show-desc">{products.desc}</li>
         </ul>
 
-        <a href='{products.product_url}'>
+        <a href={products.product_url}>
           <button className="getit-button" >GET IT</button>
         </a>
-
       </section>
+    </div>
     );
   }
 }
