@@ -16,9 +16,7 @@
  @import 'reset';
 
 
-a {
-  color: #da552f;
-}
+
 
 
 
@@ -42,19 +40,16 @@ a {
 .allproducts {
   width: 750px;
   min-width: 350px;
-  display: flex;
-  justify-content: center;
+
   background-color: white;
-  border: 2px solid #e8e8e8;
+  
 }
 
 .products-list-item {
-  border-bottom: 1px solid #e8e8e8;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border: 1px solid #e8e8e8;
+  padding: 15px;
   background-color: white;
   display: inline-flex;
-
   vertical-align: top;
   width: 100%;
   text-decoration: none;
@@ -69,20 +64,24 @@ a {
   letter-spacing: .4px;
   line-height: 24px;
   color: #000000;
+  padding-bottom: 8px;
+  text-decoration: none;
 }
 
 .product-desc {
   font-size: 13px;
   line-height: 18px;
+  padding-top: 7px;
   text-align: left;
   color: #999999;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 
 .product-img {
 
-  flex: 1;
+  flex: .4;
   height: 100%;
 }
 
