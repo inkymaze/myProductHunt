@@ -23,11 +23,12 @@ class ProductList extends React.Component {
       <section className="product-section">
         <div className="allproducts">
           <ul>
-            {products.allIds.map(id => <li key={id}><ProductListItem key={id} products={products.byId[id]} /></li>)}
+            {products.allIds.map(id => <li key={id}><ProductListItem key={id}
+              products={products.byId[id]} /></li>)}
           </ul>
       </div>
 
-      
+
       <Route path="/products/:productId" component={ProductDetailContainer} />
       </section>
     );

@@ -11,9 +11,10 @@ class ProductDetail extends React.Component {
   componentDidMount() {
     this.props.requestProduct(this.props.match.params.productId);
   }
-  
+
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.productId !== nextProps.match.params.productId) {
+    if (this.props.match.params.productId !== nextProps.match.params.productId)
+     {
       this.props.requestProduct(nextProps.match.params.productId);
     }
   }

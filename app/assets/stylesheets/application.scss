@@ -206,6 +206,7 @@ form.login-form-box {
   justify-content: flex-end;
 }
 .intro-signup {
+
   text-decoration: none;
   color: white;
   background-color: #da552f;
@@ -289,12 +290,16 @@ form.login-form-box {
 }
 
 .header-button {
-  color: white;
-  background-color: #da552f;
-  font-family: Helvetica,Arial,sans-serif;
-  border: 2px solid #da552f;
-  font-size: 11px;
-  border-radius: 3px;
+  
+  text-decoration: none;
+color: white;
+background-color: #da552f;
+font-family: Helvetica,Arial,sans-serif;
+border: 1px solid #da552f;
+font-size: 12px;
+border-radius: 3px;
+padding: 7px 13px;
+font-weight: 500;
 }
 
 .submit-guestlogin-button {
