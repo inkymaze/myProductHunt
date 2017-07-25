@@ -72,7 +72,7 @@ class AddProductForm extends React.Component {
               type="text"
               value={this.state.product_url}
               onChange={this.update("product_url")}
-              placeholder="Product Description..."/>
+              placeholder="Product URL"/>
 
             <button
               id="imageUploadButton"
