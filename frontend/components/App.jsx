@@ -13,6 +13,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import WelcomeContainer from './intro/intro_container';
 import AddProductFormContainer from './product/add_product_form_container';
 import ProductListContainer from './product/product_list_container';
+import ProductDetailContainer from './product/product_detail_container';
 // <h2 className="header-title">Product Hunt</h2>
 // <h3>The best new products, every day</h3>
 // <Route path="/" component={ProductListContainer} />
@@ -38,7 +39,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/" component={ProductListContainer} />
         <ProtectedRoute exact path='/add-product' component={AddProductFormContainer} />
-
+        <Route exact path='/products/:productId' component={ProductDetailContainer} />
       </Switch>
 
   </div>

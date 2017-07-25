@@ -30,7 +30,7 @@ class ProductDetail extends React.Component {
           <li>
             <h2>{products.name}</h2>
           </li>
-          <li>Description: {products.desc}</li>
+          <li>{products.desc}</li>
         </ul>
       </section>
     );
