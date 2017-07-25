@@ -121,6 +121,9 @@ class SessionForm extends React.Component {
           <div onSubmit={this.handleSubmit} className="login-form-box">
 
             <div className="login-form">
+                <div className="auth-prompt">
+                  Please {this.props.formType} to begin hunting!
+                </div>
                 <input type="text"
                   value={this.state.username}
                   onChange={this.update('username')}

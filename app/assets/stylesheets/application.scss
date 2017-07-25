@@ -113,6 +113,14 @@ flex-wrap: wrap;
   flex-wrap: nowrap;
 }
 
+.auth-prompt {
+  padding-top: 25px;
+  padding-bottom: 12px;
+  color: gray;
+      font-size: smaller;
+      font-weight: 500;
+}
+
 .modalCloseButton {
 
   position: absolute;
@@ -187,6 +195,7 @@ form.login-form-box {
 }
 
 .intro-span {
+  min-width: 500px;
   display: flex;
   padding: 20px;
   justify-content: space-between;
@@ -290,7 +299,7 @@ form.login-form-box {
 }
 
 .header-button {
-  
+
   text-decoration: none;
 color: white;
 background-color: #da552f;
@@ -353,12 +362,13 @@ a.login:hover {
 }
 
 input.login-input {
-  // border-bottom: 1px solid gray;
   text-decoration: none;
   border-radius: 3px;
   width: 200px;
-    height: 25px;
-    font-size: 14px;
+  height: 25px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 300;
 }
 input.signup-buttons {
   display: flex;
@@ -381,6 +391,7 @@ input.signup-buttons {
 justify-content: center;
 align-items: center;
 text-transform: uppercase;
+flex-direction: column;
 }
 
 .login-form-box {
