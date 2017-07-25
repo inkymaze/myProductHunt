@@ -7,9 +7,6 @@ import ProductDetailContainer from './product_detail_container';
 
 
 class ProductList extends React.Component {
-
-
-
   componentDidMount() {
     this.props.requestProducts();
   }
@@ -17,9 +14,7 @@ class ProductList extends React.Component {
   render() {
     const { products } = this.props;
 
-
     return (
-
       <section className="product-section">
         <div className="allproducts">
           <ul>
@@ -27,7 +22,6 @@ class ProductList extends React.Component {
               products={products.byId[id]} /></li>)}
           </ul>
       </div>
-
 
       <Route path="/products/:productId" component={ProductDetailContainer} />
       </section>

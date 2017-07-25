@@ -34,6 +34,7 @@ export const clearProductErrors = () => ({
 export const requestProducts = () => dispatch => {
   return APIUtil.fetchProducts().then( products => {
       dispatch(receiveProducts(products));
+       dispatch(clearProductErrors());
     },
     errors => dispatch(receiveProductErrors(errors))
   );
@@ -42,6 +43,7 @@ export const requestProducts = () => dispatch => {
 export const requestProduct = (id) => dispatch => {
   return APIUtil.fetchProduct(id).then( products => {
       dispatch(receiveProduct(products));
+       dispatch(clearProductErrors());
     },
     errors => dispatch(receiveProductErrors(errors))
   );

@@ -34,7 +34,12 @@ class ProductDetail extends React.Component {
         <ul>
           <li><h2>{products.name}</h2></li>
           <li>{products.desc}</li>
+          <a href={products.product_url}>
+          <button className="getit-button">GET IT</button>
+          </a>  
         </ul>
+
+
       </section>
     );
   }

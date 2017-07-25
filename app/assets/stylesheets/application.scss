@@ -49,6 +49,7 @@
   vertical-align: top;
   width: 100%;
   text-decoration: none;
+  min-width: 450px;
   &:hover {
     background-color: #f9f9f9;
   }
@@ -189,6 +190,7 @@ form.login-form-box {
 
 }
 
+
 .intro-greeting {
   width: 48%;
   margin-left: 10px;
@@ -271,6 +273,7 @@ form.login-form-box {
 }
 
 .nav-buttons {
+  min-width: 160px;
   display: flex;
   justify-content: center;
 
