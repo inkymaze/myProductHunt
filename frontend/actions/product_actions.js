@@ -11,9 +11,9 @@ export const receiveProducts = (products) => ({
   products
 });
 
-export const receiveProduct = (product) => ({
+export const receiveProduct = (products) => ({
   type: RECEIVE_PRODUCT,
-  product
+  products
 });
 
 export const createProduct = (product) => ({
@@ -40,8 +40,8 @@ export const requestProducts = () => dispatch => {
 };
 
 export const requestProduct = (id) => dispatch => {
-  return APIUtil.fetchProduct(id).then( product => {
-      dispatch(receiveProduct(product));
+  return APIUtil.fetchProduct(id).then( products => {
+      dispatch(receiveProduct(products));
     },
     errors => dispatch(receiveProductErrors(errors))
   );

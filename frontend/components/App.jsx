@@ -22,7 +22,7 @@ import ProductDetailContainer from './product/product_detail_container';
 const App = () => (
   <div>
     <header>
-      
+
       <Link to="/" className="header-link">
         <img src="http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,h_65,q_100,w_65/v1500499099/logo_pjzgg0.jpg"/>
       </Link>
@@ -40,7 +40,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/" component={ProductListContainer} />
         <ProtectedRoute exact path='/add-product' component={AddProductFormContainer} />
-        <Route path='/products/:productId' component={ProductDetailContainer} />
+        <Route exact path='/products/:productId' component={ProductDetailContainer} />
       </Switch>
 
   </div>

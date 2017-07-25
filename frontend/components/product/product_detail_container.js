@@ -3,8 +3,7 @@ import ProductDetail from './product_detail';
 import { requestProduct } from '../../actions/product_actions';
 
 const mapStateToProps = ({ products }) => ({
-  products: products.byId[products.id]
-
+  products: products.byId[products.byId.id]
 });
 
 const mapDispatchToProps = dispatch => ({

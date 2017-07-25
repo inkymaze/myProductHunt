@@ -4,11 +4,14 @@ import { Route } from 'react-router-dom';
 
 
 class ProductDetail extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount() {
     this.props.requestProduct(this.props.match.params.productId);
   }
-
+  
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.productId !== nextProps.match.params.productId) {
       this.props.requestProduct(nextProps.match.params.productId);
@@ -16,8 +19,9 @@ class ProductDetail extends React.Component {
   }
 
   render() {
+
     const { products } = this.props;
-    
+
 
     if (!products) return null;
 
@@ -27,9 +31,7 @@ class ProductDetail extends React.Component {
           <img src={products.image_url} alt={products.name} />
         </figure>
         <ul>
-          <li>
-            <h2>{products.name}</h2>
-          </li>
+          <li><h2>{products.name}</h2></li>
           <li>{products.desc}</li>
         </ul>
       </section>
