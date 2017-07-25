@@ -38,7 +38,7 @@ const App = () => (
         <AuthRoute path="/signup" component={SessionFormContainer} />
         <Route path="/" component={ProductListContainer} />
         <ProtectedRoute exact path='/add-product' component={AddProductFormContainer} />
-        <Route exact path='/products/:productId' component={ProductDetailContainer} />
+        <Route path='/products/:productId' component={ProductDetailContainer} />
       </Switch>
 
   </div>

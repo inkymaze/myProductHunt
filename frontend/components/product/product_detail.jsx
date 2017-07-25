@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 
 class ProductDetail extends React.Component {
@@ -20,9 +19,7 @@ class ProductDetail extends React.Component {
   }
 
   render() {
-
     const { products } = this.props;
-
 
     if (!products) return null;
 
@@ -34,15 +31,15 @@ class ProductDetail extends React.Component {
         <ul>
           <li><h2>{products.name}</h2></li>
           <li>{products.desc}</li>
-          <a href='{products.product_url}'>
-          <button className="getit-button" style={{width: "70px"}}>GET IT</button>
-          </a>
         </ul>
-    
+
+        <a href='{products.product_url}'>
+          <button className="getit-button" >GET IT</button>
+        </a>
 
       </section>
     );
   }
 }
 
-export default ProductDetail;
+export default withRouter(ProductDetail);
