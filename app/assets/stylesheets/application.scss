@@ -181,6 +181,8 @@ form.login-form-box {
   padding: 7px 13px;
   font-weight: 500;
 
+  flex-wrap: wrap;
+
 }
 
 .intro-greeting {
@@ -192,7 +194,7 @@ form.login-form-box {
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  
+
   margin: 0 auto;
   padding-left: 200px;
   padding-right: 320px;
@@ -252,7 +254,9 @@ form.login-form-box {
   border-radius: 3px;
   padding: 7px 13px;
   font-weight: 500;
-  flex-wrap: wrap;
+
+
+
   &:hover{
    background-color: #da552f;
    opacity: 0.8;
@@ -260,6 +264,11 @@ form.login-form-box {
  }
 }
 
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+
+}
 
 .login-form-container {
   display: flex;
@@ -319,7 +328,7 @@ header {
   padding: 15px;
   position: relative;
   height: 32px;
-
+  min-width: 500px;
   padding-left: 230px;
   padding-right: 230px;
   margin: 0 auto;

@@ -17,7 +17,7 @@ class ProductDetail extends React.Component {
 
   render() {
     const { products } = this.props;
-
+    
 
     if (!products) return null;
 

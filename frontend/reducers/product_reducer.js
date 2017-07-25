@@ -28,7 +28,12 @@ const ProductReducer = (state = _defaultState, action) => {
 
     case RECEIVE_PRODUCT:
       return merge({},
-        state,{ byId: {[action.products.id]: action.products} });
+        _defaultState,{ byId: {[action.product.id]: action.product} });
+      // const nextObj = merge({},state);
+      // newObj.byId = action.products;
+      // newObj.allIds = Object.keys(action.products);
+      //
+      // return nextObj;
 
     case RECEIVE_PRODUCT_ERRORS:
       return merge({}, state, { errors: action.errors });
