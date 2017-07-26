@@ -34,7 +34,7 @@ export const clearProductErrors = () => ({
 export const requestProducts = () => dispatch => {
   return APIUtil.fetchProducts().then( products => {
       dispatch(receiveProducts(products));
-      
+
     },
     errors => dispatch(receiveProductErrors(errors))
   );
@@ -61,6 +61,14 @@ export const requestCreateProduct = (product) => dispatch => {
 export const requestUpdateProduct = (product) => dispatch => {
   return APIUtil.updateProduct(product).then( prod => {
         dispatch(receiveProduct(prod));
+      },
+    errors => dispatch(receiveProductErrors(errors))
+  );
+};
+
+export const requestUserProducts = (userId) => dispatch => {
+  return APIUtil.fetchUserProducts(userId).then( products => {
+        dispatch(receiveProducts(products));
       },
     errors => dispatch(receiveProductErrors(errors))
   );
