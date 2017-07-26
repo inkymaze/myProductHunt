@@ -11,7 +11,7 @@ class AddProductForm extends React.Component {
      product_url: "",
      desc: "",
      hunter_id: ""
-    
+
    };
    this.handleSubmit = this.handleSubmit.bind(this);
    this.update = this.update.bind(this);
@@ -89,6 +89,16 @@ class AddProductForm extends React.Component {
       );
     }
   }
+
+  // const emptyDiv = () => (
+  //   <div></div>
+  // );
+  //
+  // const productForm = ({ currentUser }) => (
+  //   currentUser ? emptyDiv() : new AddProductForm
+  // );
+  //
+
 
 
 
