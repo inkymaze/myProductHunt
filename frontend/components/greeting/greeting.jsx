@@ -4,6 +4,7 @@ import { Route, withRouter } from 'react-router-dom';
 import SessionForm from '../session_form/session_form';
 
 
+
 const sessionLinks = () => (
   <nav>
     <ul className="nav-buttons">
