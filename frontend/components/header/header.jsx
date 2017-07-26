@@ -9,7 +9,7 @@ const Header = (props) => (
       <div className="header-link">
         <Link to="/" >
           <img className='header-logo' src=
-            "http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,h_65,q_100,w_65/v1500499099/logo_pjzgg0.jpg"  />
+            "http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_165/v1500499099/logo_pjzgg0.jpg"  />
         </Link>
       </div>
       <div className="header-title">

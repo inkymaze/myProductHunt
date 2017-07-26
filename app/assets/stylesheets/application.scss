@@ -20,9 +20,7 @@
   padding-bottom: 10px;
 
 }
-.header-link {
-  max-height: 70%;
-}
+
 .header-desc {
   display: block;
 
@@ -36,7 +34,9 @@ text-align: start;
     justify-content: space-around;
     padding: 0 120px;
     min-width: 500px;
-    padding: 0 200px;
+    padding: 0 80px;
+    border-bottom: 1px solid #e8e8e8;
+    max-height: 45px;
 }
 
 .logoWithTitle {
@@ -44,13 +44,11 @@ text-align: start;
 }
 
 .header-logo {
-  max-height: 70%;
-  padding-right: 10px;
+  max-height: 64%;
+  padding-right: 5px;
 }
 
-.header-link {
-  max-width: 70%
-}
+
 
 .upvote-button {
   border: 1px solid transparent;
@@ -311,8 +309,8 @@ form.login-form-box {
   justify-content: space-between;
 
   margin: 0 auto;
-  padding-left: 200px;
-  padding-right: 320px;
+  padding-left: 125px;
+  padding-right: 120px;
   border-bottom: 1px solid #e8e8e8;
   padding-top: 60px;
   padding-bottom: 60px;
