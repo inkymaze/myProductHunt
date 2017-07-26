@@ -35,7 +35,7 @@ text-align: start;
     justify-content: space-around;
     padding: 0 120px;
     min-width: 500px;
-    padding: 0 80px;
+    padding: 10px 80px;
     border-bottom: 1px solid #e8e8e8;
     max-height: 45px;
 }
@@ -45,8 +45,8 @@ text-align: start;
 }
 
 .header-logo {
-  max-height: 64%;
-  padding-right: 5px;
+
+  // padding-right: 5px;
 }
 
 
@@ -431,7 +431,7 @@ font-weight: 500;
 
 .header-title {
   color: #da552f;
-    padding-left: 5px;
+    padding-left: 4px;
     display: block;
     font-size: 16px;
     font-weight: 600;
