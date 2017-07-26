@@ -31,10 +31,55 @@
 
 }
 
+.productFormTitle {
+  font-size: 26px;
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+color: #999;
+padding-bottom: 30px;
+}
+.productForm input {
+  min-width: 50%;
+      line-height: 35px;
+      padding: 7px 0;
+      font-size: 22px;
+      text-align: left;
+padding-left: 15px;
+
+border: 1px solid transparent;
+border-bottom: 2px solid #999;
+}
+
+.productFormButtons {
+  text-decoration: none;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 13px;
+    height: 42px;
+    padding: 10px 28px;
+  &:hover{
+   background-color: #da552f;
+   opacity: 0.8;
+   color: white;
+ }
+ }
+
 .productForm {
-  width: 500px;
-  height: 500px;
-  
+  min-width: 500px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+
+    flex-direction: column;
+
+
 }
 .header-group {
   display: flex;
