@@ -46,6 +46,9 @@ class AddProductForm extends React.Component {
       });
     }
 
+    handleClose () {
+        this.props.history.push('/');
+    }
   //
   // errors() {
   //   if (this.props.errors) {
@@ -59,11 +62,10 @@ class AddProductForm extends React.Component {
 
   render () {
 
-
       return (
-        <div>
-          <button className="formCloseButton"  >X</button>
-        <div className="productForm">
+        <div className="outerProductForm">
+          <button className="formCloseButton" onClick={this.handleClose.bind(this)}>X</button>
+          <div className="productForm">
 
             <div className="productFormTitle">ADD YOUR HUNTED PRODUCT BELOW!</div>
 
@@ -99,6 +101,7 @@ class AddProductForm extends React.Component {
 
         </div>
         </div>
+
       );
     }
   }
