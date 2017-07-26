@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 import {  RECEIVE_PRODUCTS,
           RECEIVE_PRODUCT,
           RECEIVE_PRODUCT_ERRORS,
+          CREATE_PRODUCT,
           CLEAR_PRODUCT_ERRORS
        } from '../actions/product_actions';
 
@@ -35,8 +36,9 @@ const ProductReducer = (state = _defaultState, action) => {
       return merge({}, state, { errors: action.errors });
 
     case CLEAR_PRODUCT_ERRORS:
-       return merge({}, state, { errors: null });
+      return merge({}, state, { errors: null });
 
+    
     default:
       return state;
   }

@@ -11,10 +11,10 @@ class AddProductForm extends React.Component {
      product_url: "",
      desc: "",
      hunter_id: ""
-
    };
    this.handleSubmit = this.handleSubmit.bind(this);
    this.update = this.update.bind(this);
+   this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
   componentDidMount() {
@@ -95,7 +95,7 @@ class AddProductForm extends React.Component {
   // );
   //
   // const productForm = ({ currentUser }) => (
-  //   currentUser ? emptyDiv() : new AddProductForm
+  //   currentUser ? emptyDiv() : AddProductForm
   // );
   //
 
