@@ -15,35 +15,67 @@
  */
  @import 'reset';
 
+.product-show-info {
+  display: flex;
+  padding-bottom: 10px;
 
+}
+
+.upvote-button {
+  border: 1px solid transparent;
+background: #fff;
+border-color: #e8e8e8;
+border-radius: 3px;
+font-size: 12px;
+font-family: sans-serif;
+font-weight: 300;
+cursor: pointer;
+}
 .product-detail {
-  background: #fff;
+    background: #fff;
     padding: 20px;
     border-radius: 3px;
-  border: 1px solid #e8e8e8;
+    border: 1px solid #e8e8e8;
     justify-content: space-between;
     position: relative;
     font-family: sans-serif;
     display: flex;
+    flex-direction: column;
 
 }
 
+.product-show-buttons {
+  display: flex;
+  padding-top: 10px;
+  border-top: 1px solid #e8e8e8;
+}
 .product-show-name {
-  font-size: 20px;
-font-weight: 300;
+
+font-size: 28px;
+font-weight: 600;
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
 letter-spacing: .4px;
 line-height: 24px;
 color: #000000;
 padding-bottom: 8px;
 text-decoration: none;
+padding-left: 10px;
 }
 
 .product-show-desc {
-  font-family: sans-serif;
-  font-size: 13px;
-  text-align: left;
-  line-height: 18px;
-  color: #999999;
+
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+
+font-size: 13px;
+text-align: left;
+line-height: 18px;
+color: #999;
+flex: 1 1 auto;
+margin: 0 10px 10px 1px;
+font-size: 16px;
+line-height: 20px;
+font-weight: 400;
+padding-left: 10px;
 
 }
 
@@ -130,20 +162,24 @@ min-width: 550px;
 }
 
 .getit-button {
-  text-decoration: none;
-color: white;
-background-color: #da552f;
-font-family: Helvetica,Arial,sans-serif;
-border: 1px solid #da552f;
-font-size: 12px;
-border-radius: 3px;
-padding: 7px 13px;
-font-weight: 600;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-height: 34px;
-padding: 0 13px;
-cursor: pointer;
+
+    color: #fff;
+    background-color: #da552f;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    border: 1px solid #da552f;
+    font-size: 11px;
+    border-radius: 3px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    height: 34px;
+    padding: 0 13px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    min-width: 50px;
+    text-align: center;
+    letter-spacing: 0.3px
 
 }
 
@@ -157,8 +193,8 @@ cursor: pointer;
 }
 
 .auth-prompt {
-  padding-top: 25px;
-    padding-bottom: 14px;
+  padding-top: 33px;
+    padding-bottom: 22px;
     color: gray;
     font-size: smaller;
     font-weight: 300;
@@ -166,7 +202,6 @@ cursor: pointer;
 }
 
 .modalCloseButton {
-
   position: absolute;
   color: white;
   font-size: 18px;
@@ -182,7 +217,6 @@ cursor: pointer;
     &:hover{
      background-color: #da552f;
      border: 4px solid #da552f;
-
    }
 }
 
@@ -445,9 +479,6 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: 50%;
-  // border: 1px solid #e8e8e8;
-  // border-radius: 10px;
-
 }
 
 .search-bar {
