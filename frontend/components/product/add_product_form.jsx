@@ -57,10 +57,12 @@ class AddProductForm extends React.Component {
   // }
 
   render () {
+
+
       return (
         <div className="productForm">
 
-          <form id="addProductForm">
+
             <input
               type="text"
               value={this.state.name}
@@ -80,14 +82,14 @@ class AddProductForm extends React.Component {
 
             <button
               id="imageUploadButton"
-              onClick={this.handleUpload}>
+              onClick={this.handleCloudinary}>
               Upload your logo here...
             </button>
             <button
               onClick={this.handleSubmit}>
               SUBMIT
             </button>
-          </form>
+
         </div>
       );
     }

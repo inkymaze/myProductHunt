@@ -50,6 +50,7 @@ export const requestProduct = (id) => dispatch => {
 export const requestCreateProduct = (product) => dispatch => {
   return APIUtil.createProduct(product).then( prod => {
         dispatch(receiveProduct(prod));
+
       },
     errors => dispatch(receiveProductErrors(errors))
   );

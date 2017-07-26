@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Route, withRouter } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import SessionForm from '../session_form/session_form';
 
 

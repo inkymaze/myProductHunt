@@ -2,6 +2,7 @@
 
   before_action :require_signed_in!, only: [:create]
 
+
   def create
 
     @product = Product.new(product_params)
@@ -14,7 +15,7 @@
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find_by_id(params[:id])
     render "api/products/show"
   end
 
