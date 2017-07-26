@@ -15,7 +15,7 @@ const customStyles = {
 },
 content : {
   position                   : 'absolute',
-  height: "250px",
+  height: "350px",
   width: "350px",
   top                        : '50%',
   left                       : '50%',

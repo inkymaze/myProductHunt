@@ -23,6 +23,7 @@
 
 .header-desc {
   display: block;
+  padding-left: 5px;
 
 font-size: 13px;
 font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -222,10 +223,10 @@ min-width: 550px;
 }
 
 .auth-prompt {
-  padding-top: 33px;
-    padding-bottom: 22px;
+  padding-top: 125px;
+    padding-bottom: 50px;
     color: gray;
-    font-size: smaller;
+    font-size: 20px;
     font-weight: 300;
     font-family: sans-serif;
 }
@@ -430,6 +431,7 @@ font-weight: 500;
 
 .header-title {
   color: #da552f;
+    padding-left: 5px;
     display: block;
     font-size: 16px;
     font-weight: 600;
