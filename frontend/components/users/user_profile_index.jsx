@@ -8,6 +8,9 @@ class UserProfileIndex extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.props.requestUserProducts(this.props.userId);
+  }
 }
 
 export default UserProfileIndex;

@@ -1,4 +1,4 @@
-class Api::ProductsController < ApplicationController
+ class Api::ProductsController < ApplicationController
 
   before_action :require_signed_in!, only: [:create]
 
