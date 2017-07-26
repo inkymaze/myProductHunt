@@ -17,7 +17,7 @@ const customStyles = {
 content : {
   position                   : 'absolute',
   height: "700px",
-  width: "900px",
+  width: "840px",
   top                        : '50%',
   left                       : '50%',
   "transform"                : 'translate(-50%, -50%)',

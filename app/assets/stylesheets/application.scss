@@ -32,21 +32,23 @@
 }
 
 .productFormTitle {
-  font-size: 26px;
+  font-size: 20px;
 font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 color: #999;
-padding-bottom: 30px;
+padding-bottom: 45px;
+
 }
 .productForm input {
-  min-width: 50%;
+  min-width: 66%;
       line-height: 35px;
       padding: 7px 0;
       font-size: 22px;
       text-align: left;
 padding-left: 15px;
-
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+font-weight: 300;
 border: 1px solid transparent;
-border-bottom: 2px solid #999;
+border-bottom: 1px solid #999;
 }
 
 .productFormButtons {
@@ -78,6 +80,9 @@ border-bottom: 2px solid #999;
   vertical-align: center;
 
     flex-direction: column;
+    border: 1px solid #e8e8e8;
+    margin: 12%;
+    border-radius: 3px
 
 
 }

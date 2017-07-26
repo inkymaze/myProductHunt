@@ -61,8 +61,11 @@ class AddProductForm extends React.Component {
 
 
       return (
+        <div>
+          <button className="formCloseButton"  >X</button>
         <div className="productForm">
-            <div className="productFormTitle">WHAT DID YOU HUNT?</div>
+
+            <div className="productFormTitle">ADD YOUR HUNTED PRODUCT BELOW!</div>
 
             <input
               type="text"
@@ -94,6 +97,7 @@ class AddProductForm extends React.Component {
               SUBMIT
             </button>
 
+        </div>
         </div>
       );
     }
