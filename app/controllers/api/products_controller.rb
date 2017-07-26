@@ -2,9 +2,8 @@
 
   before_action :require_signed_in!, only: [:create]
 
-
-
   def create
+
     @product = Product.new(product_params)
     @product.hunter_id = current_user.id
     if @product.save

@@ -37,8 +37,10 @@ const ProductReducer = (state = _defaultState, action) => {
 
     case CLEAR_PRODUCT_ERRORS:
       return merge({}, state, { errors: null });
+    // case CREATE_PRODUCT:
+    //   return merge({}, state, { byId: {[action.products.id]: action.products} },
+    //     {allIds: [action.products.id]});
 
-    
     default:
       return state;
   }

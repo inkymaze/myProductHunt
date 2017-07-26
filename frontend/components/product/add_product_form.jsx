@@ -12,6 +12,7 @@ class AddProductForm extends React.Component {
      desc: "",
      hunter_id: ""
    };
+
    this.handleSubmit = this.handleSubmit.bind(this);
    this.update = this.update.bind(this);
    this.handleCloudinary = this.handleCloudinary.bind(this);
@@ -36,27 +37,29 @@ class AddProductForm extends React.Component {
     handleCloudinary(e) {
       e.preventDefault();
       cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (error, results) => {
-        if(error)
+        if(error) {
           console.log(error);
-        else
+        } else {
           this.setState({ image_url: results[0].url });
+        }
       });
     }
 
-
-  errors() {
-    if (this.props.errors) {
-      return (
-        this.props.errors.map(error => {
-          return (<li className="error" key={error}>{error}</li>);
-        })
-      );
-    }
-  }
+  //
+  // errors() {
+  //   if (this.props.errors) {
+  //     return (
+  //       this.props.errors.map(error => {
+  //         return (<li className="error" key={error}>{error}</li>);
+  //       })
+  //     );
+  //   }
+  // }
 
   render () {
       return (
-        <div>
+        <div className="productForm">
+
           <form id="addProductForm">
             <input
               type="text"
@@ -89,16 +92,6 @@ class AddProductForm extends React.Component {
       );
     }
   }
-
-  // const emptyDiv = () => (
-  //   <div></div>
-  // );
-  //
-  // const productForm = ({ currentUser }) => (
-  //   currentUser ? emptyDiv() : AddProductForm
-  // );
-  //
-
 
 
 

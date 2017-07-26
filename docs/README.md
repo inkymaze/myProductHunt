@@ -28,7 +28,7 @@ This clone is of Product Hunt and the features will be products, profile page, p
   **Objective:** Users profiles are accessible
     - API on UsersController to create, read, update
     - Jbuilder API views for user profiles
-    - Build user component for UserDetail
+    - Build user component for UserProfile
     - apply CSS to user component
 
 ### Phase IV: Comments (1 days)

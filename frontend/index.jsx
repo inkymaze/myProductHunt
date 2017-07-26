@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import Modal from 'react-modal';
-import { receiveProducts, receiveProduct, requestProduct, requestProducts  } from './actions/product_actions';
+import { receiveProducts, receiveProduct, requestProduct, requestProducts, requestCreateProduct  } from './actions/product_actions';
 import * as APIUtil from './util/product_api_util';
 
 
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
+  window.requestCreateProduct = requestCreateProduct;
   window.requestProduct = requestProduct;
   window.requestProducts = requestProducts;
   window.receiveProducts = receiveProducts;

@@ -15,8 +15,11 @@ const sessionLinks = () => (
 
 const personalGreeting = (currentUser, logout) => (
 	<hgroup className="header-group">
-
+    <div className='addProductButton'>
+      <Link to='/products/new' style={{color:'#999'}}>+</Link>
+    </div>
     <button className="header-button" onClick={logout}>LOG OUT</button>
+
 	</hgroup>
 );
 

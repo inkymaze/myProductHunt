@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
   errors: state.products.errors,
   loggedIn: !!state.session.currentUser,
   userId: ownProps.userId,
-  allIds: ownProps.allProductIds
+  allIds: ownProps.allIds
 });
 
 const mapDispatchToProps = dispatch => ({
