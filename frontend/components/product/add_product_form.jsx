@@ -47,6 +47,7 @@ class AddProductForm extends React.Component {
     }
 
     handleClose () {
+      this.props.clearProductErrors();
         this.props.history.push('/');
     }
   //
@@ -54,12 +55,16 @@ class AddProductForm extends React.Component {
     if (this.props.errors) {
 
       return (
-        this.props.errors.map(error => {
-          return (<li className="error" key={error}>{error}</li>);
+        this.props.errors.map((error, i) => {
+          return (
+            <ul className="auth-errors">
+            <li className="product-auth-errors" key={`error-${i}`}>{error}</li>
+            </ul>);
         })
       );
     }
   }
+
 
 
 
@@ -82,7 +87,7 @@ class AddProductForm extends React.Component {
               type="text"
               value={this.state.desc}
               onChange={this.update("desc")}
-              placeholder="Product Description..."/>
+              placeholder="Product description..."/>
 
             <input
               type="text"
@@ -106,9 +111,8 @@ class AddProductForm extends React.Component {
               onClick={(e) => this.handleSubmit(e)}>
               SUBMIT
             </button>
-            <div className="auth-errors">
+            <div className="product-auth-cont">
               {this.renderErrors()}
-              {console.log(this.props.errors)}
             </div>
 
         </div>
