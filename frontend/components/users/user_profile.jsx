@@ -24,14 +24,30 @@ class UserProfile extends React.Component {
 
 
 
-  //
-  // render() {
-  //   return (
-  //
-  //   );
-  // }
+
+  render() {
+    const { user } = this.props;
+    
+    return (
+      <div>
+        <section className="user-detail">
+          <div className="user-show-info">
+            <figure>
+              <img src={user.image_url} alt={user.username} />
+            </figure>
+            <ul>
+              <li className="user-show-name">{user.username}</li>
+
+            </ul>
+          </div>
+
+        </section>
+
+      </div>
+    );
+  }
 }
 
 
 
-extends default withRouter(UserProfile);
+export default withRouter(UserProfile);
