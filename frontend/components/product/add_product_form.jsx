@@ -8,8 +8,8 @@ class AddProductForm extends React.Component {
     this.state = {
      name: "",
      image_url: "",
-     product_url: "",
-     desc: "",
+     product_URL: "",
+     description: "",
      hunter_id: ""
    };
 
@@ -85,14 +85,14 @@ class AddProductForm extends React.Component {
 
             <input
               type="text"
-              value={this.state.desc}
-              onChange={this.update("desc")}
+              value={this.state.description}
+              onChange={this.update("description")}
               placeholder="Product description..."/>
 
             <input
               type="text"
-              value={this.state.product_url}
-              onChange={this.update("product_url")}
+              value={this.state.product_URL}
+              onChange={this.update("product_URL")}
               placeholder="Product URL"/>
 
             <button

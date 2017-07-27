@@ -86,11 +86,11 @@ class ProductDetail extends React.Component {
               </figure>
               <ul>
                 <li className="product-show-name">{products.name}</li>
-                <li className="product-show-desc">{products.desc}</li>
+                <li className="product-show-description">{products.description}</li>
               </ul>
           </div>
           <div className="product-show-buttons">
-            <a href={products.product_url}>
+            <a href={products.product_URL}>
               <button className="getit-button" >GET IT</button>
             </a>
             <button className="upvote-button">

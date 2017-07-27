@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  desc: MyString
+  description: MyString
   image_url: MyString
-  product_url: MyString
+  product_URL: MyString
 
 two:
   name: MyString
-  desc: MyString
+  description: MyString
   image_url: MyString
-  product_url: MyString
+  product_URL: MyString

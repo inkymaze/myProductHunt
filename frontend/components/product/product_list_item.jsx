@@ -7,10 +7,10 @@ const ProductListItem = ({ products }) => (
       <div className="product-img">
           <img src={products.image_url} alt={products.name} />
       </div>
-      <div className="product-desc">
+      <div className="product-description">
         <ul>
           <li className="product-name">{ products.name } </li>
-          <li className="products-desc">{ products.desc } </li>
+          <li className="products-description">{ products.description } </li>
         </ul>
       </div>
     </div>

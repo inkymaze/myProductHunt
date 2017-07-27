@@ -5,9 +5,9 @@
 |---------|-----------|---------|
 | id      | integer | not null, primary key |
 | name | string | not null, indexed, unique |
-| desc | string | not null |
+| description | string | not null |
 | image_url | string |
-| product_url | string | not null |
+| product_URL | string | not null |
 
 
 ## Users

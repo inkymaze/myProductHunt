@@ -8,16 +8,16 @@
       1: {
         id: 1,
         name: "Growth Hacker"
-        desc: "An app to gain traction"
+        description: "An app to gain traction"
         image_url: "www.growthhacker.com/logo"
-        product_url: "www.growthhacker.com"
+        product_URL: "www.growthhacker.com"
       }
       2: {
         id: 2,
         name: "AI Bot"
-        desc: "does everything for you"
+        description: "does everything for you"
         image_url: "www.aibot.com/logo"
-        product_url: "www.aibot.com"
+        product_URL: "www.aibot.com"
       }
     }
     allIds: [1, 2]

@@ -14,7 +14,7 @@ const Header = (props) => (
         </div>
         <div className="header-title">
           <h2 className="header-title">Product Hunt</h2>
-          <h3 className="header-desc">The best new products, every day</h3>
+          <h3 className="header-description">The best new products, every day</h3>
         </div>
       </div>
       <div>
