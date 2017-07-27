@@ -147,6 +147,7 @@ class SessionForm extends React.Component {
               <br/>
               <div className="auth-errors">
                 {this.renderErrors()}
+
               </div>
             </div>
           </div>

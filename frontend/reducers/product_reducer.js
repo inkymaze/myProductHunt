@@ -10,7 +10,7 @@ import {  RECEIVE_PRODUCTS,
 const _defaultState ={
   byId: {},
   allIds: [],
-  errors: null
+  errors: []
 };
 
 const ProductReducer = (state = _defaultState, action) => {
@@ -38,7 +38,7 @@ const ProductReducer = (state = _defaultState, action) => {
     case CLEAR_PRODUCT_ERRORS:
       return merge({}, state, { errors: null });
 
-  
+
 
     default:
       return state;

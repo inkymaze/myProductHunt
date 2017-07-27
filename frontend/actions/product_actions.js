@@ -21,7 +21,7 @@ export const createProduct = (product) => ({
   product
 });
 
-export const receiveProductErrors = (errors) => ({
+export const receiveProductErrors = errors => ({
   type: RECEIVE_PRODUCT_ERRORS,
   errors
 });
@@ -32,27 +32,28 @@ export const clearProductErrors = () => ({
 
 
 export const requestProducts = () => dispatch => {
-  return APIUtil.fetchProducts().then( products => {
-      return dispatch(receiveProducts(products));
+  return APIUtil.fetchProducts().then( products =>
+       { return dispatch(receiveProducts(products));
+
     },
-    errors => dispatch(receiveProductErrors(errors))
+    errors => dispatch(receiveProductErrors(errors.responseJSON))
   );
 };
 
 export const requestProduct = (id) => dispatch => {
   return APIUtil.fetchProduct(id).then( products => {
       return dispatch(receiveProduct(products));
+
     },
-    errors => dispatch(receiveProductErrors(errors))
+    errors => dispatch(receiveProductErrors(errors.responseJSON))
   );
 };
 
 export const requestCreateProduct = (product) => dispatch => {
   return APIUtil.createProduct(product).then( prod => {
         return dispatch(receiveProduct(prod));
-
       },
-    errors => dispatch(receiveProductErrors(errors))
+    errors => dispatch(receiveProductErrors(errors.responseJSON))
   );
 };
 

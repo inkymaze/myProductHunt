@@ -50,15 +50,18 @@ class AddProductForm extends React.Component {
         this.props.history.push('/');
     }
   //
-  // errors() {
-  //   if (this.props.errors) {
-  //     return (
-  //       this.props.errors.map(error => {
-  //         return (<li className="error" key={error}>{error}</li>);
-  //       })
-  //     );
-  //   }
-  // }
+  renderErrors() {
+    if (this.props.errors) {
+
+      return (
+        this.props.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
+
 
   render () {
 
@@ -90,7 +93,12 @@ class AddProductForm extends React.Component {
             <button
               className='productFormButtons'
               id="imageUploadButton"
-              onClick={this.handleCloudinary}>
+              onClick={this.handleCloudinary}
+
+
+                style={{backgroundImage:`url(${this.state.image_url})`}}>
+
+
               Upload your logo here...
             </button>
 
@@ -98,6 +106,10 @@ class AddProductForm extends React.Component {
               onClick={(e) => this.handleSubmit(e)}>
               SUBMIT
             </button>
+            <div className="auth-errors">
+              {this.renderErrors()}
+              {console.log(this.props.errors)}
+            </div>
 
         </div>
         </div>
