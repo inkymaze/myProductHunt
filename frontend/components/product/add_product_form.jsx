@@ -42,14 +42,14 @@ class AddProductForm extends React.Component {
 
       return (e) => {
       e.preventDefault();
-      cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (error, results) => {
+      cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, function(error, results) {
 
           if(error) {
             console.log(error);
           } else {
             this.setState({ [field]: results[0].url });
           }
-        });
+        }.bind(this));
       };
     }
 
