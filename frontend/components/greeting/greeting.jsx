@@ -19,7 +19,7 @@ const personalGreeting = (currentUser, logout) => (
       <Link to='/products/new' style={{color:'#999'}}>+</Link>
     </div>
     <div className='userProfileButton'>
-      <Link to='/users/:userId' style={{color:'#999'}}>{currentUser.username}</Link>
+      <Link to={`/user/${currentUser.id}`} style={{color:'#999'}}>Hi {currentUser.username}</Link>
     </div>
     <button className="header-button" onClick={logout}>LOG OUT</button>
 

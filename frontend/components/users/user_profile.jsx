@@ -22,12 +22,13 @@ class UserProfile extends React.Component {
     }
   }
 
-
-
-
   render() {
     const { user } = this.props;
-    
+
+    if (!user) return null;
+
+
+    console.log(this.props);
     return (
       <div>
         <section className="user-detail">

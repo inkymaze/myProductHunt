@@ -7,26 +7,25 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const _defaultState = {
   byId: {},
-  userDetail: null,
   errors: []
 };
 
 const UserReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   let byId = {}, userDetail, userId;
-
+  console.log(action);
   switch(action.type) {
     case RECEIVE_USER:
       userId = action.user.id;
       return merge({}, state,
-        { byId: { [userId]: action.user }, userDetail: userId });
+        { byId: { [userId]: action.user } });
 
     case RECEIVE_USER_ERRORS:
-      const errors = action.errors;
-      return merge({}, state, {errors});
+      // const errors = action.errors;
+      return merge({}, state, {errors: action.errors.responseJSON});
 
     case CLEAR_USER_ERRORS:
-      return merge({}, _defaultState, {errors: []});
+      return merge({}, state, {errors: []});
 
       case RECEIVE_CURRENT_USER:
         if (action.user) {
@@ -35,7 +34,7 @@ const UserReducer = (state = _defaultState, action) => {
         } else {
           return state;
         }
-        
+
     default:
       return state;
   }

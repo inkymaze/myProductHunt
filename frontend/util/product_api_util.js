@@ -22,7 +22,7 @@ export const createProduct = data => (
 
 export const fetchUserProducts = (userId) => ($.ajax({
     method: "GET",
-    url:  `api/users/${userId}/products`
+    url:  `api/user/${userId}/products`
   })
 );
 

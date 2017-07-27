@@ -21,8 +21,9 @@ export const clearUserErrors = () => ({
 export const requestSingleUser = id => dispatch => {
   return APIUtil.getUser(id)
     .then( user => { dispatch(receiveUser(user));
+
         },
-     errors => dispatch(receiveUserErrors(errors))
+     errors => dispatch(receiveUserErrors(errors.responseJSON))
    );
 };
 
@@ -30,7 +31,8 @@ export const requestUpdateUser = user => dispatch => {
   return APIUtil.updateUser(user)
     .then( usr => {
             dispatch(receiveUser(usr));
+
        },
-     errors => dispatch(receiveUserErrors(errors))
+     errors => dispatch(receiveUserErrors(errors.responseJSON))
   );
 };

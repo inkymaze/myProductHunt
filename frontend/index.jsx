@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import Modal from 'react-modal';
 import { receiveProducts, receiveProduct, requestProduct, requestProducts, requestCreateProduct  } from './actions/product_actions';
+import { requestSingleUser } from './actions/user_actions';
 import * as APIUtil from './util/product_api_util';
 
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
+  window.requestSingleUser = requestSingleUser;
   window.requestCreateProduct = requestCreateProduct;
   window.requestProduct = requestProduct;
   window.requestProducts = requestProducts;
