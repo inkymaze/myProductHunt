@@ -13,7 +13,7 @@ const _defaultState = {
 const UserReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   let byId = {}, userDetail, userId;
-  
+
   switch(action.type) {
     case RECEIVE_USER:
       userId = action.user.id;
@@ -32,7 +32,7 @@ const UserReducer = (state = _defaultState, action) => {
           return merge({}, state,
             { byId: {[action.user.id]: action.user }});
         } else {
-          return state;
+          return _defaultState;
         }
 
     default:

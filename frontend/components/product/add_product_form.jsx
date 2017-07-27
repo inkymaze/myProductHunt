@@ -58,7 +58,7 @@ class AddProductForm extends React.Component {
       this.props.clearProductErrors();
         this.props.history.push('/');
     }
-  //
+  
   renderErrors() {
     if (this.props.errors) {
 

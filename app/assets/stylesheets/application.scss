@@ -18,7 +18,9 @@
 .product-show-info {
   display: flex;
   padding-bottom: 10px;
-
+  display: flex;
+      justify-content: space-around;
+      margin: 30px;
 }
 
 .user-detail {
@@ -243,7 +245,7 @@ text-align: start;
   display: flex;
     justify-content: space-around;
     padding: 0 120px;
-    min-width: 700px;
+    min-width: 770px;
     padding: 10px 80px;
     border-bottom: 1px solid #e8e8e8;
     max-height: 45px;
