@@ -9,9 +9,7 @@ const customStyles = {
   left            : 0,
   right           : 0,
   bottom          : 0,
-
   background: 'hsla(0,0%,97%,.8)',
-
   zIndex          : 10
 },
 content : {
@@ -25,9 +23,7 @@ content : {
   overflow                   : 'auto',
   WebkitOverflowScrolling    : 'touch',
   outline                    : 'none',
-
   zIndex          : 11,
-
   transition      : 'opacity 0.5s'
 }
 };
@@ -98,7 +94,24 @@ class ProductDetail extends React.Component {
             </button>
               </div>
           </section>
-
+          <section className="showProductImages">
+            <div className="product-show-info">
+              <figure>
+                <img src={products.image_two_url} alt={products.name} />
+              </figure>
+              <figure>
+                <img src={products.image_three_url} alt={products.name} />
+              </figure>
+            </div>
+            <div className="product-show-info">
+              <figure>
+                <img src={products.image_four_url} alt={products.name} />
+              </figure>
+              <figure>
+                <img src={products.image_five_url} alt={products.name} />
+              </figure>
+            </div>
+          </section>
         </div>
       </Modal>
     </div>

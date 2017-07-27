@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   products: state.products.byId,
   currentUser: (state.session.currentUser) ? state.session.currentUser.id : null,
   errors: state.products.errors,
-  loggedIn: !!state.session.currentUser,
+  loggedIn: Boolean(state.session.currentUser),
   userId: ownProps.userId,
   allIds: ownProps.allIds
 });

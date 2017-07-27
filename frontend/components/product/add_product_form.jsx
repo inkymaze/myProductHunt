@@ -38,15 +38,18 @@ class AddProductForm extends React.Component {
       });
     }
 
-    handleCloudinary(e) {
+    handleCloudinary(field) {
+
+      return (e) => {
       e.preventDefault();
       cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, (error, results) => {
         if(error) {
           console.log(error);
         } else {
-          this.setState({ image_url: results[0].url });
+          this.setState({ [field]: results[0].url });
         }
       });
+    };
     }
 
     handleClose () {
@@ -102,7 +105,7 @@ class AddProductForm extends React.Component {
               <button
                 className='uploadFormButton'
                 id="imageUploadButton"
-                onClick={this.handleCloudinary}
+                onClick={this.handleCloudinary("image_url")}
 
 
                   style={{backgroundImage:`url(${this.state.image_url})`}}
@@ -114,24 +117,24 @@ class AddProductForm extends React.Component {
               <div className="firstProductImages">
                 <button
                   className="productImages"
-                  onClick={this.handleCloudinary}
+                  onClick={this.handleCloudinary("image_two_url")}
                   style={{backgroundImage:`url(${this.state.image_two_url})`}}>
                 </button>
                 <button
                   className="productImages"
-                  onClick={this.handleCloudinary}
+                  onClick={this.handleCloudinary("image_three_url")}
                   style={{backgroundImage:`url(${this.state.image_three_url})`}}>
                 </button>
               </div>
               <div className="secondProductImages">
                 <button
                   className="productImages"
-                  onClick={this.handleCloudinary}
+                  onClick={this.handleCloudinary("image_four_url")}
                   style={{backgroundImage:`url(${this.state.image_four_url})`}}>
                 </button>
                 <button
                   className="productImages"
-                  onClick={this.handleCloudinary}
+                  onClick={this.handleCloudinary("image_five_url")}
                   style={{backgroundImage:`url(${this.state.image_five_url})`}}>
                 </button>
               </div>

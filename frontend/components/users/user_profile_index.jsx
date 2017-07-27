@@ -12,12 +12,13 @@ class UserProfileIndex extends React.Component {
     this.props.requestUserProducts(this.props.userId);
   }
 
-  render () {
-    return (
-
-
-    );
-  }
+//   render () {
+//     return (
+//
+//
+//     );
+//   }
+// }
 }
 
 export default UserProfileIndex;
