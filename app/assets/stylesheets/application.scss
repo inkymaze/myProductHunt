@@ -21,6 +21,51 @@
 
 }
 
+.user-detail {
+  padding: 60px 40px;
+height: 140px;
+margin: 25px 15px;
+flex-flow: row;
+border-radius: 3px;
+background: none 50%/cover #505d6c;
+display: flex;
+max-width: 1000px;
+justify-content: space-between;
+}
+
+.user-show-info {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfileEditButton {
+
+  width: 50px;
+font-weight: 500;
+font-size: 11px;
+padding: 0 13px;
+text-align: center;
+line-height: 34px;
+letter-spacing: 0.3px;
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+border: 1px solid transparent;
+background: #fff;
+border-color: #e8e8e8;
+border-radius: 3px;
+font-size: 12px;
+cursor: pointer;
+}
+
+.user-show-name {
+  font-size: 28px;
+    font-weight: 600;
+    margin-left: 10px;
+    line-height: 34px;
+    color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
 .showProductImages {
   background: #fff;
     padding: 20px;

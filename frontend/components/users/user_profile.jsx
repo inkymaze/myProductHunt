@@ -28,18 +28,22 @@ class UserProfile extends React.Component {
     if (!user) return null;
 
 
-    console.log(this.props);
     return (
       <div>
         <section className="user-detail">
           <div className="user-show-info">
-            <figure>
+            <figure className="userProfileImage">
               <img src={user.image_url} alt={user.username} />
             </figure>
             <ul>
               <li className="user-show-name">{user.username}</li>
 
             </ul>
+          </div>
+          <div className="user-show-info">
+            <button className="userProfileEditButton">
+              Edit
+            </button>
           </div>
 
         </section>
