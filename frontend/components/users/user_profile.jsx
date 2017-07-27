@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 // import UserProfileIndexContainer from './user_profile_index_container';
+import { Link } from 'react-router-dom';
 
 
 class UserProfile extends React.Component {
@@ -41,12 +42,15 @@ class UserProfile extends React.Component {
             </ul>
           </div>
           <div className="user-show-info">
-            <button className="userProfileEditButton">
+            <Link to={`/user/update/${user.id}`}>
               Edit
-            </button>
+            </Link>
           </div>
+        </section>
+        <section className="profileUpvotedProductsList">
 
         </section>
+
 
       </div>
     );

@@ -13,7 +13,11 @@ const sessionLinks = () => (
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
+const handleLogout = (logout, history) => () => {
+  logout().then( () => history.push('/'));
+};
+
+const personalGreeting = (currentUser, logout, history) => (
 	<hgroup className="header-group">
     <div className='addProductButton'>
       <Link to='/products/new' style={{color:'#999'}}>+</Link>
@@ -21,13 +25,13 @@ const personalGreeting = (currentUser, logout) => (
     <div className='userProfileButton'>
       <Link to={`/user/${currentUser.id}`} style={{color:'#999'}}>{currentUser.username}</Link>
     </div>
-    <button className="logout-header-button" onClick={logout}>LOG OUT</button>
+    <button className="logout-header-button" onClick={handleLogout(logout, history)}>LOG OUT</button>
 
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+const Greeting = ({ currentUser, logout, history }) => (
+  currentUser ? personalGreeting(currentUser, logout, history) : sessionLinks()
 );
 
 
