@@ -24,7 +24,6 @@ class AddProductForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.state);
     this.props.requestCreateProduct(this.state)
       .then(data => this.props.history.push(`/products/${data.products.id}`));
   }
@@ -94,18 +93,19 @@ class AddProductForm extends React.Component {
               value={this.state.product_URL}
               onChange={this.update("product_URL")}
               placeholder="Product URL"/>
-
-            <button
-              className='productFormButtons'
-              id="imageUploadButton"
-              onClick={this.handleCloudinary}
-
-
-                style={{backgroundImage:`url(${this.state.image_url})`}}>
+            <div className="uploadLogoField">
+              <li className='uploadLogoPrompt'>Upload your logo here:</li>
+              <button
+                className='uploadFormButton'
+                id="imageUploadButton"
+                onClick={this.handleCloudinary}
 
 
-              Upload your logo here...
-            </button>
+                  style={{backgroundImage:`url(${this.state.image_url})`}}
+                  value="Upload your logo here...">
+              </button>
+            </div>
+
 
             <button className='productFormButtons'
               onClick={(e) => this.handleSubmit(e)}>
