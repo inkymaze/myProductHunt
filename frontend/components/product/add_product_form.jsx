@@ -58,7 +58,7 @@ class AddProductForm extends React.Component {
       this.props.clearProductErrors();
         this.props.history.push('/');
     }
-  
+
   renderErrors() {
     if (this.props.errors) {
 
@@ -72,9 +72,6 @@ class AddProductForm extends React.Component {
       );
     }
   }
-
-
-
 
   render () {
 
@@ -108,10 +105,8 @@ class AddProductForm extends React.Component {
                 className='uploadFormButton'
                 id="imageUploadButton"
                 onClick={this.handleCloudinary("image_url")}
-
-
-                  style={{backgroundImage:`url(${this.state.image_url})`}}
-                  value="Upload your logo here...">
+                style={{backgroundImage:`url(${this.state.image_url})`}}
+                value="Upload your logo here...">
               </button>
             </div>
             <div className="uploadImagesField">
