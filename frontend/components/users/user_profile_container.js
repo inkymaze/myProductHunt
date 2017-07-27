@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
 import { requestSingleUser,
-         requestUpdateUser,
-         requestDeleteUser } from '../../actions/user_actions';
-import { requestUserProducts } from '../../actions/product_actions';
+  requestUpdateUser } from '../../actions/user_actions';
+
 
 const mapStateToProps = (state, ownProps) => ({
   user:  state.users.byId[ownProps.match.params.userId],

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import UserProfileIndexContainer from './user_profile_index_container';
+// import UserProfileIndexContainer from './user_profile_index_container';
 
 
 class UserProfile extends React.Component {

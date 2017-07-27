@@ -53,6 +53,7 @@ class AddProductForm extends React.Component {
       };
     }
 
+
     handleClose () {
       this.props.clearProductErrors();
         this.props.history.push('/');
