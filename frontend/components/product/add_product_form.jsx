@@ -10,7 +10,11 @@ class AddProductForm extends React.Component {
      image_url: "",
      product_URL: "",
      description: "",
-     hunter_id: ""
+     hunter_id: "",
+     image_two_url: "",
+     image_three_url: "",
+     image_four_url: "",
+     image_five_url: "",
    };
 
    this.handleSubmit = this.handleSubmit.bind(this);
@@ -104,6 +108,33 @@ class AddProductForm extends React.Component {
                   style={{backgroundImage:`url(${this.state.image_url})`}}
                   value="Upload your logo here...">
               </button>
+            </div>
+            <div className="uploadImagesField">
+              <li className='uploadImagesPrompt'>Upload your product images or GIFs here:</li>
+              <div className="firstProductImages">
+                <button
+                  className="productImages"
+                  onClick={this.handleCloudinary}
+                  style={{backgroundImage:`url(${this.state.image_two_url})`}}>
+                </button>
+                <button
+                  className="productImages"
+                  onClick={this.handleCloudinary}
+                  style={{backgroundImage:`url(${this.state.image_three_url})`}}>
+                </button>
+              </div>
+              <div className="secondProductImages">
+                <button
+                  className="productImages"
+                  onClick={this.handleCloudinary}
+                  style={{backgroundImage:`url(${this.state.image_four_url})`}}>
+                </button>
+                <button
+                  className="productImages"
+                  onClick={this.handleCloudinary}
+                  style={{backgroundImage:`url(${this.state.image_five_url})`}}>
+                </button>
+              </div>
             </div>
 
 

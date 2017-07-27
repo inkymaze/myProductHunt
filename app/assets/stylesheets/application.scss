@@ -21,6 +21,32 @@
 
 }
 
+.uploadImagesPrompt {
+  color: gray;
+    min-width: 66%;
+    line-height: 35px;
+    padding: 7px 0;
+    font-size: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding-left: 15px;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.productImages {
+  background-image: url((unknown));
+width: 111px;
+height: 111px;
+background: transparent;
+border-radius: 3px;
+margin-top: 20px;
+margin-left: 5px;
+border: 2px dotted #999
+}
+
 .uploadLogoPrompt {
   color: gray;
 min-width: 66%;
@@ -36,14 +62,22 @@ font-weight: 300;
 }
 
 .uploadLogoField {
-  display: flex;
+display: flex;
 justify-content: flex-start;
 align-items: center;
 
 }
 
-.uploadFormButton {
+.uploadImagesField {
+  display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: column;
+}
 
+.uploadFormButton {
+border: 2px dotted #999;
 width: 111px;
 height: 111px;
 background: transparent;
