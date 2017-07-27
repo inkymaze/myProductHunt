@@ -13,7 +13,7 @@ const _defaultState = {
 const UserReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   let byId = {}, userDetail, userId;
-  console.log(action);
+  
   switch(action.type) {
     case RECEIVE_USER:
       userId = action.user.id;

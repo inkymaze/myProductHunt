@@ -21,7 +21,7 @@ const personalGreeting = (currentUser, logout) => (
     <div className='userProfileButton'>
       <Link to={`/user/${currentUser.id}`} style={{color:'#999'}}>{currentUser.username}</Link>
     </div>
-    <button className="header-button" onClick={logout}>LOG OUT</button>
+    <button className="logout-header-button" onClick={logout}>LOG OUT</button>
 
 	</hgroup>
 );

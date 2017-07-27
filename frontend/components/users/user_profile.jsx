@@ -36,7 +36,7 @@ class UserProfile extends React.Component {
               <img src={user.image_url} alt={user.username} />
             </figure>
             <ul>
-              <li className="user-show-name">{user.username}</li>
+              <li className="user-show-name">@{user.username}</li>
 
             </ul>
           </div>
