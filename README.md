@@ -22,7 +22,7 @@ Each product has an attached modal containing more detail. The modal contains an
 
 When logged in the user can click the '+' sign in the header to open a model the will allow creation of a new product.
 
-[productform](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501262981/Screen_Shot_2017-07-28_at_10.29.16_AM_gbgsee.png)
+![productform](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501262981/Screen_Shot_2017-07-28_at_10.29.16_AM_gbgsee.png)
 
 ### User Profile Pages
 
