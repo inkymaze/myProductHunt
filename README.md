@@ -33,3 +33,10 @@ When logged in the user profile can be reached by clicking on the username in th
 ### Future Improvements
 
 Users will be able to comment on products and have and ongoing discussion. Users will also be able to `upvote` products which will then be rendered in their corresponding profile for future reference. Instead of the username in the header the user's image will appear with a dropdown showing options to logout or be redirected to their profile.
+
+### Additional Resources
+
+* [Database Schema](docs/schema.md)
+* [API Endpoints](docs/api-endpoints.md)
+* [Design Wireframes](docs/wireframes)
+* [Sample Redux State](docs/sample-state.md)
