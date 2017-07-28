@@ -8,19 +8,26 @@ class UserEditForm extends React.Component {
     return (
       <div className='editForm'>
         <form>
-
-          <TextInput
-            name="username"
-            label="username"
-            placeholder={this.props.user.username}
-            onChange={this.props.onChange}/>
-
-          <input
-            type="submit"
-            disabled={this.props.saving}
-            className="btn-primary"
-            onClick={this.props.onSave}
-            className="logout-header-button"/>
+          <div className="editUsernameInput">
+            <div>
+              <h2 className='editUserNameListItem'>Username:</h2>
+            </div>
+            <div>
+              <TextInput
+              name="username"
+              label="username"
+              placeholder={this.props.user.username}
+              onChange={this.props.onChange}/>
+            </div>
+          </div>
+          <div className="editSubmitButton">
+            <input
+              type="submit"
+              disabled={this.props.saving}
+              className="btn-primary"
+              onClick={this.props.onSave}
+              className="edit-submit-button"/>
+          </div>
         </form>
       </div>
     );
