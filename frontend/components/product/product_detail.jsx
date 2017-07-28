@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 const customStyles = {
   overlay : {
@@ -61,13 +62,10 @@ class ProductDetail extends React.Component {
     }
   }
 
+
   render() {
     const { products } = this.props;
-
     if (!products) return null;
-
-
-
 
     return (
       <div>
@@ -114,6 +112,14 @@ class ProductDetail extends React.Component {
                 <img src={products.image_five_url} alt={products.name} />
               </figure>
             </div>
+          </section>
+          <section>
+            Hunter
+              <div className="hunterInfo">
+                  <Link to={`/user/${products.hunter_id}`} >
+                    hunter image here
+                  </Link>
+              </div>
           </section>
         </div>
       </Modal>
