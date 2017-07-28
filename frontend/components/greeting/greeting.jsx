@@ -23,7 +23,7 @@ const personalGreeting = (currentUser, logout, history) => (
       <Link to='/products/new' style={{color:'#999'}}>+</Link>
     </div>
     <div className='userProfileButton'>
-      <Link to={`/user/${currentUser.id}`} style={{color:'#999'}}>{currentUser.username}</Link>
+      <Link to={`/user/${currentUser.id}`} style={{color:'#999'}}>@{currentUser.username}</Link>
     </div>
     <button className="logout-header-button" onClick={handleLogout(logout, history)}>LOG OUT</button>
 

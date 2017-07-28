@@ -75,6 +75,13 @@ font-weight: 600;
 
 }
 
+.userProfileCont {
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
 .user-detail {
   padding: 60px 40px;
 height: 140px;
@@ -85,6 +92,7 @@ background: none 50%/cover #505d6c;
 display: flex;
 max-width: 1000px;
 justify-content: space-between;
+min-width: 930px;
 }
 
 .user-show-info {
@@ -224,7 +232,8 @@ display: -ms-flexbox;
 display: flex;
 max-width: 1000px;
 background: white;
-border: 1px solid #e8e8e8
+border: 1px solid #e8e8e8;
+min-width:930px;
 }
 
 

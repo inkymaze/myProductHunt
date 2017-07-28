@@ -30,7 +30,7 @@ class UserProfile extends React.Component {
 
 
     return (
-      <div>
+      <div className="userProfileCont">
         <section className="user-detail">
           <div className="user-show-info">
             <figure className="userProfileImage">
