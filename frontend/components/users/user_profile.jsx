@@ -43,7 +43,7 @@ class UserProfile extends React.Component {
           </div>
           <div className="user-show-info">
           <div className="editUserinfo">
-            <Link to={`/user/update/${user.id}`}>
+            <Link to={`/user/update/${user.id}`} style={{color:'black'}}>
               Edit
             </Link>
           </div>
