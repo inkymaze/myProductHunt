@@ -42,11 +42,15 @@ class UserProfile extends React.Component {
             </ul>
           </div>
           <div className="user-show-info">
+          <div className="editUserinfo">
             <Link to={`/user/update/${user.id}`}>
               Edit
             </Link>
           </div>
+        </div>
         </section>
+
+
         <section className="profileUpvotedProductsList">
 
         </section>

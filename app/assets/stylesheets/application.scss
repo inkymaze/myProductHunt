@@ -91,6 +91,29 @@ justify-content: space-between;
   display: flex;
     justify-content: center;
     align-items: center;
+
+
+}
+
+.editUserinfo {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #000000;
+    background: #ffffff;
+    border-radius: 3px;
+    border-color: #e8e8e8;
+    height: 34px;
+    text-align: center;
+    display: inline-flex;
+    padding: 0 13px;
+    vertical-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .userProfileEditButton {
