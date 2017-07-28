@@ -22,13 +22,13 @@ Each product has an attached modal containing more detail. The modal contains an
 
 When logged in the user can click the '+' sign in the header to open a model the will allow creation of a new product.
 
-(http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501262981/Screen_Shot_2017-07-28_at_10.29.16_AM_gbgsee.png)
+![homescreen](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501262981/Screen_Shot_2017-07-28_at_10.29.16_AM_gbgsee.png)
 
 ### User Profile Pages
 
 When logged in the user profile can be reached by clicking on the username in the header. This will only appear when there is an active user. The edit button allows the user to change there image and/or there username.
 
-(http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501266403/Screen_Shot_2017-07-28_at_11.26.06_AM_gnndjv.png)
+![homescreen](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501266403/Screen_Shot_2017-07-28_at_11.26.06_AM_gnndjv.png)
 
 ### Future Improvements
 
