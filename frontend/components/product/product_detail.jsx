@@ -26,7 +26,7 @@ content : {
   outline                    : 'none',
   zIndex          : 11,
   transition      : 'opacity 0.5s'
-}
+  }
 };
 
 class ProductDetail extends React.Component {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductListItem from '../product/product_list_item';
+import UserProfileIndexContainer from './user_profile_index_container';
 
 
 class UserProfileIndex extends React.Component {
@@ -11,16 +12,19 @@ class UserProfileIndex extends React.Component {
     this.props.requestUserProducts(this.props.userId);
   }
 
-//   render () {
-//
+  // render () {
+    // const { users } = this.props;
+    // let userProducts = (<UserProfileIndexContainer products={users.products}
+    //    userId={users.id}/>);
+
 //
 //     return (
 //
-//       <ProductListItem key={id}
-//           products={products.byId[id]} />
+//       { userProducts }
 //     );
 //   }
 // }
 }
+
 
 export default UserProfileIndex;
