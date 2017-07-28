@@ -21,7 +21,6 @@ const UserReducer = (state = _defaultState, action) => {
         { byId: { [userId]: action.user } });
 
     case RECEIVE_USER_ERRORS:
-      // const errors = action.errors;
       return merge({}, state, {errors: action.errors});
 
     case CLEAR_USER_ERRORS:

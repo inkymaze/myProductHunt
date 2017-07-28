@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-// import UserProfileIndexContainer from './user_profile_index_container';
 import { Link } from 'react-router-dom';
 import UserEditForm from './user_edit_form';
 
@@ -20,7 +19,6 @@ class UserProfile extends React.Component {
    const field = event.target.name;
    const user = this.state.user;
    user.id = this.props.userId;
-  // console.log(this.props);
    user[field] = event.target.value;
    return this.setState({user: user});
  }
@@ -34,8 +32,8 @@ class UserProfile extends React.Component {
 
   saveUser(event) {
    event.preventDefault();
-  //  console.log(this.state);
-   this.props.requestUpdateUser(this.state.user).then(this.setState({isEditing: false}));
+   this.props.requestUpdateUser(this.state.user)
+   .then(this.setState({isEditing: false}));
  }
 
   componentWillReceiveProps(nextProps) {
@@ -62,7 +60,7 @@ class UserProfile extends React.Component {
 
     if (this.state.isEditing) {
       return (
-      <div>
+      <div className="editFormCont">
         <h1 className='editUserTitle'>Edit Info Below</h1>
         <UserEditForm user={this.props.user}
           onSave={this.saveUser}
@@ -86,7 +84,7 @@ class UserProfile extends React.Component {
           </div>
           <div className="user-show-info">
           <div className="editUserinfo">
-            <button onClick={this.toggleEdit}>EDIT</button>
+            <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
           </div>
         </div>
         </section>

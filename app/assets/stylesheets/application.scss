@@ -37,6 +37,13 @@
 
 }
 
+.edit-form-button {
+  background: white;
+border: transparent;
+font-size: 14px;
+font-weight: 700;
+}
+
 .editUserNameinput {
   width: 250px;
 
@@ -50,11 +57,25 @@
 
 }
 
+.editFormCont {
+  margin: 20%;
+  min-width: 66%;
+      line-height: 35px;
+      padding: 7px 0;
+      font-size: 22px;
+      color: #999;
+      text-align: left;
+padding-left: 15px;
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+font-weight: 300;
+bordeR: 1px solid #999;
+}
+
 .editForm {
   display: flex;
     justify-content: center;
-    /* flex-direction: column; */
-    margin: 20%;
+
+
 }
 
 .btn-primary {
