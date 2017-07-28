@@ -24,7 +24,7 @@ class Api::UsersController < ApplicationController
    def update
     @user = User.find_by_id(params[:id])
 
-    if @user.username == current_user.username
+    if @user && @user.username == current_user.username
       if @user.update_attributes(user_params)
         render 'api/users/show'
       else

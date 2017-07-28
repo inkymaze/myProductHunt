@@ -26,8 +26,7 @@ When logged in the user can click the '+' sign in the header to open a model the
 
 ### User Profile Pages
 
-When logged in the user profile can be reached by clicking on the username in the header. This will only appear when there is an active user. The edit button allows the user to change there image and/or there username.
-
+When logged in the user profile can be reached by clicking on the username in the header. This will only appear when there is an active user. The edit button allows the user to change there image and/or there usernam<
 ![homescreen](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501266403/Screen_Shot_2017-07-28_at_11.26.06_AM_gnndjv.png)
 
 ### Future Improvements
@@ -39,4 +38,3 @@ Users will be able to comment on products and have and ongoing discussion. Users
 * [Database Schema](docs/schema.md)
 * [API Endpoints](docs/api-endpoints.md)
 * [Design Wireframes](docs/wireframes)
-* [Sample Redux State](docs/sample-state.md)

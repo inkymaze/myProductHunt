@@ -22,7 +22,7 @@ const UserReducer = (state = _defaultState, action) => {
 
     case RECEIVE_USER_ERRORS:
       // const errors = action.errors;
-      return merge({}, state, {errors: action.errors.responseJSON});
+      return merge({}, state, {errors: action.errors});
 
     case CLEAR_USER_ERRORS:
       return merge({}, state, {errors: []});

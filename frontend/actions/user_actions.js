@@ -30,7 +30,7 @@ export const requestSingleUser = id => dispatch => {
 export const requestUpdateUser = user => dispatch => {
   return APIUtil.updateUser(user)
     .then( usr => {
-            dispatch(receiveUser(usr));
+          return dispatch(receiveUser(usr));
 
        },
      errors => dispatch(receiveUserErrors(errors.responseJSON))

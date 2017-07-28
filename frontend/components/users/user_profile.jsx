@@ -2,12 +2,28 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 // import UserProfileIndexContainer from './user_profile_index_container';
 import { Link } from 'react-router-dom';
+import UserEditForm from './user_edit_form';
 
 
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      isEditing: false,
+      user: {}};
+      this.updateUserState = this.updateUserState.bind(this);
+      this.toggleEdit = this.toggleEdit.bind(this);
+      this.saveUser = this.saveUser.bind(this);
   }
+
+  updateUserState(event) {
+   const field = event.target.name;
+   const user = this.state.user;
+   user.id = this.props.userId;
+  // console.log(this.props);
+   user[field] = event.target.value;
+   return this.setState({user: user});
+ }
 
 
   componentDidMount() {
@@ -16,17 +32,44 @@ class UserProfile extends React.Component {
     }
   }
 
+  saveUser(event) {
+   event.preventDefault();
+  //  console.log(this.state);
+   this.props.requestUpdateUser(this.state.user).then(this.setState({isEditing: false}));
+ }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId)
      {
       this.props.requestSingleUser(nextProps.match.params.userId);
     }
+
+
   }
+
+  toggleEdit() {
+   this.setState({isEditing: !this.state.isEditing});
+ }
+
+
 
   render() {
     const { user } = this.props;
-
     if (!user) return null;
+
+    console.log(this.props);
+
+
+    if (this.state.isEditing) {
+      return (
+      <div>
+        <h1 className='editUserTitle'>Edit Info Below</h1>
+        <UserEditForm user={this.props.user}
+          onSave={this.saveUser}
+          onChange={this.updateUserState}/>
+      </div>
+    );
+    }
 
 
     return (
@@ -43,19 +86,13 @@ class UserProfile extends React.Component {
           </div>
           <div className="user-show-info">
           <div className="editUserinfo">
-            <Link to={`/user/update/${user.id}`} style={{color:'black'}}>
-              Edit
-            </Link>
+            <button onClick={this.toggleEdit}>EDIT</button>
           </div>
         </div>
         </section>
 
-
         <section className="profileUpvotedProductsList">
-
         </section>
-
-
       </div>
     );
   }
@@ -64,3 +101,8 @@ class UserProfile extends React.Component {
 
 
 export default withRouter(UserProfile);
+
+
+// <Link to={`/user/update/${user.id}`} style={{color:'black'}}>
+//   Edit
+// </Link>
