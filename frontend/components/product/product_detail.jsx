@@ -98,27 +98,32 @@ class ProductDetail extends React.Component {
           <section className="showProductImages">
             <div className="product-show-info">
               <figure>
-                <img src={products.image_two_url} alt={products.name} />
+                <img src={products.image_two_url} />
               </figure>
               <figure>
-                <img src={products.image_three_url} alt={products.name} />
+                <img src={products.image_three_url} />
               </figure>
             </div>
             <div className="product-show-info">
               <figure>
-                <img src={products.image_four_url} alt={products.name} />
+                <img src={products.image_four_url}/>
               </figure>
               <figure>
-                <img src={products.image_five_url} alt={products.name} />
+                <img src={products.image_five_url} />
               </figure>
             </div>
           </section>
-          <section>
-            Hunter
+          <section className='productHuntedInfo'>
+              <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
+                <div className="hunterImage">
                   <Link to={`/user/${products.hunter_id}`} >
-                    hunter image here
+                    <img src={products.hunter_image} />
                   </Link>
+                </div>
+                <div>
+                  <li className="hunterInfoName">@{products.hunter}</li>
+                </div>
               </div>
           </section>
         </div>

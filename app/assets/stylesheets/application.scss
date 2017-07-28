@@ -24,6 +24,56 @@
       justify-content: space-around;
       margin: 30px;
 }
+.hunterInfo {
+  display: flex;
+}
+.hunterImage {
+
+  width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+img {
+
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+.productHuntedInfo {
+  background: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid #e8e8e8;
+
+}
+.productHunterListItem {
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  display: flex;
+  line-height: 18px;
+  text-align: start;
+  letter-spacing: 0.3px;
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 1%;
+  font-weight: 400;
+
+}
+
+.hunterInfoName {
+  display: flex;
+font-size: 13px;
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+line-height: 30px;
+margin-left: 30%;
+font-weight: 600;
+
+}
 
 .user-detail {
   padding: 60px 40px;
