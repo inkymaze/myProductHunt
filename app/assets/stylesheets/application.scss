@@ -17,52 +17,53 @@
  @import "~slick-carousel/slick/slick.css";
  @import "~slick-carousel/slick/slick-theme.css";
 
+ body {
+   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+ }
+
 .product-show-info {
   display: flex;
   padding-bottom: 10px;
   display: flex;
-      justify-content: space-around;
-      margin: 30px;
+  justify-content: space-around;
+  margin: 30px;
 }
+
 .hunterInfo {
   display: flex;
 }
-.hunterImage {
 
+.hunterImage {
   width: 30px;
   height: 30px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-
 }
 
 .edit-form-button {
   background: white;
-border: transparent;
-font-size: 14px;
-font-weight: 700;
+  border: transparent;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .editUsernameinput {
-    display: inline-flex;
-
-
+  display: inline-flex;
   justify-content: center;
-
   margin: 10%;
 }
 
 .editUserNameListItem {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .editUserTitle {
   font-size: 24px;
-      color: rgb(153, 153, 153);
-      justify-content: center;
-    display: flex;
-    margin: 8%;
+  color: rgb(153, 153, 153);
+  justify-content: center;
+  display: flex;
+  margin: 8%;
 }
 
 .field {
@@ -72,17 +73,16 @@ justify-content: center;
 .form-control {
   margin: 10%;
   width: 400px;
-    min-width: 66%;
-    line-height: 35px;
-    padding: 7px 0;
-    font-size: 22px;
-    color: #999;
-    text-align: left;
-    padding-left: 15px;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    border: 1px solid transparent;
-    border-bottom: 1px solid #999;
+  min-width: 66%;
+  line-height: 35px;
+  padding: 7px 0;
+  font-size: 22px;
+  color: #999;
+  text-align: left;
+  padding-left: 15px;
+  font-weight: 300;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #999;
 }
 
 
@@ -90,15 +90,14 @@ justify-content: center;
 .editFormCont {
   margin: 20%;
   min-width: 66%;
-      line-height: 35px;
-      padding: 7px 0;
-      font-size: 22px;
-      color: #999;
-      text-align: left;
-padding-left: 15px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-font-weight: 300;
-bordeR: 1px solid #999;
+  line-height: 35px;
+  padding: 7px 0;
+  font-size: 22px;
+  color: #999;
+  text-align: left;
+  padding-left: 15px;
+  font-weight: 300;
+  bordeR: 1px solid #999;
 }
 
 .editSubmitButton {
@@ -108,40 +107,37 @@ bordeR: 1px solid #999;
 
 .editForm {
   display: flex;
-    justify-content: center;
-
-
+  justify-content: center;
 }
 
 .btn-primary {
   text-decoration: none;
-color: white;
-background-color: #da552f;
-font-family: Helvetica,Arial,sans-serif;
-border: 1px solid #da552f;
-font-size: 12px;
-border-radius: 3px;
-padding: 7px 13px;
-font-weight: 500;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 7px 13px;
+  font-weight: 500;
 }
 
 img {
-
-    display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
 }
+
 .productHuntedInfo {
   background: #fff;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 3px;
-    border: 1px solid #e8e8e8;
-
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
 }
+
 .productHunterListItem {
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
   display: flex;
   line-height: 18px;
   text-align: start;
@@ -150,84 +146,76 @@ img {
   font-size: 14px;
   margin-bottom: 1%;
   font-weight: 400;
-
 }
 
 .hunterInfoName {
   display: flex;
-font-size: 13px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-line-height: 30px;
-margin-left: 30%;
-font-weight: 600;
-
+  font-size: 13px;
+  line-height: 30px;
+  margin-left: 30%;
+  font-weight: 600;
 }
 
 .userProfileCont {
   display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-detail {
   padding: 60px 40px;
-height: 140px;
-margin: 25px 15px;
-flex-flow: row;
-border-radius: 3px;
-background: none 50%/cover #505d6c;
-display: flex;
-max-width: 1000px;
-justify-content: space-between;
-min-width: 930px;
+  height: 140px;
+  margin: 25px 15px;
+  flex-flow: row;
+  border-radius: 3px;
+  background: none 50%/cover #505d6c;
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  min-width: 930px;
 }
 
 .user-show-info {
   display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+  justify-content: center;
+  align-items: center;
 }
 
 .editUserinfo {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 11px;
-    line-height: 16px;
-    text-align: center;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #000000;
-    background: #ffffff;
-    border-radius: 3px;
-    border-color: #e8e8e8;
-    height: 34px;
-    text-align: center;
-    display: inline-flex;
-    padding: 0 13px;
-    vertical-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 3px;
+  border-color: #e8e8e8;
+  height: 34px;
+  text-align: center;
+  display: inline-flex;
+  padding: 0 13px;
+  vertical-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .userProfileEditButton {
-
   width: 50px;
-font-weight: 500;
-font-size: 11px;
-padding: 0 13px;
-text-align: center;
-line-height: 34px;
-letter-spacing: 0.3px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-border: 1px solid transparent;
-background: #fff;
-border-color: #e8e8e8;
-border-radius: 3px;
-font-size: 12px;
-cursor: pointer;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 0 13px;
+  text-align: center;
+  line-height: 34px;
+  letter-spacing: 0.3px;
+  border: 1px solid transparent;
+  background: #fff;
+  border-color: #e8e8e8;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .user-show-name {
@@ -261,85 +249,81 @@ cursor: pointer;
 
 .uploadImagesPrompt {
   color: gray;
-    min-width: 66%;
-    line-height: 35px;
-    padding: 7px 0;
-    font-size: 22px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: left;
-    padding-left: 15px;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+  min-width: 66%;
+  line-height: 35px;
+  padding: 7px 0;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  padding-left: 15px;
+  font-weight: 300;
 }
 
 .productImages {
   background-image: url((unknown));
-width: 111px;
-height: 111px;
-background: transparent;
-border-radius: 3px;
-margin-top: 20px;
-margin-left: 5px;
-border: 2px dotted #999
+  width: 111px;
+  height: 111px;
+  background: transparent;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-left: 5px;
+  border: 2px dotted #999
 }
 
 .uploadLogoPrompt {
   color: gray;
-min-width: 66%;
-line-height: 35px;
-padding: 7px 0;
-font-size: 22px;
-display: flex;
-text-align: left;
-padding-left: 15px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-font-weight: 300;
-
+  min-width: 66%;
+  line-height: 35px;
+  padding: 7px 0;
+  font-size: 22px;
+  display: flex;
+  text-align: left;
+  padding-left: 15px;
+  font-weight: 300;
 }
 
 .uploadLogoField {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .profileUpvotedProductsList {
   padding: 60px 40px;
-min-height: 250px;
-margin: 25px 15px;
--webkit-box-orient: horizontal;
--webkit-box-direction: normal;
--ms-flex-flow: row;
-flex-flow: row;
-border-radius: 3px;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-max-width: 1000px;
-background: white;
-border: 1px solid #e8e8e8;
-min-width:930px;
+  min-height: 250px;
+  margin: 25px 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  background: white;
+  border: 1px solid #e8e8e8;
+  min-width:930px;
 }
 
 
 .uploadImagesField {
   display: flex;
-justify-content: flex-start;
-align-items: center;
-flex-wrap: wrap;
-flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .uploadFormButton {
-border: 2px dotted #999;
-width: 111px;
-height: 111px;
-background: transparent;
-border-radius: 3px;
-margin-top: 20px;
+  border: 2px dotted #999;
+  width: 111px;
+  height: 111px;
+  background: transparent;
+  border-radius: 3px;
+  margin-top: 20px;
 }
 
 .addProductButton {
@@ -348,17 +332,13 @@ margin-top: 20px;
   text-align: center;
   color: #999;
   font-weight: 300;
-
-
 }
 
 .productFormTitle {
   margin-top: 9%;
   font-size: 20px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-color: #999;
-padding-bottom: 45px;
-
+  color: #999;
+  padding-bottom: 45px;
 }
 .productForm input {
   min-width: 66%;
@@ -368,7 +348,6 @@ padding-bottom: 45px;
       color: #999;
       text-align: left;
 padding-left: 15px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 font-weight: 300;
 border: 1px solid transparent;
 border-bottom: 1px solid #999;
@@ -424,55 +403,55 @@ border-bottom: 1px solid #999;
 }
 .header-description {
   display: block;
-  padding-left: 5px;
-
-font-size: 13px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-color: #999;
-text-align: start;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  text-align: start;
 }
+
 .homepageHeader {
   display: flex;
-    justify-content: space-around;
-    padding: 0 120px;
-    min-width: 770px;
-    padding: 10px 80px;
-    border-bottom: 1px solid #e8e8e8;
-    max-height: 45px;
+  justify-content: space-around;
+  padding: 0 120px;
+  min-width: 770px;
+  padding: 10px 80px;
+  border-bottom: 1px solid #e8e8e8;
+  max-height: 45px;
 }
 
 .logoWithTitle {
   display: flex;
+  align-items: center;
 }
 
 .header-logo {
-
-  // padding-right: 5px;
+  width: 55px;
+  height: 55px;
+  margin: 0;
+  padding: 0;
 }
-
-
 
 .upvote-button {
   border: 1px solid transparent;
-background: #fff;
-border-color: #e8e8e8;
-border-radius: 3px;
-font-size: 12px;
-font-family: sans-serif;
-font-weight: 300;
-cursor: pointer;
+  background: #fff;
+  border-color: #e8e8e8;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 300;
+  cursor: pointer;
 }
-.product-detail {
-    background: #fff;
-    padding: 20px;
-    border-radius: 3px;
-    border: 1px solid #e8e8e8;
-    justify-content: space-between;
-    position: relative;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
 
+.product-detail {
+  background: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  justify-content: space-between;
+  position: relative;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-show-buttons {
@@ -480,43 +459,40 @@ cursor: pointer;
   padding-top: 10px;
   border-top: 1px solid #e8e8e8;
 }
-.product-show-name {
 
-font-size: 28px;
-font-weight: 600;
-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
-letter-spacing: .4px;
-line-height: 24px;
-color: #000000;
-padding-bottom: 8px;
-text-decoration: none;
-padding-left: 20px;
+.product-show-name {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  letter-spacing: .4px;
+  line-height: 24px;
+  color: #000000;
+  padding-bottom: 8px;
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 .product-show-description {
-
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
-
-font-size: 13px;
-text-align: left;
-line-height: 18px;
-color: #999;
-flex: 1 1 auto;
-margin: 0 10px 10px 1px;
-font-size: 16px;
-line-height: 20px;
-font-weight: 400;
-padding-left: 20px;
-
+  font-size: 13px;
+  text-align: left;
+  line-height: 18px;
+  color: #999;
+  flex: 1 1 auto;
+  margin: 0 10px 10px 1px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding-left: 20px;
 }
 
 .product-show {
-
-padding-left: 200px;
-padding-right: 200px;
-padding-top: 25px;
-min-width: 550px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 25px;
+  min-width: 550px;
 }
+
 .product-auth-errors li{
   display: flex;
   justify-content: center;
@@ -525,6 +501,7 @@ min-width: 550px;
   font-family: Helvetica,Arial,sans-serif;
   flex-wrap: nowrap;
 }
+
 .auth-errors {
   display: flex;
   justify-content: center;
@@ -555,9 +532,7 @@ min-width: 550px;
 .allproducts {
   width: 750px;
   min-width: 350px;
-
   background-color: white;
-
 }
 
 .products-list-item {
@@ -569,6 +544,7 @@ min-width: 550px;
   width: 100%;
   text-decoration: none;
   min-width: 450px;
+
   &:hover {
     background-color: #f9f9f9;
   }
@@ -596,32 +572,31 @@ min-width: 550px;
 
 .formCloseButton {
   position: absolute;
-color: white;
-font-size: 18px;
-text-align: center;
-margin-left: 10px;
-margin-top: 10px;
-z-index: 200;
-background: #bbbbbb;
-border-radius: 50%;
-width: 40px;
-height: 40px;
-border: 4px solid #bbbbbb;
-cursor: pointer;
-&:hover{
- background-color: #da552f;
- border: 4px solid #da552f;
-}
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  z-index: 200;
+  background: #bbbbbb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #bbbbbb;
+  cursor: pointer;
+
+  &:hover{
+   background-color: #da552f;
+   border: 4px solid #da552f;
+  }
 }
 
 .product-img {
-
   flex: .4;
   height: 100%;
 }
 
 .product-description {
-
   color: #999999;
   flex: 1;
   text-align: left;
@@ -629,25 +604,22 @@ cursor: pointer;
 }
 
 .getit-button {
-
-    color: #fff;
-    background-color: #da552f;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-    border: 1px solid #da552f;
-    font-size: 11px;
-    border-radius: 3px;
-    line-height: 16px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    height: 34px;
-    padding: 0 13px;
-    margin: 0 10px 0 0;
-    cursor: pointer;
-    min-width: 50px;
-    text-align: center;
-    letter-spacing: 0.3px
-
+  color: #fff;
+  background-color: #da552f;
+  border: 1px solid #da552f;
+  font-size: 11px;
+  border-radius: 3px;
+  line-height: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  padding: 0 13px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  min-width: 50px;
+  text-align: center;
+  letter-spacing: 0.3px
 }
 
 .auth-errors li {
@@ -661,11 +633,11 @@ cursor: pointer;
 
 .auth-prompt {
   padding-top: 125px;
-    padding-bottom: 50px;
-    color: gray;
-    font-size: 20px;
-    font-weight: 300;
-    font-family: sans-serif;
+  padding-bottom: 50px;
+  color: gray;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: sans-serif;
 }
 
 .modalCloseButton {
@@ -673,18 +645,19 @@ cursor: pointer;
   color: white;
   font-size: 18px;
   text-align: center;
-    top: 40px;
-    left: 40px;
-    z-index: 200;
-    background: #bbbbbb;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: 4px solid #bbbbbb;
-    &:hover{
-     background-color: #da552f;
-     border: 4px solid #da552f;
-   }
+  top: 40px;
+  left: 40px;
+  z-index: 200;
+  background: #bbbbbb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #bbbbbb;
+
+  &:hover{
+    background-color: #da552f;
+    border: 4px solid #da552f;
+  }
 }
 
 body {
@@ -729,11 +702,8 @@ form.login-form-box {
   font-size: 12px;
   padding: 7px 13px;
   font-weight: 500;
-
   flex-wrap: wrap;
-
 }
-
 
 .intro-greeting {
   width: 48%;
@@ -743,16 +713,10 @@ form.login-form-box {
 .intro-span {
   min-width: 500px;
   display: flex;
-  padding: 20px;
   justify-content: space-between;
-
   margin: 0 auto;
-  padding-left: 125px;
-  padding-right: 20%;
   border-bottom: 1px solid #e8e8e8;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
+  padding: 60px 20% 60px 125px;
 }
 
 .kitty img{
@@ -760,8 +724,8 @@ form.login-form-box {
   display: flex;
   justify-content: flex-end;
 }
-.intro-signup {
 
+.intro-signup {
   text-decoration: none;
   color: white;
   background-color: #da552f;
@@ -769,16 +733,15 @@ form.login-form-box {
   border: 1px solid #da552f;
   font-size: 12px;
   border-radius: 3px;
-
   font-weight: 500;
   font-size: 13px;
-    height: 42px;
-    padding: 10px 28px;
+  height: 42px;
+  padding: 10px 28px;
   &:hover{
-   background-color: #da552f;
-   opacity: 0.8;
-   color: white;
- }
+    background-color: #da552f;
+    opacity: 0.8;
+    color: white;
+  }
 }
 
 .intro-greeting h1 {
@@ -786,15 +749,15 @@ form.login-form-box {
   font-weight: 600;
   line-height: 34px;
   display: block;
-    margin-bottom: 15px
+  margin-bottom: 15px
 }
 
 .intro-greeting h6 {
   font-size: 15px;
-    line-height: 25px;
-    color: #999;
-    font-weight: 200;
-    margin: 10px 0 20px
+  line-height: 25px;
+  color: #999;
+  font-weight: 200;
+  margin: 10px 0 20px
 }
 .nav-buttons .signup{
   text-decoration: none;
@@ -807,20 +770,17 @@ form.login-form-box {
   padding: 7px 13px;
   font-weight: 500;
 
-
-
   &:hover{
    background-color: #da552f;
    opacity: 0.8;
    color: white;
- }
+  }
 }
 
 .nav-buttons {
   min-width: 160px;
   display: flex;
   justify-content: center;
-
 }
 
 .login-form-container {
@@ -831,61 +791,47 @@ form.login-form-box {
 
 .login-form input[type="submit"] {
   text-decoration: none;
-    color: white;
-    background-color: #da552f;
-    font-family: Helvetica,Arial,sans-serif;
-    border: 1px solid #da552f;
-    font-size: 12px;
-    border-radius: 3px;
-    font-weight: 500;
-    font-size: 14px;
-    height: 42px;
-    padding: 10px 28px;
-    margin: 4px;
-
-}
-
-.header-button {
-
-  text-decoration: none;
-color: white;
-background-color: #da552f;
-font-family: Helvetica,Arial,sans-serif;
-border: 1px solid #da552f;
-font-size: 12px;
-border-radius: 3px;
-padding: 7px 13px;
-font-weight: 500;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  height: 42px;
+  padding: 10px 28px;
+  margin: 4px;
 }
 
 .logout-header-button {
   margin-left: 10px;
   text-decoration: none;
-color: white;
-background-color: #da552f;
-font-family: Helvetica,Arial,sans-serif;
-border: 1px solid #da552f;
-font-size: 12px;
-border-radius: 3px;
-padding: 7px 13px;
-font-weight: 500;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 7px 13px;
+  font-weight: 500;
 }
 
 
 .edit-submit-button {
   margin-left: 10px;
   text-decoration: none;
-color: white;
-background-color: #da552f;
-font-family: Helvetica,Arial,sans-serif;
-border: 1px solid #da552f;
-font-size: 12px;
-border-radius: 3px;
-padding: 7px 13px;
-font-weight: 500;
-padding: 10px 15px;
-    font-size: 19px;
-    font-weight: 500;
+  color: white;
+  background-color: #da552f;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 1px solid #da552f;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 7px 13px;
+  font-weight: 500;
+  padding: 10px 15px;
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .submit-guestlogin-button {
@@ -898,17 +844,17 @@ padding: 10px 15px;
 
 .header-title {
   color: #da552f;
-    padding-left: 4px;
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 17px;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 17px;
 }
+
 header img {
- max-height: 100%;
- padding-left: 10px
+  max-height: 100%;
+  padding-left: 10px
 }
+
 header {
   display: flex;
   border-bottom: 1px solid #e8e8e8;
@@ -921,20 +867,14 @@ header {
   padding-left: 230px;
   padding-right: 230px;
   margin: 0 auto;
-
-
 }
-
 
 header input[type="text"] {
   width: 280px;
   border-radius: 3px;
-
   border: 1px solid #e8e8e8;
   font-size: 13px
 }
-
-
 
 a.login:hover {
   background-color: #e8e8e8;
@@ -949,6 +889,7 @@ input.login-input {
   font-family: sans-serif;
   font-weight: 300;
 }
+
 input.signup-buttons {
   display: flex;
   justify-content: center;
@@ -962,15 +903,14 @@ input.signup-buttons {
 
 .login-form input[value="Password"] {
   opacity: .5;
-
 }
 
 .form-buttons {
   display: flex;
-justify-content: center;
-align-items: center;
-text-transform: uppercase;
-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  flex-direction: column;
 }
 
 .login-form-box {
@@ -982,17 +922,16 @@ flex-direction: column;
 
 .search-bar {
   background: #fff;
-border: 1px solid #e8e8e8;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-height: 30px;
-padding: 0 10px 0 32px;
-width: 100%;
-min-width: 275px;
-font-size: 13px;
-font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
-line-height: normal;
-border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 10px 0 32px;
+  width: 100%;
+  min-width: 275px;
+  font-size: 13px;
+  line-height: normal;
+  border-radius: 3px;
 }
 
 .login-form{
