@@ -14,8 +14,7 @@
  *= require_self
  */
  @import 'reset';
- @import "~slick-carousel/slick/slick.css";
- @import "~slick-carousel/slick/slick-theme.css";
+
 
  body {
    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -48,6 +47,26 @@
   font-weight: 700;
 }
 
+.editProfilePage {
+  background: #f9f9f9;
+
+}
+
+.editProfileForm {
+  max-width: 1100px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: 320px;
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+}
 .editUsernameinput {
   display: inline-flex;
   justify-content: center;
@@ -56,14 +75,25 @@
 
 .editUserNameListItem {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.editProfileTitle {
+  align-items: baseline;
+border-bottom: 1px solid #e8e8e8;
 }
 .editUserTitle {
-  font-size: 24px;
-  color: rgb(153, 153, 153);
-  justify-content: center;
+  align-items: baseline;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+
+  font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+
+  color: #000;
   display: flex;
-  margin: 8%;
+
 }
 
 .field {
@@ -94,10 +124,13 @@
   padding: 7px 0;
   font-size: 22px;
   color: #999;
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
   text-align: left;
-  padding-left: 15px;
+  padding: 0 15px;
   font-weight: 300;
-  bordeR: 1px solid #999;
+
 }
 
 .editSubmitButton {
@@ -107,7 +140,7 @@
 
 .editForm {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .btn-primary {
@@ -925,25 +958,15 @@ input.signup-buttons {
   display: flex;
 }
 
-.search {
-  // font-size: 13px;
-  // font-weight: 400;
-  // line-height: 18px;
-  // color: #999;
-  // // padding: 0 10px 0 32px;
-  // min-width: 300px;
-  // line-height: normal;
-  // border-radius: 3px;
-  // background: #fff;
-  // border: 1px solid #e8e8e8;
-  // -webkit-box-sizing: border-box;
-  // box-sizing: border-box;
-  // height: 30px;
+.header-description {
+  font-weight: 400;
+}
 
+.search {
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  width: 300px;
-  height: 28px;
+  min-width: 300px;
+  height: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -953,7 +976,7 @@ input.signup-buttons {
   width: 233px;
   border: none;
   font-size: 13px;
-  color: #999999;
+  color: #999;
   font-weight: 400;
 }
 

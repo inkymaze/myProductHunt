@@ -60,11 +60,18 @@ class UserProfile extends React.Component {
 
     if (this.state.isEditing) {
       return (
-      <div className="editFormCont">
-        <h1 className='editUserTitle'>Edit Info Below</h1>
-        <UserEditForm user={this.props.user}
-          onSave={this.saveUser}
-          onChange={this.updateUserState}/>
+      <div className="editProfilePage">
+        <div className="editProfileForm">
+          <h2>Settings</h2>
+          <div className="editFormCont">
+            <div className="editProfileTitle">
+              <h1 className='editUserTitle'>My Details</h1>
+            </div>
+            <UserEditForm user={this.props.user}
+              onSave={this.saveUser}
+              onChange={this.updateUserState}/>
+          </div>
+        </div>
       </div>
     );
     }

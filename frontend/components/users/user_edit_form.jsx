@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import TextInput from '../common/TextInput';
 
 class UserEditForm extends React.Component {
@@ -10,7 +11,7 @@ class UserEditForm extends React.Component {
         <form>
           <div className="editUsernameInput">
             <div>
-              <h2 className='editUserNameListItem'>Username:</h2>
+              <h3 className='editUserNameListItem'>Username:</h3>
             </div>
             <div>
               <TextInput
@@ -24,7 +25,6 @@ class UserEditForm extends React.Component {
             <input
               type="submit"
               disabled={this.props.saving}
-              className="btn-primary"
               onClick={this.props.onSave}
               className="edit-submit-button"/>
           </div>
@@ -35,9 +35,9 @@ class UserEditForm extends React.Component {
 }
 
 UserEditForm.propTypes = {
-  user: React.PropTypes.object.isRequired,
-  onSave: React.PropTypes.func.isRequired,
-  onChange: React.PropTypes.func.isRequired
+  user: PropTypes.object.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default UserEditForm;
