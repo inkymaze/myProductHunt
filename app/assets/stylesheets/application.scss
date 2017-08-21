@@ -920,18 +920,50 @@ input.signup-buttons {
   min-width: 50%;
 }
 
-.search-bar {
-  background: #fff;
+.search-form {
+  align-items: center;
+  display: flex;
+}
+
+.search {
+  // font-size: 13px;
+  // font-weight: 400;
+  // line-height: 18px;
+  // color: #999;
+  // // padding: 0 10px 0 32px;
+  // min-width: 300px;
+  // line-height: normal;
+  // border-radius: 3px;
+  // background: #fff;
+  // border: 1px solid #e8e8e8;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+  // height: 30px;
+
   border: 1px solid #e8e8e8;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 30px;
-  padding: 0 10px 0 32px;
-  width: 100%;
-  min-width: 275px;
-  font-size: 13px;
-  line-height: normal;
   border-radius: 3px;
+  width: 300px;
+  height: 28px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-bar {
+  width: 233px;
+  border: none;
+  font-size: 13px;
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-icon {
+  fill: #999;
+  height: 14px;
+  left: 8px;
+  top: 8px;
+  width: 14px;
+  padding: 0 5px;
 }
 
 .login-form{
