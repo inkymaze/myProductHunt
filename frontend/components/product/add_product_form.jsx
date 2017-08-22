@@ -39,11 +39,9 @@ class AddProductForm extends React.Component {
     }
 
     handleCloudinary(field) {
-
       return (e) => {
       e.preventDefault();
       cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, function(error, results) {
-
           if(error) {
             console.log(error);
           } else {

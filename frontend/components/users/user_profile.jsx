@@ -41,13 +41,12 @@ class UserProfile extends React.Component {
      {
       this.props.requestSingleUser(nextProps.match.params.userId);
     }
-
-
   }
 
   toggleEdit() {
    this.setState({isEditing: !this.state.isEditing});
  }
+
 
 
 
@@ -62,7 +61,7 @@ class UserProfile extends React.Component {
       return (
       <div className="editProfilePage">
         <div className="editProfileForm">
-          <h2>Settings</h2>
+          <h2 >Settings</h2>
           <div className="editFormCont">
             <div className="editProfileTitle">
               <h1 className='editUserTitle'>My Details</h1>
