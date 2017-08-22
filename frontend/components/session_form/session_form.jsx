@@ -10,10 +10,9 @@ const customStyles = {
   right           : 0,
   bottom          : 0,
   background: 'rgba(255,255,255,0.97)',
-
   zIndex          : 10
-},
-content : {
+ },
+  content : {
   position                   : 'absolute',
   height: "350px",
   width: "350px",
@@ -24,19 +23,20 @@ content : {
   overflow                   : 'auto',
   WebkitOverflowScrolling    : 'touch',
   outline                    : 'none',
-
   zIndex          : 11,
   opacity         : 70,
   transition      : 'opacity 0.5s'
-}
+ }
 };
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modalIsOpen: true,
       username: '',
-      password: ''
+      password: '',
+      image_url: "https://res.cloudinary.com/dbyoymbpd/image/upload/v1503434829/original_msduei.jpg"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);

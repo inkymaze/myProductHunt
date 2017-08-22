@@ -94,9 +94,7 @@ class UserProfile extends React.Component {
         </section>
 
         <section className="profileUpvotedProductsList">
-          <UserProfileIndexContainer
-              allIds={user.hunted_products}
-              userId={user.id}/>
+
         </section>
       </div>
     );
@@ -105,3 +103,7 @@ class UserProfile extends React.Component {
 
 
 export default withRouter(UserProfile);
+
+// <UserProfileIndexContainer
+//     allIds={user.hunted_products}
+//     userId={user.id}/>

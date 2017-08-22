@@ -18,6 +18,12 @@ class UserEditForm extends React.Component {
     };
   }
 
+    update(field) {
+        return e => this.setState({
+          [field]: e.currentTarget.value
+        });
+      }
+
 
 
   render() {
@@ -40,7 +46,7 @@ class UserEditForm extends React.Component {
               <h3 className='editListItem'>Headline</h3>
             </div>
             <div>
-              <TextInput name="headline" label="headline" placeholder={this.props.user.headline}
+              <TextInput name="headline" placeholder={this.props.user.headline}
                 onChange={this.props.onChange}/>
             </div>
           </div>
@@ -52,9 +58,9 @@ class UserEditForm extends React.Component {
             <button
               className="editProfileImage"
               name="image_url"
-              label="image_url"
+
               onClick={this.handleCloudinary("image_url").bind(this)}
-              onChange={this.props.onChange}
+
               style={{backgroundImage:`url(${this.props.user.image_url})`}}>
             </button>
           </div>
@@ -66,7 +72,7 @@ class UserEditForm extends React.Component {
         <input
           type="submit"
           onClick={this.props.onSave}
-          className="edit-submit-button" placeholder="Update"/>
+          className="edit-submit-button" />
       </div>
     </div>
     );
