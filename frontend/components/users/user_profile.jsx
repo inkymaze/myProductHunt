@@ -16,12 +16,13 @@ class UserProfile extends React.Component {
   }
 
   updateUserState(event) {
-   const field = event.target.name;
-   const user = this.state.user;
-   user.id = this.props.userId;
-   user[field] = event.target.value;
-   return this.setState({user: user});
- }
+    const field = event.target.name;
+    const user = this.state.user;
+    user.id = this.props.userId;
+    user[field] = event.target.value;
+    return this.setState({user: user});
+  }
+
 
 
   componentDidMount() {
@@ -54,19 +55,20 @@ class UserProfile extends React.Component {
     const { user } = this.props;
     if (!user) return null;
 
-    console.log(this.props);
+    console.log("Props Below");
+    console.log(user);
 
 
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
         <div className="editProfileForm">
-          <h2 >Settings</h2>
+          <h2>Settings</h2>
           <div className="editFormCont">
             <div className="editProfileTitle">
               <h1 className='editUserTitle'>My Details</h1>
             </div>
-            <UserEditForm user={this.props.user}
+            <UserEditForm user={user}
               onSave={this.saveUser}
               onChange={this.updateUserState}/>
           </div>
@@ -80,11 +82,12 @@ class UserProfile extends React.Component {
       <div className="userProfileCont">
         <section className="user-detail">
           <div className="user-show-info">
-            <figure className="userProfileImage">
-              <img src={user.image_url} alt={user.username} />
+            <figure>
+              <img className="userProfileImage" src={user.image_url} alt={user.username} />
             </figure>
             <ul>
               <li className="user-show-name">@{user.username}</li>
+              <li className="user-show-name">headline here:{user.headline}</li>
 
             </ul>
           </div>

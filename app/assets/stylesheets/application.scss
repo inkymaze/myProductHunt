@@ -99,10 +99,14 @@
   width: 111px;
     height: 111px;
     background: transparent;
-    border-radius: 3px;
+  
 
     margin: 10px;
     border: 2px dotted #999;
+
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
 
 
 }
@@ -229,6 +233,11 @@ img {
   justify-content: center;
 }
 
+.userProfileImage {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+}
 .user-detail {
   padding: 60px 40px;
   height: 140px;

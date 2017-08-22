@@ -17,6 +17,8 @@ class UserEditForm extends React.Component {
     };
   }
 
+
+
   render() {
 
     return (
@@ -45,11 +47,11 @@ class UserEditForm extends React.Component {
             <div>
               <h3 className='editListItem'>Profile Header</h3>
             </div>
-              <h3 className='editListItemDesc'>Upload an Image</h3>
+              <h3 className='editListItemDesc'>Upload an Image:</h3>
             <button
               className="editProfileImage"
               onClick={this.handleCloudinary("image_url")}
-              onChange={this.props.onChange}
+
               style={{backgroundImage:`url(${this.props.user.image_url})`}}>
             </button>
 
@@ -61,9 +63,8 @@ class UserEditForm extends React.Component {
       <div className="editSubmitButton">
         <input
           type="submit"
-          disabled={this.props.saving}
           onClick={this.props.onSave}
-          className="edit-submit-button"/>
+          className="edit-submit-button" placeholder="Update"/>
       </div>
     </div>
     );
