@@ -10,9 +10,7 @@ const mapStateToProps = ({ products }) => ({
 const mapDispatchToProps = dispatch => ({
   requestProducts: () => dispatch(requestProducts()),
   requestProduct: (id) => dispatch(requestProduct(id))
-
 });
-
 
 export default connect (
   mapStateToProps,

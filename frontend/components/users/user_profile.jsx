@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import UserEditForm from './user_edit_form';
+import UserProfileIndexContainer from './user_profile_index_container';
 
 
 class UserProfile extends React.Component {
@@ -22,8 +23,6 @@ class UserProfile extends React.Component {
     user[field] = event.target.value;
     return this.setState({user: user});
   }
-
-
 
   componentDidMount() {
     if (!this.props.user) {
@@ -48,16 +47,12 @@ class UserProfile extends React.Component {
    this.setState({isEditing: !this.state.isEditing});
  }
 
-
-
-
   render() {
     const { user } = this.props;
     if (!user) return null;
 
-    console.log("Props Below");
+    console.log(this.props);
     console.log(user);
-
 
     if (this.state.isEditing) {
       return (
@@ -70,13 +65,13 @@ class UserProfile extends React.Component {
             </div>
             <UserEditForm user={user}
               onSave={this.saveUser}
-              onChange={this.updateUserState}/>
+              onChange={this.updateUserState}
+              />
           </div>
         </div>
       </div>
     );
-    }
-
+  }
 
     return (
       <div className="userProfileCont">
@@ -99,6 +94,9 @@ class UserProfile extends React.Component {
         </section>
 
         <section className="profileUpvotedProductsList">
+          <UserProfileIndexContainer
+              allIds={user.hunted_products}
+              userId={user.id}/>
         </section>
       </div>
     );
@@ -106,10 +104,4 @@ class UserProfile extends React.Component {
 }
 
 
-
 export default withRouter(UserProfile);
-
-
-// <Link to={`/user/update/${user.id}`} style={{color:'black'}}>
-//   Edit
-// </Link>

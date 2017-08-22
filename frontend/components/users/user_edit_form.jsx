@@ -11,6 +11,7 @@ class UserEditForm extends React.Component {
         if(error) {
           console.log(error);
         } else {
+          this.props.user.image_url = results[0].url;
           this.setState({ [field]: results[0].url });
         }
       }.bind(this));
@@ -50,11 +51,12 @@ class UserEditForm extends React.Component {
               <h3 className='editListItemDesc'>Upload an Image:</h3>
             <button
               className="editProfileImage"
-              onClick={this.handleCloudinary("image_url")}
-
+              name="image_url"
+              label="image_url"
+              onClick={this.handleCloudinary("image_url").bind(this)}
+              onChange={this.props.onChange}
               style={{backgroundImage:`url(${this.props.user.image_url})`}}>
             </button>
-
           </div>
 
         </form>
@@ -75,6 +77,7 @@ UserEditForm.propTypes = {
   user: PropTypes.object.isRequired,
   onSave: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired
+
 };
 
 export default UserEditForm;
