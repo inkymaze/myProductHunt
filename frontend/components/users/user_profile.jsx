@@ -19,8 +19,9 @@ class UserProfile extends React.Component {
   updateUserState(event) {
     const field = event.target.name;
     const user = this.state.user;
+  
     user.id = this.props.userId;
-    
+
     user[field] = event.target.value;
     return this.setState({user: user});
   }

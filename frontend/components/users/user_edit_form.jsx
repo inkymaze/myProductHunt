@@ -11,13 +11,15 @@ class UserEditForm extends React.Component {
         if(error) {
           console.log(error);
         } else {
+          // issue = cant pass on user id to state
+
           //   console.log(this.props.user);
           // // console.log(field);
-          console.log(this.props);
-          // this.props.user.id = this.props.userId;
-          // this.props.user[field] = results[0].url;
-          // console.log(this.props.userId);
-          // this.setState({ [this.props.user]: {[field]: results[0].url }});
+          // console.log(this.state);
+          // this.props.user.id
+          this.props.user[field] = results[0].url;
+          console.log(this.props.user.id);
+          this.setState({ [this.props.user]: {id: this.props.user.id, [field]: results[0].url }});
 
         }
       }.bind(this));
@@ -43,15 +45,6 @@ class UserEditForm extends React.Component {
           </div>
           <div className="editUsernameInput">
             <div>
-              <h3 className='editListItem'>Headline</h3>
-            </div>
-            <div>
-              <TextInput name="headline" label="headline" placeholder={this.props.user.headline}
-                onChange={this.props.onChange}/>
-            </div>
-          </div>
-          <div className="editUsernameInput">
-            <div>
               <h3 className='editListItem'>Profile Header</h3>
             </div>
               <h3 className='editListItemDesc'>Upload an Image:</h3>
@@ -66,10 +59,10 @@ class UserEditForm extends React.Component {
         </form>
       </div>
       <div className="editSubmitButton">
-        <input
+        <button
           type="submit"
           onClick={this.props.onSave}
-          className="edit-submit-button" />
+          className="edit-submit-button">UPDATE</button>
       </div>
     </div>
     );

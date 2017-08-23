@@ -99,7 +99,7 @@
   width: 111px;
     height: 111px;
     background: transparent;
-  
+
 
     margin: 10px;
     border: 2px dotted #999;
@@ -172,7 +172,9 @@ border-bottom: 1px solid #e8e8e8;
 
 .editSubmitButton {
   display: flex;
-  justify-content: center;
+
+  justify-content: flex-start;
+  padding: 8px;
 }
 
 .editForm {
@@ -894,7 +896,6 @@ form.login-form-box {
 
 
 .edit-submit-button {
-  margin-left: 10px;
   text-decoration: none;
   color: white;
   background-color: #da552f;
@@ -903,10 +904,11 @@ form.login-form-box {
   font-size: 12px;
   border-radius: 3px;
   padding: 7px 13px;
-  font-weight: 500;
+  font-weight: 450;
   padding: 10px 15px;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
 }
 
 .submit-guestlogin-button {
