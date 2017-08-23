@@ -99,7 +99,6 @@ class SessionForm extends React.Component {
       this.openModal();
     }
 
-
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>

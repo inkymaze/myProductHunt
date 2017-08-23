@@ -11,18 +11,18 @@ class UserEditForm extends React.Component {
         if(error) {
           console.log(error);
         } else {
-          this.props.user.image_url = results[0].url;
-          this.setState({ [field]: results[0].url });
+          //   console.log(this.props.user);
+          // // console.log(field);
+          console.log(this.props);
+          // this.props.user.id = this.props.userId;
+          // this.props.user[field] = results[0].url;
+          // console.log(this.props.userId);
+          // this.setState({ [this.props.user]: {[field]: results[0].url }});
+
         }
       }.bind(this));
     };
   }
-
-    update(field) {
-        return e => this.setState({
-          [field]: e.currentTarget.value
-        });
-      }
 
 
 
@@ -46,7 +46,7 @@ class UserEditForm extends React.Component {
               <h3 className='editListItem'>Headline</h3>
             </div>
             <div>
-              <TextInput name="headline" placeholder={this.props.user.headline}
+              <TextInput name="headline" label="headline" placeholder={this.props.user.headline}
                 onChange={this.props.onChange}/>
             </div>
           </div>
@@ -55,18 +55,15 @@ class UserEditForm extends React.Component {
               <h3 className='editListItem'>Profile Header</h3>
             </div>
               <h3 className='editListItemDesc'>Upload an Image:</h3>
-            <button
-              className="editProfileImage"
-              name="image_url"
-
-              onClick={this.handleCloudinary("image_url").bind(this)}
-
-              style={{backgroundImage:`url(${this.props.user.image_url})`}}>
-            </button>
+                <input
+                  className="editProfileImage"
+                  name="image_url"
+                  onClick={this.handleCloudinary("image_url").bind(this)}
+                  style={{backgroundImage:`url(${this.props.user.image_url})`}}
+                  onChange={this.props.onChange}
+                />
           </div>
-
         </form>
-
       </div>
       <div className="editSubmitButton">
         <input

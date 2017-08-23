@@ -20,6 +20,7 @@ class UserProfile extends React.Component {
     const field = event.target.name;
     const user = this.state.user;
     user.id = this.props.userId;
+    
     user[field] = event.target.value;
     return this.setState({user: user});
   }
@@ -51,9 +52,6 @@ class UserProfile extends React.Component {
     const { user } = this.props;
     if (!user) return null;
 
-    console.log(this.props);
-    console.log(user);
-
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -82,8 +80,6 @@ class UserProfile extends React.Component {
             </figure>
             <ul>
               <li className="user-show-name">@{user.username}</li>
-              <li className="user-show-name">headline here:{user.headline}</li>
-
             </ul>
           </div>
           <div className="user-show-info">
@@ -93,14 +89,13 @@ class UserProfile extends React.Component {
         </div>
         </section>
 
-        <section className="profileUpvotedProductsList">
-
+        <section className="profileHuntedList">
         </section>
+
       </div>
     );
   }
 }
-
 
 export default withRouter(UserProfile);
 

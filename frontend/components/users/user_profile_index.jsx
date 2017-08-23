@@ -15,15 +15,37 @@ class UserProfileIndex extends React.Component {
   }
 
   render () {
-    const { users } = this.props;
-    let userProducts = (<UserProfileIndexContainer products={users.products}
-       userId={users.id}/>);
+    // const { users } = this.props;
+    // let userProducts = (<UserProfileIndexContainer products={users.products}
+    //    userId={users.id}/>);
+    //
+    //
+    // return (
+    //
+    //   { userProducts }
+    // );
+    let orderedProducts = "";
+
+    orderedProducts =  this.props.allIds.map((product_id, index) => {
+      let products = this.props.products[product_id];
+
+      return (
+        <ProductListItem
+          key={index}
+          products={products}
+          loggedIn={this.props.loggedIn}
+          currentUser={this.props.currentUser}
+          requestProduct={this.props.requestProduct}
+          className="userProfileIndexItem"/>
+      );
+    });
 
 
-    return (
-
-      { userProducts }
-    );
+return (
+  <section>
+    { orderedProducts }
+  </section>
+);
   }
 
 }
