@@ -12,7 +12,6 @@ class UserEditForm extends React.Component {
           console.log(error);
         } else {
           // issue = cant pass on user id to state
-
           //   console.log(this.props.user);
           // // console.log(field);
           // console.log(this.state);
@@ -20,7 +19,6 @@ class UserEditForm extends React.Component {
           this.props.user[field] = results[0].url;
           console.log(this.props.user.id);
           this.setState({ [this.props.user]: {id: this.props.user.id, [field]: results[0].url }});
-
         }
       }.bind(this));
     };

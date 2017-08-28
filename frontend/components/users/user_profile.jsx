@@ -16,12 +16,32 @@ class UserProfile extends React.Component {
       this.saveUser = this.saveUser.bind(this);
   }
 
+
+  handleCloudinary(field) {
+    return (e) => {
+    e.preventDefault();
+    cloudinary.openUploadWidget(window.CLOUDINARY_OPTIONS, function(error, results) {
+        if(error) {
+          console.log(error);
+        } else {
+          // issue = cant pass on user id to state
+          //   console.log(this.props.user);
+          // // console.log(field);
+          // console.log(this.state);
+          // this.props.user.id
+          this.props.user[field] = results[0].url;
+          console.log(this.props.user.id);
+          this.setState({ [this.props.user]: {id: this.props.user.id, [field]: results[0].url }});
+          this.props.onChange;
+        }
+      }.bind(this));
+    };
+  }
+
   updateUserState(event) {
     const field = event.target.name;
     const user = this.state.user;
-  
     user.id = this.props.userId;
-
     user[field] = event.target.value;
     return this.setState({user: user});
   }
@@ -64,8 +84,7 @@ class UserProfile extends React.Component {
             </div>
             <UserEditForm user={user}
               onSave={this.saveUser}
-              onChange={this.updateUserState}
-              />
+              onChange={this.updateUserState}/>
           </div>
         </div>
       </div>
