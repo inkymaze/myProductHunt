@@ -11,18 +11,22 @@ class UserEditForm extends React.Component {
         if(error) {
           console.log(error);
         } else {
-          // issue = cant pass on user id to state
+          // issue is that I cant pass on user id to state
           //   console.log(this.props.user);
           // // console.log(field);
           // console.log(this.state);
           // this.props.user.id
           this.props.user[field] = results[0].url;
-          console.log(this.props.user.id);
-          this.setState({ [this.props.user]: {id: this.props.user.id, [field]: results[0].url }});
+          // console.log(this.props.user.id);
+          this.setState({ user: {id: [this.props.user.id], [field]: results[0].url }});
         }
       }.bind(this));
     };
   }
+
+// paste in the input for editting image and pair with the handleCloudinary field:
+// onClick={this.handleCloudinary("image_url").bind(this)}
+// style={{backgroundImage:`url(${this.props.user.image_url})`}}
 
 
 
@@ -46,11 +50,11 @@ class UserEditForm extends React.Component {
               <h3 className='editListItem'>Profile Header</h3>
             </div>
               <h3 className='editListItemDesc'>Upload an Image:</h3>
-                <input
+                <TextInput
                   className="editProfileImage"
                   name="image_url"
-                  onClick={this.handleCloudinary("image_url").bind(this)}
-                  style={{backgroundImage:`url(${this.props.user.image_url})`}}
+                  placeholder="Paste a Image Address here"
+
                   onChange={this.props.onChange}
                 />
           </div>
