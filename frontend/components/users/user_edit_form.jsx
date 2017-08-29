@@ -49,12 +49,10 @@ class UserEditForm extends React.Component {
             <div>
               <h3 className='editListItem'>Profile Header</h3>
             </div>
-              <h3 className='editListItemDesc'>Upload an Image:</h3>
                 <TextInput
                   className="editProfileImage"
                   name="image_url"
-                  placeholder="Paste a Image Address here"
-
+                  placeholder="Paste an image address here"
                   onChange={this.props.onChange}
                 />
           </div>

@@ -5,12 +5,12 @@ import { requestProduct,
 
 
 const mapStateToProps = (state, ownProps) => ({
-  products: state.products.byId,
+  allProducts: state.products.byId,
   loggedIn: Boolean(state.session.currentUser),
   userId: ownProps.userId,
   currentUser: (state.session.currentUser) ? state.session.currentUser.id : null,
   errors: state.products.errors,
-  allIds: ownProps.allIds
+  allProductIds: ownProps.allProductIds
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
 
   updateUserState(event) {
     const field = event.target.name;
-    console.log(field);
+
     const user = this.state.user;
     user.id = this.props.userId;
     user[field] = event.target.value;
@@ -34,6 +34,7 @@ class UserProfile extends React.Component {
     if (!this.props.user) {
       this.props.requestSingleUser(this.props.userId);
     }
+    
   }
 
   saveUser(event) {
@@ -52,6 +53,8 @@ class UserProfile extends React.Component {
   toggleEdit() {
    this.setState({isEditing: !this.state.isEditing});
  }
+
+
 
   render() {
     const { user } = this.props;
@@ -76,6 +79,7 @@ class UserProfile extends React.Component {
   }
 
     return (
+
       <div className="userProfileCont">
         <section className="user-detail">
           <div className="user-show-info">
@@ -94,6 +98,9 @@ class UserProfile extends React.Component {
         </section>
 
         <section className="profileHuntedList">
+          <UserProfileIndexContainer
+              allProductIds={user.products}
+              userId={user.id}/>
         </section>
 
       </div>
