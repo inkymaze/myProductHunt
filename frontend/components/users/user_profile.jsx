@@ -101,7 +101,7 @@ class UserProfile extends React.Component {
           </div>
         </div>
         </section>
-
+        <div className="userProfileProdHeader"> {orderedProducts.length} hunted</div>
         <section className="userProfileProducts">
           { orderedProducts }
         </section>

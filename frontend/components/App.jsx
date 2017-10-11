@@ -14,6 +14,7 @@ import AddProductFormContainer from './product/add_product_form_container';
 import ProductListContainer from './product/product_list_container';
 import ProductDetailContainer from './product/product_detail_container';
 import UserProfileContainer from './users/user_profile_container';
+import SearchContainer from './search/search_container';
 import Header from './header/header';
 
 
@@ -30,7 +31,8 @@ const App = () => (
         <ProtectedRoute exact path='/products/new' component={AddProductFormContainer} />
         <Route exact path='/user/:userId' component={UserProfileContainer} />
         <Route path='/products/:productId' component={ProductDetailContainer} />
-        <Route path="/" component={ProductListContainer} />
+        <Route exact path="/" component={ProductListContainer} />
+        <Route path ="/search/:searchQuery" component={SearchContainer} />
 
       </Switch>
   </div>
