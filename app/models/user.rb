@@ -33,9 +33,19 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  def hunted_ids
+    product_ids = []
+    self.products.each do |product|
+      product_ids.push(product.id)
+    end
+    product_ids
+  end
+
   private
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64(16)
   end
+
+
 end

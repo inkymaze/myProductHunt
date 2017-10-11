@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveProducts = receiveProducts;
   window.receiveProduct = receiveProduct;
   window.fetchProducts = APIUtil.fetchProducts;
+  window.fetchUserProducts = APIUtil.fetchUserProducts;
   window.fetchProduct = APIUtil.fetchProduct;
   window.getState = store.getState;
   window.dispatch = store.dispatch;

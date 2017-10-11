@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import UserEditForm from './user_edit_form';
+import ProductListItem from '../product/product_list_item';
 import UserProfileIndexContainer from './user_profile_index_container';
-
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -16,14 +16,8 @@ class UserProfile extends React.Component {
       this.saveUser = this.saveUser.bind(this);
   }
 
-
-
-
-
-
   updateUserState(event) {
     const field = event.target.name;
-
     const user = this.state.user;
     user.id = this.props.userId;
     user[field] = event.target.value;
@@ -33,8 +27,9 @@ class UserProfile extends React.Component {
   componentDidMount() {
     if (!this.props.user) {
       this.props.requestSingleUser(this.props.userId);
+
     }
-    
+
   }
 
   saveUser(event) {
@@ -54,12 +49,11 @@ class UserProfile extends React.Component {
    this.setState({isEditing: !this.state.isEditing});
  }
 
-
-
   render() {
     const { user } = this.props;
     if (!user) return null;
-
+    console.log('user profile main props',this.props);
+    console.log('user products?', this.props.userId);
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -77,6 +71,17 @@ class UserProfile extends React.Component {
       </div>
     );
   }
+
+  let orderedProducts = "";
+  orderedProducts = user.products.map((product, index) => {
+
+    return (
+      <ProductListItem
+        key={index}
+        products={product}
+        className="userProfileIndexItem"/>
+      );
+    });
 
     return (
 
@@ -97,10 +102,8 @@ class UserProfile extends React.Component {
         </div>
         </section>
 
-        <section className="profileHuntedList">
-          <UserProfileIndexContainer
-              allProductIds={user.products}
-              userId={user.id}/>
+        <section className="userProfileProducts">
+          { orderedProducts }
         </section>
 
       </div>
@@ -111,5 +114,5 @@ class UserProfile extends React.Component {
 export default withRouter(UserProfile);
 
 // <UserProfileIndexContainer
-//     allIds={user.hunted_products}
+//     allProducts={user.products}
 //     userId={user.id}/>

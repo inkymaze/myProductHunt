@@ -16,16 +16,16 @@ class UserProfileIndex extends React.Component {
   }
 
   render () {
-
+    console.log('user prof idx props', this.props);
     let orderedProducts = "";
-    console.log(this.props);
     orderedProducts =  this.props.allProductsIds.map((productId, index) => {
+
       let product = this.props.allProducts[productId];
 
       return (
         <ProductListItem
           key={index}
-          product={product}
+          products={product}
           loggedIn={this.props.loggedIn}
           currentUser={this.props.currentUser}
           requestProduct={this.props.requestProduct}
@@ -33,12 +33,11 @@ class UserProfileIndex extends React.Component {
       );
     });
 
-
-return (
-  <section>
-    { orderedProducts }
-  </section>
-);
+    return (
+      <section>
+        { orderedProducts }
+      </section>
+    );
   }
 
 }

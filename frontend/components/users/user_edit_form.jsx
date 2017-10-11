@@ -56,6 +56,7 @@ class UserEditForm extends React.Component {
                   onChange={this.props.onChange}
                 />
           </div>
+        
         </form>
       </div>
       <div className="editSubmitButton">
