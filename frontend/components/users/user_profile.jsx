@@ -27,9 +27,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     if (!this.props.user) {
       this.props.requestSingleUser(this.props.userId);
-
     }
-
   }
 
   saveUser(event) {
@@ -50,7 +48,7 @@ class UserProfile extends React.Component {
  }
 
   render() {
-    const { user } = this.props;
+    const { user, loggedIn, userId, currentUserId } = this.props;
     if (!user) return null;
     console.log('user profile main props',this.props);
     console.log('user products?', this.props.userId);
@@ -83,8 +81,12 @@ class UserProfile extends React.Component {
       );
     });
 
-    return (
+    const editOption = loggedIn && user.id === currentUserId ?
+    <div className="editUserinfo">
+      <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
+    </div> : <div></div>;
 
+    return (
       <div className="userProfileCont">
         <section className="user-detail">
           <div className="user-show-info">
@@ -96,9 +98,7 @@ class UserProfile extends React.Component {
             </ul>
           </div>
           <div className="user-show-info">
-          <div className="editUserinfo">
-            <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
-          </div>
+          {editOption}
         </div>
         </section>
         <div className="userProfileProdHeader"> {orderedProducts.length} hunted</div>
@@ -112,7 +112,3 @@ class UserProfile extends React.Component {
 }
 
 export default withRouter(UserProfile);
-
-// <UserProfileIndexContainer
-//     allProducts={user.products}
-//     userId={user.id}/>
