@@ -48,7 +48,7 @@ class UserProfile extends React.Component {
  }
 
   render() {
-    const { user, loggedIn, userId, currentUserId } = this.props;
+    const { user, loggedIn, currentUserId } = this.props;
     if (!user) return null;
     console.log('user profile main props',this.props);
     console.log('user products?', this.props.userId);

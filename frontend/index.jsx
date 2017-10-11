@@ -9,11 +9,10 @@ import * as APIUtil from './util/product_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Modal.setAppElement(document.body);
 
   let store;
   if (window.currentUser) {
-    // add product slice of state below?
+
     const preloadedState = { session: { currentUser: window.currentUser, errors: null} };
     store = configureStore(preloadedState);
     delete window.currentUser;
