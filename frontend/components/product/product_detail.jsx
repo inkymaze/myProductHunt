@@ -63,9 +63,10 @@ class ProductDetail extends React.Component {
   }
 
   handleUpvote(e) {
-    const { currentUserId, products } = this.props;
+    const { currentUserId, products, upvotedByUser } = this.props;
     e.preventDefault();
-    if (currentUserId) {
+
+    if (currentUserId && !upvotedByUser.includes(parseInt(products.id))) {
       const vote = {
       upvote: {
         hunter_id: currentUserId,

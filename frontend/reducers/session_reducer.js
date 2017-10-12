@@ -6,6 +6,8 @@ import {
   CLEAR_ERRORS
 } from '../actions/session_actions';
 
+import { CREATE_UPVOTE } from '../actions/upvote_actions';
+
 const nullUser = Object.freeze({
   currentUser: null,
   errors: []
@@ -13,6 +15,8 @@ const nullUser = Object.freeze({
 
 const SessionReducer = (state = nullUser, action) => {
   Object.freeze(state);
+  let upVotes = [];
+
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
@@ -26,8 +30,15 @@ const SessionReducer = (state = nullUser, action) => {
       });
     case CLEAR_ERRORS:
       return merge({}, state, { errors: [] });
+    case CREATE_UPVOTE:
+      upVotes = state.currentUser.upvoted_products_ids;
+      upVotes.push(action.upvote.productId);
+      return merge({}, state, { currentUser: { upvoted_products_ids: upVotes}});
+
+
     default:
       return state;
+
   }
 };
 
