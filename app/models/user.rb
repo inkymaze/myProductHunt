@@ -12,6 +12,15 @@ class User < ApplicationRecord
     foreign_key: :hunter_id,
     class_name: "Product"
 
+  has_many :upvotes, dependent: :destroy,
+  primary_key: :id,
+  foreign_key: :hunter_id,
+  class_name: :Upvote
+
+  has_many :upvoted_products,
+  through: :upvotes,
+  source: :product
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
@@ -35,6 +44,14 @@ class User < ApplicationRecord
   def hunted_ids
     product_ids = []
     self.products.each do |product|
+      product_ids.push(product.id)
+    end
+    product_ids
+  end
+
+  def upvoted_products
+    product_ids = []
+    self.upvoted_products.each do |product|
       product_ids.push(product.id)
     end
     product_ids

@@ -38,10 +38,10 @@ class ProductDetail extends React.Component {
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleUpvote = this.handleUpvote.bind(this);
   }
 
   openModal() {
-
     this.setState({modalIsOpen: true});
   }
 
@@ -62,11 +62,27 @@ class ProductDetail extends React.Component {
     }
   }
 
+  handleUpvote(e) {
+    const { currentUserId, products } = this.props;
+    e.preventDefault();
+    if (currentUserId) {
+      const vote = {
+      upvote: {
+        hunter_id: currentUserId,
+        product_id: products.id
+      }
+    };
+      this.props.requestUpvote(vote);
+    } else {
+      alert("Only logged in users can vote");
+    }
+  }
+
 
   render() {
     const { products } = this.props;
     if (!products) return null;
-
+    console.log('prod details', this.props);
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
@@ -90,8 +106,13 @@ class ProductDetail extends React.Component {
             <a href={products.product_URL}>
               <button className="getit-button" >GET IT</button>
             </a>
-            <button className="upvote-button">
-              Upvote
+            <button className="upvote-button"
+                    onClick={this.handleUpvote}>
+
+              <img src="https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,co_rgb:4d6abf,e_blue:0,h_256/v1507835829/512px-Sort_up_font_awesome.svg_ykb2jq.png"
+                    className="upvote-caret"/>
+                  <div className='upvote-count'>{products.upvotes}</div>
+
             </button>
               </div>
           </section>
@@ -116,14 +137,14 @@ class ProductDetail extends React.Component {
           <section className='productHuntedInfo'>
               <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
-                <div className="hunterImage">
-                  <Link to={`/user/${products.hunter_id}`} >
-                    <img src={products.hunter_image} />
-                  </Link>
-                </div>
-                <div>
-                  <li className="hunterInfoName">@{products.hunter}</li>
-                </div>
+                <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
+                  <div className="hunterImage">
+                      <img src={products.hunter_image} />
+                  </div>
+                  <div>
+                    <li className="hunterInfoName">@{products.hunter}</li>
+                  </div>
+                </Link>
               </div>
           </section>
         </div>

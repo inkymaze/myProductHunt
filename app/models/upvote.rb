@@ -1,7 +1,7 @@
 class Upvote < ApplicationRecord
-  validates :hunter, :product, presence: true
+  validates :hunter_id, :product_id, presence: true
   # validate user can only upvote once
-  
+
 
   belongs_to :user,
   primary_key: :id,

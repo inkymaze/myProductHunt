@@ -95,6 +95,10 @@
 
 }
 
+.icon_f5f81.orange_768d8 {
+  background-image: url(https://s3.producthunt.com/static/upvote-burst-orange.png)
+}
+
 .editProfileImage {
   width: 111px;
     height: 111px;
@@ -207,6 +211,11 @@ img {
   margin-top: 10px;
   border-radius: 3px;
   border: 1px solid #e8e8e8;
+}
+
+.productHunterLink {
+  display: flex;
+    color: black
 }
 
 .productHunterListItem {
@@ -531,6 +540,26 @@ border-bottom: 1px solid #999;
   font-family: sans-serif;
   font-weight: 300;
   cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+}
+
+.upvote-caret {
+  height: 26px;
+  height: 26px;
+  margin: 0;
+  width: 20px;
+  padding-right: 5px;
+}
+
+.upvote-count {
+  font-size: 12px;
+line-height: 16px;
+font-weight: 600;
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
 }
 
 .product-detail {
