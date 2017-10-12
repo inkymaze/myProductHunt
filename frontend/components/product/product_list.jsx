@@ -18,8 +18,15 @@ class ProductList extends React.Component {
       <section className="product-section">
         <div className="allproducts">
           <ul>
-            {products.allIds.map(id => <li key={id}><ProductListItem key={id}
-              products={products.byId[id]} /></li>)}
+            {products.allIds.map(id => <li key={id}>
+              <ProductListItem
+                key={id}
+                products={products.byId[id]}
+                requestUpvote={this.props.requestUpvote}
+                currentUserId={this.props.currentUserId}
+                upvotedByUser={this.props.upvotedByUser}
+
+              /></li>)}
           </ul>
 
       </div>

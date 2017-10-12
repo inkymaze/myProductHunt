@@ -50,8 +50,7 @@ class UserProfile extends React.Component {
   render() {
     const { user, loggedIn, currentUserId } = this.props;
     if (!user) return null;
-    console.log('user profile main props',this.props);
-    console.log('user products?', this.props.userId);
+
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -85,7 +84,7 @@ class UserProfile extends React.Component {
           loggedIn && user.id === currentUserId ?
           <div className="editUserinfo">
             <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
-          </div> 
+          </div>
           : <div></div>;
 
     return (
