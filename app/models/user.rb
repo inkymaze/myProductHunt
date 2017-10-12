@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :upvotes, dependent: :destroy,
   primary_key: :id,
   foreign_key: :hunter_id,
-  class_name: :Upvote
+  class_name: "Upvote"
 
   has_many :upvoted_products,
   through: :upvotes,
@@ -49,7 +49,7 @@ class User < ApplicationRecord
     product_ids
   end
 
-  def upvoted_products
+  def upvoted_products_ids
     product_ids = []
     self.upvoted_products.each do |product|
       product_ids.push(product.id)

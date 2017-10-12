@@ -34,7 +34,7 @@ class ProductDetail extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: true,
-
+      upvoted: null
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);

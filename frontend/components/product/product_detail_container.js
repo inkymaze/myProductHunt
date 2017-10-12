@@ -6,7 +6,11 @@ import { requestUpvote } from '../../actions/upvote_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   products: state.products.byId[ownProps.match.params.productId],
-  currentUserId: (state.session.currentUser) ? state.session.currentUser.id : null,
+  currentUserId: (state.session.currentUser) ?
+    state.session.currentUser.id : null,
+  upvotedByUser:(state.session.currentUser) ? state.session.currentUser.upvoted_products_ids : null,
+
+
 });
 
 const mapDispatchToProps = dispatch => ({
