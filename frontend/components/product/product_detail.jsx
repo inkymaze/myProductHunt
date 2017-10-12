@@ -66,14 +66,18 @@ class ProductDetail extends React.Component {
     const { currentUserId, products, upvotedByUser } = this.props;
     e.preventDefault();
 
-    if (currentUserId && !upvotedByUser.includes(parseInt(products.id))) {
-      const vote = {
-      upvote: {
-        hunter_id: currentUserId,
-        product_id: products.id
+    if (currentUserId) {
+      if (!upvotedByUser.includes(products.id)) {
+        const vote = {
+        upvote: {
+          hunter_id: currentUserId,
+          product_id: products.id
+        }
+      };
+        this.props.requestUpvote(vote);
+      } else {
+        alert("You can only vote once!");
       }
-    };
-      this.props.requestUpvote(vote);
     } else {
       alert("Only logged in users can vote");
     }
