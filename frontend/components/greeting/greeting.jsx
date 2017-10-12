@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SessionForm from '../session_form/session_form';
 
 
@@ -14,7 +14,7 @@ const sessionLinks = () => (
 );
 
 const handleLogout = (logout, history) => () => {
-  logout().then( () => history.push('/'));
+  logout().then(() => history.push('/'));
 };
 
 const personalGreeting = (currentUser, logout, history) => (
@@ -30,9 +30,12 @@ const personalGreeting = (currentUser, logout, history) => (
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout, history }) => (
-  currentUser ? personalGreeting(currentUser, logout, history) : sessionLinks()
+const Greeting = (props) => {
+  console.log('greeting props', props);
+  return (
+  props.currentUser ? personalGreeting(props.currentUser, props.logout, props.history) : sessionLinks()
 );
+};
 
 
 

@@ -12,7 +12,6 @@ class Api::SessionsController < ApplicationController
       json: ["Invalid username/password combination"],
       status: 401)
     end
-
   end
 
   def destroy

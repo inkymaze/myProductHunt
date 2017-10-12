@@ -7,4 +7,14 @@ class Product < ApplicationRecord
     foreign_key: :hunter_id,
     class_name: "User"
 
+  has_many :upvotes, dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :product_id,
+    class_name: :Upvote
+
+    def self.search(query)
+      query = query.split("+").join(" ")
+      # query = "%#{query.downcase}%"
+      self.where("lower(name) LIKE ?", query)
+    end
 end

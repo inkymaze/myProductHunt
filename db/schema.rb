@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727164006) do
+ActiveRecord::Schema.define(version: 20171012162320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20170727164006) do
     t.string   "image_four_url"
     t.string   "image_five_url"
     t.index ["name"], name: "index_products_on_name", unique: true, using: :btree
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.integer "hunter_id",  null: false
+    t.index ["hunter_id"], name: "index_upvotes_on_hunter_id", using: :btree
+    t.index ["product_id"], name: "index_upvotes_on_product_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

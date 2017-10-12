@@ -81,17 +81,21 @@ class UserProfile extends React.Component {
       );
     });
 
-    const editOption = loggedIn && user.id === currentUserId ?
-    <div className="editUserinfo">
-      <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
-    </div> : <div></div>;
+    const editOption =
+          loggedIn && user.id === currentUserId ?
+          <div className="editUserinfo">
+            <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
+          </div> 
+          : <div></div>;
 
     return (
       <div className="userProfileCont">
         <section className="user-detail">
           <div className="user-show-info">
             <figure>
-              <img className="userProfileImage" src={user.image_url} alt={user.username} />
+              <img className="userProfileImage"
+                   src={user.image_url}
+                   alt={user.username} />
             </figure>
             <ul>
               <li className="user-show-name">@{user.username}</li>

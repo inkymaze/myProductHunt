@@ -24,7 +24,6 @@
     render "api/products/index"
   end
 
-
   private
 
   def product_params
