@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'comments/index'
+  end
+
+  namespace :api do
+    get 'comments/create'
+  end
+
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create, :show, :update]
     resources :products, only: [:create, :show, :index]
