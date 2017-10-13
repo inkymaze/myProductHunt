@@ -30,6 +30,8 @@ class UserProfile extends React.Component {
     }
   }
 
+
+
   saveUser(event) {
    event.preventDefault();
    this.props.requestUpdateUser(this.state.user)
@@ -71,11 +73,14 @@ class UserProfile extends React.Component {
 
   let orderedProducts = "";
   orderedProducts = user.products.map((product, index) => {
-
+    console.log('user profile product', product);
     return (
       <ProductListItem
         key={index}
         products={product}
+        requestUpvote={this.props.requestUpvote}
+        currentUserId={this.props.currentUserId}
+        upvotedByUser={this.props.upvotedByUser}
         className="userProfileIndexItem"/>
       );
     });

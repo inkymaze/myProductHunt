@@ -44,14 +44,16 @@ class ProductListItem extends React.Component {
             <li className="products-description">{ products.description } </li>
           </ul>
         </div>
+        <button className="upvote-button-idx"
+                onClick={this.handleUpvote}>
+          <img src="https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,co_rgb:4d6abf,e_blue:0,h_256/v1507835829/512px-Sort_up_font_awesome.svg_ykb2jq.png"
+                className="upvote-caret"/>
+              <div className='upvote-count'>{products.upvotes}</div>
+        </button>
       </div>
+
+
     </Link>
-    <button className="upvote-button"
-            onClick={this.handleUpvote}>
-      <img src="https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,co_rgb:4d6abf,e_blue:0,h_256/v1507835829/512px-Sort_up_font_awesome.svg_ykb2jq.png"
-            className="upvote-caret"/>
-          <div className='upvote-count'>{products.upvotes}</div>
-    </button>
   </div>
 );
 }

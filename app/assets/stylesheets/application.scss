@@ -547,12 +547,31 @@ border-bottom: 1px solid #999;
   width: 66px;
 }
 
+.upvote-button-idx {
+  padding: 0 8px;
+  align-self: flex-end;
+  border: 1px solid transparent;
+  background: #fff;
+  border-color: #e8e8e8;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+}
+
 .upvote-caret {
   height: 26px;
   height: 26px;
   margin: 0;
   width: 20px;
   padding-right: 5px;
+  padding-top: 3px;
 }
 
 .upvote-count {
