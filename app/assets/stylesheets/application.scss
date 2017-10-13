@@ -16,6 +16,8 @@
  @import 'reset';
 
 
+
+
  body {
    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
  }
@@ -547,13 +549,36 @@ border-bottom: 1px solid #999;
   width: 66px;
 }
 
+.fa-comment:before {
+  color: #999;
+}
+
+.comment-blurb {
+  border: 1px solid transparent;
+  background: #fff;
+  border-color: #e8e8e8;
+  width: 43px;
+  height: 28px;
+  margin-left: 4px;
+  align-self: flex-end;
+  border-radius: 5px;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.product-idx-buttons {
+  display: flex;
+}
+
 .upvote-button-idx {
   padding: 0 8px;
   align-self: flex-end;
   border: 1px solid transparent;
   background: #fff;
   border-color: #e8e8e8;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 12px;
   font-family: sans-serif;
   font-weight: 300;
@@ -570,8 +595,8 @@ border-bottom: 1px solid #999;
   height: 26px;
   margin: 0;
   width: 20px;
-  padding-right: 5px;
-  padding-top: 3px;
+  padding-right: 2px;
+  padding-top: 1px;
 }
 
 .upvote-count {
