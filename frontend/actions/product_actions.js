@@ -16,11 +16,6 @@ export const receiveProduct = (products) => ({
   products
 });
 
-export const createProduct = (product) => ({
-  type: CREATE_PRODUCT,
-  product
-});
-
 export const receiveProductErrors = errors => ({
   type: RECEIVE_PRODUCT_ERRORS,
   errors
