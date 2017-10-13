@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     resources :upvotes, only: [:create]
   end
 
+  resources :users do
+    resources :products, only: [:index]
+  end
+  
   root "static_pages#root"
 end

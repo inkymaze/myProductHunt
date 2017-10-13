@@ -69,6 +69,7 @@ export const requestUpdateProduct = (product) => dispatch => {
 export const requestUserProducts = (userId) => dispatch => {
   return APIUtil.fetchUserProducts(userId).then( products => {
         dispatch(receiveProducts(products));
+        dispatch(clearProductErrors());
       },
     errors => dispatch(receiveProductErrors(errors.responseJSON))
   );

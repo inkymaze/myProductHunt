@@ -19,6 +19,7 @@ class ProductList extends React.Component {
         <div className="allproducts">
           <ul>
             {products.allIds.map(id => <li key={id}>
+
               <ProductListItem
                 key={id}
                 products={products.byId[id]}

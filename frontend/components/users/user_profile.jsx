@@ -10,6 +10,7 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       isEditing: false,
+
       user: {}};
       this.updateUserState = this.updateUserState.bind(this);
       this.toggleEdit = this.toggleEdit.bind(this);
@@ -27,6 +28,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     if (!this.props.user) {
       this.props.requestSingleUser(this.props.userId);
+
     }
   }
 
@@ -49,8 +51,10 @@ class UserProfile extends React.Component {
    this.setState({isEditing: !this.state.isEditing});
  }
 
+
+
   render() {
-    const { user, loggedIn, currentUserId } = this.props;
+    const { user, loggedIn, currentUserId, products } = this.props;
     if (!user) return null;
 
     if (this.state.isEditing) {
@@ -72,12 +76,12 @@ class UserProfile extends React.Component {
   }
 
   let orderedProducts = "";
-  orderedProducts = user.products.map((product, index) => {
-    console.log('user profile product', product);
+  orderedProducts = user.hunted_ids.map(id => {
+    // console.log('user profile product', product);
     return (
       <ProductListItem
-        key={index}
-        products={product}
+        key={id}
+        products={products.byId[id]}
         requestUpvote={this.props.requestUpvote}
         currentUserId={this.props.currentUserId}
         upvotedByUser={this.props.upvotedByUser}
