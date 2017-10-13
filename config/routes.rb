@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    get 'comments/index'
-  end
-
-  namespace :api do
-    get 'comments/create'
+  resources :products do
+    resources :comments, only: [:index]
   end
 
   namespace :api, defaults: { format: :json } do
@@ -19,6 +15,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :products, only: [:index]
   end
-  
+
   root "static_pages#root"
 end

@@ -10,7 +10,12 @@ class Product < ApplicationRecord
   has_many :upvotes, dependent: :destroy,
     primary_key: :id,
     foreign_key: :product_id,
-    class_name: :Upvote
+    class_name: "Upvote"
+
+  has_many :comments, dependent: :destroy,
+  primary_key: :id,
+  foreign_key: :product_id,
+  class_name: "Comment"
 
     def self.search(query)
       query = query.split("+").join(" ")

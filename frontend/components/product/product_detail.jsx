@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
+import CommentSectionContainer from '../comment/comment_section_container';
 
 const customStyles = {
   overlay : {
@@ -150,6 +151,9 @@ class ProductDetail extends React.Component {
                   </div>
                 </div>
               </div>
+          </section>
+          <section className="productComments">
+            <CommentSectionContainer productId={products.id} />
           </section>
         </div>
       </Modal>
