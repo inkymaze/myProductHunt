@@ -1,6 +1,5 @@
-class Upvote < ApplicationRecord
-  validates :hunter_id, :product_id, presence: true
-
+class Comment < ApplicationRecord
+  validates :hunter_id, :product_id, :body, presence: true
 
   belongs_to :user,
   primary_key: :id,
