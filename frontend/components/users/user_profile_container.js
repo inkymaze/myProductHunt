@@ -4,25 +4,24 @@ import { requestSingleUser,
   requestUpdateUser } from '../../actions/user_actions';
 import { requestUserProducts } from '../../actions/product_actions';
 import { requestUpvote } from '../../actions/upvote_actions';
-import { requestProduct } from '../../actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
   user:  state.users.byId[ownProps.match.params.userId],
   userId: ownProps.match.params.userId,
-  products: state.products,
   loggedIn: Boolean(state.session.currentUser),
+  products: state.products,
   currentUserId: state.session.currentUser
                 ? state.session.currentUser.id
                 : null,
   upvotedByUser:(state.session.currentUser)
                 ? state.session.currentUser.upvoted_products_ids
-                : null
+                : null,
 });
 
 const mapDispatchToProps = dispatch => ({
   requestSingleUser: (id) => dispatch(requestSingleUser(id)),
-  requestProduct: (id) => dispatch(requestProduct(id)),
+  requestUpdateUser: (user) => dispatch(requestUpdateUser(user)),
   requestUserProducts: userId => dispatch(requestUserProducts(userId)),
   requestUpvote: (upvote) => dispatch(requestUpvote(upvote))
 });
