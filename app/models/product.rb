@@ -22,4 +22,13 @@ class Product < ApplicationRecord
       # query = "%#{query.downcase}%"
       self.where("lower(name) LIKE ?", query)
     end
+
+    def comment_ids
+      comment_ids = []
+      self.comments.each do |comment|
+        comment_ids.push(comment.id)
+      end
+      comment_ids
+    end
+    
 end

@@ -4,3 +4,4 @@ json.extract! product,
    :image_three_url, :image_four_url, :image_five_url
 
 json.upvotes product.upvotes.count
+json.comments product.comment_ids
