@@ -10,7 +10,6 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       isEditing: false,
-
       user: {}};
       this.updateUserState = this.updateUserState.bind(this);
       this.toggleEdit = this.toggleEdit.bind(this);
@@ -28,11 +27,8 @@ class UserProfile extends React.Component {
   componentDidMount() {
     if (!this.props.user) {
       this.props.requestSingleUser(this.props.userId);
-
     }
   }
-
-
 
   saveUser(event) {
    event.preventDefault();
@@ -56,7 +52,7 @@ class UserProfile extends React.Component {
   render() {
     const { user, loggedIn, currentUserId, products } = this.props;
     if (!user) return null;
-
+    console.log('user prof props', this.props);
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">

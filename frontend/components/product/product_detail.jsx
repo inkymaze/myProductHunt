@@ -141,14 +141,14 @@ class ProductDetail extends React.Component {
           <section className='productHuntedInfo'>
               <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
-                <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
+                <div className="productHunterLink" >
                   <div className="hunterImage">
                       <img src={products.hunter_image} />
                   </div>
                   <div>
                     <li className="hunterInfoName">@{products.hunter}</li>
                   </div>
-                </Link>
+                </div>
               </div>
           </section>
         </div>

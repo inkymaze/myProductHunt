@@ -31,6 +31,7 @@ class ProductListItem extends React.Component {
     }
     render (){
       const { products } = this.props;
+      
       return (
   <div>
     <Link to={`/products/${products.id}`}>
