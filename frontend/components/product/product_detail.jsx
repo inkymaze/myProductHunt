@@ -1,7 +1,6 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom';
 import CommentSectionContainer from '../comment/comment_section_container';
 
 const customStyles = {
@@ -87,7 +86,7 @@ class ProductDetail extends React.Component {
   render() {
     const { products } = this.props;
     if (!products) return null;
-    console.log('prod details', this.props);
+    console.log('product detail props', this.props);
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
@@ -113,11 +112,9 @@ class ProductDetail extends React.Component {
             </a>
             <button className="upvote-button"
                     onClick={this.handleUpvote}>
-
               <img src="https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,co_rgb:4d6abf,e_blue:0,h_256/v1507835829/512px-Sort_up_font_awesome.svg_ykb2jq.png"
                     className="upvote-caret"/>
                   <div className='upvote-count'>{products.upvotes}</div>
-
             </button>
               </div>
           </section>
@@ -142,14 +139,14 @@ class ProductDetail extends React.Component {
           <section className='productHuntedInfo'>
               <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
-                <div className="productHunterLink" >
+                <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
                   <div className="hunterImage">
                       <img src={products.hunter_image} />
                   </div>
                   <div>
                     <li className="hunterInfoName">@{products.hunter}</li>
                   </div>
-                </div>
+                </Link>
               </div>
           </section>
           <section className="productComments">

@@ -11,7 +11,7 @@ class Search extends React.Component {
   handleSearchQuery(e) {
     // must hide intro
     const intro =document.getElementsByClassName("intro-span");
-    console.log('intro', intro);
+
     // Array.prototype.forEach.call(intro, (el) => {
     //   el.classList.add("fade");
   }
@@ -29,8 +29,8 @@ class Search extends React.Component {
   }
 
   render() {
-    console.log('search props', this.props);
-    console.log('search state', this.state);
+    // console.log('search props', this.props);
+    // console.log('search state', this.state);
     return (
       <div>
         <input type="text"

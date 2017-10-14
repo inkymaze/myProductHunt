@@ -20,7 +20,11 @@
   end
 
   def index
-    @products = Product.all
+    if !params[:user_id]
+      @products = Product.all
+    else 
+      @products = Product.where("hunter_id = ?", params[:user_id]);
+    end
     render "api/products/index"
   end
 

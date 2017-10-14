@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import UserEditForm from './user_edit_form';
 import ProductListItem from '../product/product_list_item';
-import UserProfileIndexContainer from './user_profile_index_container';
+import UserProfileIndex from './user_profile_index';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -26,8 +26,10 @@ class UserProfile extends React.Component {
 
   componentDidMount() {
     if (!this.props.user) {
+    //   console.log('user prof props', this.props);
       this.props.requestSingleUser(this.props.userId);
     }
+      // this.props.requestUserProducts(this.props.userId);
   }
 
   saveUser(event) {
@@ -40,6 +42,7 @@ class UserProfile extends React.Component {
     if (this.props.match.params.userId !== nextProps.match.params.userId)
      {
       this.props.requestSingleUser(nextProps.match.params.userId);
+
     }
   }
 
@@ -51,8 +54,8 @@ class UserProfile extends React.Component {
 
   render() {
     const { user, loggedIn, currentUserId, products } = this.props;
-    if (!user) return null;
-    console.log('user prof props', this.props);
+    if (!user || !products) return null;
+    console.log('user profile props', this.props);
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -71,19 +74,19 @@ class UserProfile extends React.Component {
     );
   }
 
-  let orderedProducts = "";
-  orderedProducts = user.hunted_ids.map(id => {
-    // console.log('user profile product', product);
-    return (
-      <ProductListItem
-        key={id}
-        products={products.byId[id]}
-        requestUpvote={this.props.requestUpvote}
-        currentUserId={this.props.currentUserId}
-        upvotedByUser={this.props.upvotedByUser}
-        className="userProfileIndexItem"/>
-      );
-    });
+  // let orderedProducts = "";
+  // orderedProducts = user.hunted_ids.map(id => {
+  //   // console.log('user profile product', product);
+  //   return (
+  //     <ProductListItem
+  //       key={id}
+  //       products={products.byId[id]}
+  //       requestUpvote={this.props.requestUpvote}
+  //       currentUserId={this.props.currentUserId}
+  //       upvotedByUser={this.props.upvotedByUser}
+  //       className="userProfileIndexItem"/>
+  //     );
+  //   });
 
     const editOption =
           loggedIn && user.id === currentUserId ?
@@ -109,9 +112,10 @@ class UserProfile extends React.Component {
           {editOption}
         </div>
         </section>
-        <div className="userProfileProdHeader"> {orderedProducts.length} hunted</div>
+
         <section className="userProfileProducts">
-          { orderedProducts }
+          <UserProfileIndex allProductIds={user.upvoted_products_ids}
+            userId={user.id} />
         </section>
 
       </div>

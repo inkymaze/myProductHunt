@@ -3,6 +3,7 @@ import ProductDetail from './product_detail';
 import { requestProduct } from '../../actions/product_actions';
 import { requestSingleUser } from '../../actions/user_actions';
 import { requestUpvote } from '../../actions/upvote_actions';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => ({
   products: state.products.byId[ownProps.match.params.productId],
@@ -20,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
   requestUpvote: (upvote) => dispatch(requestUpvote(upvote))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProductDetail);
+)(ProductDetail));
