@@ -15,11 +15,6 @@ const mapDispatchToProps = dispatch => ({
   requestComments: (productId) => dispatch(requestComments(productId)),
   requestCreateComment: (comment) => dispatch(requestCreateComment(comment)),
 });
-// 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(CommentSection);
 
 
 const CommentSectionContainer = connect(

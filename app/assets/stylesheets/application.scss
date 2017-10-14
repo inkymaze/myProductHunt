@@ -22,6 +22,23 @@
    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
  }
 
+ .comment-section {
+    background: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid #e8e8e8;
+ }
+
+ .comments-header {
+   font-size: 11px;
+   font-weight: 600;
+   border-bottom-color: #999;
+   color: #999;
+   padding-top: 25px;
+ }
+
+
 .product-show-info {
   display: flex;
   padding-bottom: 10px;
