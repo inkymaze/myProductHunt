@@ -9,11 +9,14 @@ const mapStateToProps = (state, ownProps) => ({
   allProducts: state.products.byId,
   loggedIn: Boolean(state.session.currentUser),
   userId: ownProps.userId,
-  currentUser: (state.session.currentUser)
+  currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id
                 : null,
   errors: state.products.errors,
-  allProductIds:  state.products.allIds
+  allProductIds:  state.products.allIds,
+  upvotedByUser:(state.session.currentUser)
+                ? state.session.currentUser.upvoted_products_ids
+                : null,
 });
 
 const mapDispatchToProps = dispatch => ({

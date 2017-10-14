@@ -12,7 +12,7 @@ class ProductListItem extends React.Component {
     handleUpvote(e) {
       const { currentUserId, products, upvotedByUser } = this.props;
       e.preventDefault();
-
+      console.log('product list item props', this.props);
       if (currentUserId) {
         if (!upvotedByUser.includes(products.id)) {
           const vote = {
@@ -31,7 +31,7 @@ class ProductListItem extends React.Component {
     }
     render (){
       const { products } = this.props;
-      
+
       return (
   <div>
     <Link to={`/products/${products.id}`}>
