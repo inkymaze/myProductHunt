@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => ({
                 ? state.session.currentUser.id
                 : null,
   errors: state.products.errors,
-  allProductIds: ownProps.allProductIds
+  allProductIds:  state.products.allIds
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -22,7 +22,9 @@ const mapDispatchToProps = dispatch => ({
   requestUpvote: upvote => dispatch(requestUpvote(upvote))
 });
 
-export default connect(
+const UserProfileIndexContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(UserProfileIndex);
+
+export default UserProfileIndexContainer;

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import UserEditForm from './user_edit_form';
 import ProductListItem from '../product/product_list_item';
-import UserProfileIndex from './user_profile_index';
+import UserProfileIndexContainer from './user_profile_index_container';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -114,7 +114,8 @@ class UserProfile extends React.Component {
         </section>
 
         <section className="userProfileProducts">
-          <UserProfileIndex allProductIds={user.upvoted_products_ids}
+          <UserProfileIndexContainer
+            
             userId={user.id} />
         </section>
 
