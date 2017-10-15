@@ -109,6 +109,26 @@
   display: flex;
 }
 
+.signup-prompt-outer {
+  display: block;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #999;
+}
+
+
+.signup-prompt-link {
+  cursor: pointer;
+  color: #da552f;
+  text-decoration: none;
+}
 .comment-text {
   margin: 0 0 15px 42px;
   white-space: pre-line;
