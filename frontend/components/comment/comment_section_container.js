@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
   errors: state.comments.errors,
   currentUserImg: state.session.currentUser
                   ? state.session.currentUser.image_url
-                  : null,
+                  : "https://res.cloudinary.com/dbyoymbpd/image/upload/v1503434829/original_msduei.jpg"
 });
 
 const mapDispatchToProps = dispatch => ({

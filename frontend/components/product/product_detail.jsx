@@ -140,9 +140,10 @@ class ProductDetail extends React.Component {
               <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
                 <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
-                  <div className="hunterImage">
-                      <img src={products.hunter_image} />
-                  </div>
+
+                      
+                      <img src={products.hunter_image} className='hunterImage'/>
+
                   <div>
                     <li className="hunterInfoName">@{products.hunter}</li>
                   </div>

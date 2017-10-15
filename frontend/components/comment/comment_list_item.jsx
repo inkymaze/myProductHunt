@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-class CommentListItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { body: ""};
-  }
-  
+const CommentListItem = props => {
 
-  render() {
-    console.log('comment list item', this.props);
+
+
     return (
-      <h1>Comment list item</h1>
+      <div>
+          {JSON.stringify(props)}
+
+      </div>
     );
-  }
-}
+
+};
+
+export default CommentListItem;
