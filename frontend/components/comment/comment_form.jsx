@@ -29,18 +29,25 @@ update(field) {
   render() {
     console.log('comment form props', this.props);
     return(
+      <div>
 
       <form className='new-comment-form' onSubmit={this.handleSubmit.bind(this)}>
+        <div className='comment-form-inner-cont'>
+
+        <img src={this.props.currentUserImg} className='hunterImage'/>
+
         <textarea
           className="comment-input"
           type="text"
           placeholder="What do you think of this product..."
           onChange={this.update("body")}
           value={this.state.body}/>
+        </div>
         <div className='actions_4493e'>
           <button type='submit' className='comment-submit-btn'>COMMENT</button>
         </div>
       </form>
+      </div>
     );
   }
 }

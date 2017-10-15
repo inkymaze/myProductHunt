@@ -8,7 +8,10 @@ const mapStateToProps = (state) => ({
   currentUserId: state.session.currentUser
                   ? state.session.currentUser.id
                   : null,
-  errors: state.comments.errors
+  errors: state.comments.errors,
+  currentUserImg: state.session.currentUser
+                  ? state.session.currentUser.image_url
+                  : null,
 });
 
 const mapDispatchToProps = dispatch => ({
