@@ -26,10 +26,8 @@ class UserProfile extends React.Component {
 
   componentDidMount() {
     if (!this.props.user) {
-    //   console.log('user prof props', this.props);
       this.props.requestSingleUser(this.props.userId);
     }
-      // this.props.requestUserProducts(this.props.userId);
   }
 
   saveUser(event) {
@@ -55,7 +53,7 @@ class UserProfile extends React.Component {
   render() {
     const { user, loggedIn, currentUserId, products } = this.props;
     if (!user || !products) return null;
-    console.log('user profile props', this.props);
+  
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -115,7 +113,7 @@ class UserProfile extends React.Component {
 
         <section className="userProfileProducts">
           <UserProfileIndexContainer
-            
+
             userId={user.id} />
         </section>
 

@@ -109,6 +109,26 @@
   display: flex;
 }
 
+.comment-text {
+  margin: 0 0 15px 42px;
+  white-space: pre-line;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+}
+.commentAuthorInfo {
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row
+}
+
 .hunterImage {
   width: 32px;
   height: 32px;
@@ -116,6 +136,17 @@
   overflow: hidden;
   border-radius: 50%;
 }
+
+.commentAuthorImg {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
 
 .edit-form-button {
   background: white;

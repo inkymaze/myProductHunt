@@ -15,33 +15,30 @@ componentDidMount() {
 }
 
 renderComments() {
-    _.map(this.props.comments, comment => {
-      console.log('each rendered comment', comment);
+  let comments;
+    comments = _.map(this.props.comments, comment => {
       return (
-        <li className='comment-info' key={comment.id} >
-          <CommentListItem
-            comment={comment}
-            />
-        </li>
+        <div className='comment-info' key={comment.id} >
+          <CommentListItem comment={comment}/>
+        </div>
       );
     });
+  return comments;
 }
 
   render () {
-
-    console.log('comment section props', this.props.comments.byId);
     return (
       <div>
         <div className="comments-header">DISCUSSION</div>
         <div className="comment-section">
-          <ul className='comments-list'>
-            {this.renderComments}
-          </ul>
           <CommentForm
             currentUserImg={this.props.currentUserImg}
             productId={this.props.productId}
             currentUserId={this.props.currentUserId}
             requestCreateComment={this.props.requestCreateComment}/>
+            <ul className='commens-list'>
+              {this.renderComments()}
+            </ul>
         </div>
       </div>
     );

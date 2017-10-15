@@ -27,10 +27,7 @@ update(field) {
 }
 
   render() {
-    console.log('comment form props', this.props);
     return(
-      <div>
-
       <form className='new-comment-form' onSubmit={this.handleSubmit.bind(this)}>
         <div className='comment-form-inner-cont'>
 
@@ -47,7 +44,6 @@ update(field) {
           <button type='submit' className='comment-submit-btn'>COMMENT</button>
         </div>
       </form>
-      </div>
     );
   }
 }
