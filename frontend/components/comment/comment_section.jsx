@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentListItem from './comment_list_item';
+import CommentForm from './comment_form';
 
 
 class CommentSection extends React.Component {
@@ -40,7 +41,10 @@ createComment(e) {
           <section>
             {productComments}
           </section>
-          {commentForm}
+          <CommentForm
+            productId={this.props.productId}
+            currentUserId={this.props.currentUserId}
+            requestCreateComment={this.props.requestCreateComment}/>
         </section>
       </div>
     );

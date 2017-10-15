@@ -38,6 +38,57 @@
    padding-top: 25px;
  }
 
+ .comment-input {
+   background: #fff;
+    border-radius: 3px;
+    border: 1px solid #f0f0f0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    padding: 7px 10px;
+    margin: -1px 0 0;
+    width: 100%;
+ }
+
+ .comment-submit-btn {
+   background: #da552f;
+  border-color: #da552f;
+  color: #fff;
+  height: 34px;
+  padding: 0px 13px;
+  fill: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  outline: 0;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none!important;
+ }
+
+
+ .actions_4493e {
+   -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin: 10px 0 0;
+  text-align: right;
+ }
+ .new-comment-form {
+   border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+ }
+
 
 .product-show-info {
   display: flex;
