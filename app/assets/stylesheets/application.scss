@@ -38,6 +38,11 @@
    padding-top: 25px;
  }
 
+ .comment-blurb-count {
+   padding-right: 10px;
+   text-align: center;
+ }
+
  .comment-input {
    background: #fff;
     border-radius: 3px;
@@ -682,15 +687,21 @@ border-bottom: 1px solid #999;
   border: 1px solid transparent;
   background: #fff;
   border-color: #e8e8e8;
-  width: 43px;
-  height: 28px;
+  width: 40px;
+  height: 22px;
+  padding-top: 1px;
   margin-left: 4px;
   align-self: flex-end;
   border-radius: 5px;
-  justify-content: flex-start;
   display: flex;
   align-items: center;
   padding-left: 5px;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  color: #999;
+  justify-content: space-around;
 }
 
 .product-idx-buttons {
@@ -713,6 +724,7 @@ border-bottom: 1px solid #999;
   justify-content: center;
   align-items: center;
   width: 56px;
+  height: 25px;
 }
 
 .upvote-caret {
@@ -721,14 +733,13 @@ border-bottom: 1px solid #999;
   margin: 0;
   width: 20px;
   padding-right: 2px;
-  padding-top: 1px;
 }
 
 .upvote-count {
-  font-size: 12px;
-line-height: 16px;
-font-weight: 600;
-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
 }
 
 .product-detail {
