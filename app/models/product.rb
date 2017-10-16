@@ -19,8 +19,8 @@ class Product < ApplicationRecord
 
 
   def self.search(query)
-    query = query.split("+").join(" ")
-    query = "%#{query.downcase}%"
+    query = query.split("+").join(" ").downcase
+    query = "%#{query}%"
 
     self.where("lower(name) LIKE ? OR lower(description) LIKE ?", query, query)
   end

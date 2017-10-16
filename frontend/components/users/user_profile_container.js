@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
   user:  state.users.byId[ownProps.match.params.userId],
   userId: ownProps.match.params.userId,
   loggedIn: Boolean(state.session.currentUser),
-  products: state.products.byId,
+  products: state.search.byId || state.products.byId,
 
   currentUserId: state.session.currentUser
                 ? state.session.currentUser.id

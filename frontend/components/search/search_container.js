@@ -5,7 +5,6 @@ import { requestUpvote } from '../../actions/upvote_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   searchResults: state.search.byId || null
-
 });
 
 const mapDispatchToProps = dispatch => ({
