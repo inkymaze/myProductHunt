@@ -16,8 +16,11 @@ const SearchReducer = (state = _defaultState, action) => {
     case UPDATE_QUERY:
       return merge({}, state, {query: action.query});
     case RECEIVE_QUERY_PRODUCTS:
-      // must figure how products come into reducer 
-      return _defaultState;
+      action.products.forEach(product => {
+        byId[product.id] = product;
+        allIds.push(product.id);
+      });
+      return merge({},_defaultState,{byId}, {allIds});
     default:
       return state;
   }

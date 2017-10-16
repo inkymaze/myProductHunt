@@ -1,10 +1,8 @@
- class Api::ProductsController < ApplicationController
+class Api::ProductsController < ApplicationController
 
   before_action :require_signed_in!, only: [:create]
 
-
   def create
-
     @product = Product.new(product_params)
     @product.hunter_id = current_user.id
     if @product.save
@@ -22,7 +20,7 @@
   def index
     if !params[:user_id]
       @products = Product.all
-    else 
+    else
       @products = Product.where("hunter_id = ?", params[:user_id]);
     end
     render "api/products/index"

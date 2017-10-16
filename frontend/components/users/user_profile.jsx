@@ -37,10 +37,8 @@ class UserProfile extends React.Component {
  }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.userId !== nextProps.match.params.userId)
-     {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.requestSingleUser(nextProps.match.params.userId);
-
     }
   }
 
@@ -48,12 +46,10 @@ class UserProfile extends React.Component {
    this.setState({isEditing: !this.state.isEditing});
  }
 
-
-
   render() {
     const { user, loggedIn, currentUserId, products } = this.props;
     if (!user || !products) return null;
-  
+
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
@@ -66,32 +62,18 @@ class UserProfile extends React.Component {
             <UserEditForm user={user}
               onSave={this.saveUser}
               onChange={this.updateUserState}/>
+            </div>
           </div>
         </div>
-      </div>
-    );
-  }
-
-  // let orderedProducts = "";
-  // orderedProducts = user.hunted_ids.map(id => {
-  //   // console.log('user profile product', product);
-  //   return (
-  //     <ProductListItem
-  //       key={id}
-  //       products={products.byId[id]}
-  //       requestUpvote={this.props.requestUpvote}
-  //       currentUserId={this.props.currentUserId}
-  //       upvotedByUser={this.props.upvotedByUser}
-  //       className="userProfileIndexItem"/>
-  //     );
-  //   });
+      );
+    }
 
     const editOption =
-          loggedIn && user.id === currentUserId ?
-          <div className="editUserinfo">
-            <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
-          </div>
-          : <div></div>;
+      loggedIn && user.id === currentUserId ?
+      <div className="editUserinfo">
+        <button className="edit-form-button" onClick={this.toggleEdit}>EDIT</button>
+      </div>
+      : <div></div>;
 
     return (
       <div className="userProfileCont">
@@ -110,13 +92,9 @@ class UserProfile extends React.Component {
           {editOption}
         </div>
         </section>
-
         <section className="userProfileProducts">
-          <UserProfileIndexContainer
-
-            userId={user.id} />
+          <UserProfileIndexContainer userId={user.id} />
         </section>
-
       </div>
     );
   }

@@ -29,8 +29,6 @@ class ProductListItem extends React.Component {
     }
 
     render (){
-      console.log('product list item props', this.props);
-
       const { products } = this.props;
 
       return (

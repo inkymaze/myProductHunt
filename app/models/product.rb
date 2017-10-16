@@ -17,18 +17,18 @@ class Product < ApplicationRecord
   foreign_key: :product_id,
   class_name: "Comment"
 
-    def self.search(query)
-      query = query.split("+").join(" ")
-      # query = "%#{query.downcase}%"
-      self.where("lower(name) LIKE ?", query)
-    end
 
-    def comment_ids
-      comment_ids = []
-      self.comments.each do |comment|
-        comment_ids.push(comment.id)
-      end
-      comment_ids
+  def self.search(query)
+  query = query.split("+").join(" ")
+  query = "%#{query.downcase}%"
+  self.where("lower(name) LIKE ? OR lower(tag) LIKE ? OR lower(description) LIKE ?", query, query, query)
+end
+
+  def comment_ids
+    comment_ids = []
+    self.comments.each do |comment|
+      comment_ids.push(comment.id)
     end
-    
+    comment_ids
+  end
 end
