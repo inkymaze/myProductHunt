@@ -6,14 +6,14 @@ import { requestUpvote } from '../../actions/upvote_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
-  allProducts: state.products.byId,
+  allProducts: state.search.query.length === 0 ? state.products.byId : state.search.byId,
   loggedIn: Boolean(state.session.currentUser),
   userId: ownProps.userId,
   currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id
                 : null,
   errors: state.products.errors,
-  allProductIds:  state.products.allIds,
+  allProductIds:  state.search.query.length === 0 ? state.products.allIds : state.search.allIds,
   upvotedByUser:(state.session.currentUser)
                 ? state.session.currentUser.upvoted_products_ids
                 : null,

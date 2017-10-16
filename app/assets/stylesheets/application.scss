@@ -154,6 +154,32 @@
   flex-flow: row
 }
 
+.search-fail {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 300;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.emoji-sad {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  text-align: center;
+}
+
+.search-fail-outer-cont {
+  margin: 0 auto;
+  max-width: 400px;
+  padding-top: 50px;
+}
+
+
+.loading-message {
+  text-align: center;
+  color: #999
+}
 .hunterImage {
   width: 32px;
   height: 32px;

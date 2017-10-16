@@ -4,7 +4,7 @@ import {requestProducts, requestProduct } from '../../actions/product_actions';
 import { requestUpvote } from '../../actions/upvote_actions';
 
 const mapStateToProps = (state) => ({
-  products: state.search || state.products,
+  products: state.search.query.length === 0 ? state.products : state.search,
   currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id
                 : null,

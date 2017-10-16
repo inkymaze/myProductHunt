@@ -12,10 +12,8 @@ class Search extends React.Component {
   }
 
   handleQuery(e) {
-    if (e.key === 'Enter') {
       let query = { query: this.state.query };
       this.props.requestQueryProducts(query);
-    }
   }
 
   updateQuery(e) {

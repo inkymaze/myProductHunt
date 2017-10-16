@@ -34,9 +34,12 @@ class UserProfileIndex extends React.Component {
       );
     });
       return (
+        <div>
+          <div>Hunted</div>
         <section>
           { userHuntedProducts }
         </section>
+        </div>
       );
     }
   }
