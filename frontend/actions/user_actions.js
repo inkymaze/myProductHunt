@@ -21,6 +21,7 @@ export const clearUserErrors = () => ({
 export const requestSingleUser = id => dispatch => {
   return APIUtil.getUser(id)
     .then( user => { dispatch(receiveUser(user));
+                     dispatch(clearUserErrors());
         },
      errors => dispatch(receiveUserErrors(errors.responseJSON))
    );
@@ -29,7 +30,8 @@ export const requestSingleUser = id => dispatch => {
 export const requestUpdateUser = user => dispatch => {
   return APIUtil.updateUser(user)
     .then( usr => {
-          return dispatch(receiveUser(usr));
+                 dispatch(receiveUser(usr));
+                 dispatch(clearUserErrors());
        },
      errors => dispatch(receiveUserErrors(errors.responseJSON))
   );

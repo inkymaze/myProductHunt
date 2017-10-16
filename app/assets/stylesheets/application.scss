@@ -642,12 +642,6 @@ border-bottom: 1px solid #999;
 }
 
 .homepageHeader {
-  // display: flex;
-  // justify-content: space-around;
-  // padding: 0 120px;
-  // min-width: 770px;
-  // padding: 10px 80px;
-  // border-bottom: 1px solid #e8e8e8;
   max-height: 45px;
 }
 
@@ -1123,6 +1117,7 @@ form.login-form-box {
   border-radius: 3px;
   padding: 7px 13px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 

@@ -21,11 +21,6 @@ export const receiveProductErrors = errors => ({
   errors
 });
 
-export const clearProductErrors = () => ({
-  type: CLEAR_PRODUCT_ERRORS
-});
-
-
 export const requestProducts = () => dispatch => {
   return APIUtil.fetchProducts().then( products => {
         dispatch(receiveProducts(products));

@@ -24,8 +24,6 @@ class Header extends React.Component {
               <h3 className="header-description">The best new products, every day</h3>
             </div>
           </div>
-        
-
       </div>
     );
   }

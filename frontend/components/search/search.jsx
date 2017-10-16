@@ -5,6 +5,7 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.handleQuery = this.handleQuery.bind(this);
+    this.updateQuery = this.updateQuery.bind(this);
     this.state = {
       query: ""
     };
@@ -19,12 +20,16 @@ class Search extends React.Component {
     //   el.classList.add("fade");
   }
 
+  handleQuery(e) {
+    if (e.key === 'Enter') {
+      let query = { query: this.state.query };
+      this.props.requestQueryProducts(query);
+    }
+  }
 
-  handleQuery(query) {
-
-    this.setState({ query: query });
-    this.props.requestQueryProducts(this.state.query);
-    // console.log('query', query);
+  updateQuery(e) {
+    this.props.updateQuery(e.target.value);
+    this.setState({ query: e.target.value });
   }
 
   showAllElements() {
@@ -44,15 +49,14 @@ class Search extends React.Component {
           </div>
           <input type="text"
                  className="search-bar"
-                 ref={input => this.textInput = input}
-                 onChange={() => {this.handleQuery(this.textInput.value)}}
-                 onKeyPress={this.handleSearchQuery.bind(this)}
+                 onChange={this.updateQuery}
+                 onKeyPress={this.handleQuery.bind(this)}
                  onBlur={this.showAllElements.bind(this)}
                  placeholder="Discover your next favorite thing..."></input>
 
         </div>
       </div>
-      
+
     );
   }
 }

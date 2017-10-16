@@ -19,10 +19,11 @@ class Product < ApplicationRecord
 
 
   def self.search(query)
-  query = query.split("+").join(" ")
-  query = "%#{query.downcase}%"
-  self.where("lower(name) LIKE ? OR lower(tag) LIKE ? OR lower(description) LIKE ?", query, query, query)
-end
+    query = query.split("+").join(" ")
+    query = "%#{query.downcase}%"
+
+    self.where("lower(name) LIKE ? OR lower(description) LIKE ?", query, query)
+  end
 
   def comment_ids
     comment_ids = []
