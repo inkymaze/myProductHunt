@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import CommentSectionContainer from '../comment/comment_section_container';
 
 const customStyles = {
