@@ -13,7 +13,8 @@ class Search extends React.Component {
 
   handleQuery(e) {
       let query = { query: this.state.query };
-      this.props.requestQueryProducts(query);
+      this.props.requestQueryProducts(query)
+      .then( ()=> this.props.history.push('/'));
   }
 
   updateQuery(e) {
@@ -33,7 +34,7 @@ class Search extends React.Component {
           <input type="text"
                  className="search-bar"
                  onChange={this.updateQuery}
-                 onKeyPress={this.handleQuery.bind(this)}
+                 onKeyPress={this.handleQuery}
                  placeholder="Discover your next favorite thing..."></input>
         </div>
       </div>

@@ -16,7 +16,7 @@ class UserProfileIndex extends React.Component {
     let userHuntedProducts = "";
     if (this.state.pending) {
       return (
-        <div>loading....</div>
+        <div>Loading....</div>
       );
     } else {
       userHuntedProducts =  this.props.allProductIds.map((productId, index) => {
@@ -35,7 +35,7 @@ class UserProfileIndex extends React.Component {
     });
       return (
         <div>
-          <div>Hunted</div>
+          <div className='user-product-idx-header'>Hunted</div>
         <section>
           { userHuntedProducts }
         </section>

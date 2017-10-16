@@ -16,7 +16,7 @@ class AddProductForm extends React.Component {
      image_four_url: "",
      image_five_url: "",
    };
-
+   this.handleClose = this.handleClose.bind(this);
    this.handleSubmit = this.handleSubmit.bind(this);
    this.update = this.update.bind(this);
    this.handleCloudinary = this.handleCloudinary.bind(this);
@@ -74,7 +74,7 @@ class AddProductForm extends React.Component {
   render () {
       return (
         <div className="outerProductForm">
-          <button className="formCloseButton" onClick={this.handleClose.bind(this)}>X</button>
+          <button className="formCloseButton" onClick={this.handleClose}>X</button>
           <div className="productForm">
 
             <div className="productFormTitle">ADD YOUR HUNTED PRODUCT BELOW!</div>

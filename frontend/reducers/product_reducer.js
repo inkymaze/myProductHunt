@@ -36,6 +36,9 @@ const ProductReducer = (state = _defaultState, action) => {
 
     case RECEIVE_PRODUCT_ERRORS:
       return merge({}, _defaultState, { errors: action.errors });
+      
+    case CLEAR_PRODUCT_ERRORS:
+      return merge({}, _defaultState, { errors: [] });
 
     case CREATE_UPVOTE:
       newObj = merge({},state);

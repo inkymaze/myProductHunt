@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
+import Slider from 'react-slick';
 import CommentSectionContainer from '../comment/comment_section_container';
 
 const customStyles = {
@@ -141,7 +142,7 @@ class ProductDetail extends React.Component {
               <div className="hunterInfo">
                 <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
 
-                      
+
                       <img src={products.hunter_image} className='hunterImage'/>
 
                   <div>
