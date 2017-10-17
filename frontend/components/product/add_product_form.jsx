@@ -83,31 +83,31 @@ class AddProductForm extends React.Component {
               type="text"
               value={this.state.name}
               onChange={this.update("name")}
-              placeholder="Product Name"/>
+              placeholder="Name"/>
 
             <input
               type="text"
               value={this.state.description}
               onChange={this.update("description")}
-              placeholder="Product description..."/>
+              placeholder="Tagline"/>
 
             <input
               type="text"
               value={this.state.product_URL}
               onChange={this.update("product_URL")}
-              placeholder="Product URL"/>
+              placeholder="Paste a URL (e.g. https://snapchat.com)"/>
             <div className="uploadLogoField">
-              <li className='uploadLogoPrompt'>Upload your logo here:</li>
+              <li className='uploadLogoPrompt'>Thumbnail:</li>
               <button
                 className='uploadFormButton'
                 id="imageUploadButton"
                 onClick={this.handleCloudinary("image_url")}
                 style={{backgroundImage:`url(${this.state.image_url})`}}
-                value="Upload your logo here...">
+                >
               </button>
             </div>
             <div className="uploadImagesField">
-              <li className='uploadImagesPrompt'>Upload your product images or GIFs here:</li>
+              <li className='uploadImagesPrompt'>Gallery</li>
               <div className="firstProductImages">
                 <button
                   className="productImages"

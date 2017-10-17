@@ -41,7 +41,7 @@
  .user-product-idx-header {
   color: #999;
   font-size: 20px;
-  line-height: 32px; 
+  line-height: 32px;
  }
  .comment-blurb-count {
    padding-right: 10px;
@@ -512,15 +512,13 @@ img {
 
 .uploadImagesPrompt {
   color: gray;
-  min-width: 66%;
   line-height: 35px;
-  padding: 7px 0;
+  padding: 27px 0 7px 15px;
   font-size: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  padding-left: 15px;
   font-weight: 300;
 }
 
@@ -537,7 +535,7 @@ img {
 
 .uploadLogoPrompt {
   color: gray;
-  min-width: 66%;
+  min-width: 49%;
   line-height: 35px;
   padding: 7px 0;
   font-size: 22px;
@@ -599,8 +597,9 @@ img {
 
 .productFormTitle {
   margin-top: 9%;
-  font-size: 20px;
+  font-size: 21px;
   color: #999;
+  font-weight: 500;
   padding-bottom: 45px;
 }
 .productForm input {
