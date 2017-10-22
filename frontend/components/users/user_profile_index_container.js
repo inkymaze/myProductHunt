@@ -5,17 +5,8 @@ import { requestProduct,
 import { requestUpvote } from '../../actions/upvote_actions';
 import _ from 'lodash';
 
-// const userFilteredProducts = (userProducts, searchProducts) => {
-//   let products;
-//   products = _.map(u)
-//   return (
-//
-//   );
-// }
-
 const mapStateToProps = (state, ownProps) => ({
   allProducts: state.products.byId,
-  loggedIn: Boolean(state.session.currentUser),
   userId: ownProps.userId,
   currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id

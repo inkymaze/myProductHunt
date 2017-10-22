@@ -82,12 +82,9 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    console.log(this.props.errors);
     return(
-
       <ul>
         {this.props.errors.map((error, i) => (
-
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -141,7 +138,6 @@ class SessionForm extends React.Component {
               <br/>
               <div className="auth-errors">
                 {this.renderErrors()}
-
               </div>
             </div>
           </div>
@@ -150,7 +146,6 @@ class SessionForm extends React.Component {
     </div>
     );
   }
-
 }
 
 export default withRouter(SessionForm);
