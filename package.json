@@ -46,5 +46,8 @@
     "sort-by": "^1.2.0",
     "superagent": "^3.5.2",
     "webpack": "^3.3.0"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   }
 }

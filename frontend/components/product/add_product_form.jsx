@@ -72,7 +72,7 @@ class AddProductForm extends React.Component {
   }
 
   render () {
-      return (
+    return (
         <div className="outerProductForm">
           <button className="formCloseButton" onClick={this.handleClose}>X</button>
           <div className="productForm">
@@ -143,13 +143,10 @@ class AddProductForm extends React.Component {
               {this.renderErrors()}
             </div>
 
+          </div>
         </div>
-        </div>
-
       );
-    }
   }
-
-
+}
 
 export default withRouter(AddProductForm);

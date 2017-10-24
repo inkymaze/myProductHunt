@@ -26,6 +26,3 @@ const Welcome = ({ currentUser }) => (
 );
 
 export default Welcome;
-
-
-//

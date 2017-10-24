@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionForm from '../session_form/session_form';
 
-
-
 const sessionLinks = () => (
   <nav>
     <ul className="nav-buttons">
@@ -31,12 +29,11 @@ const personalGreeting = (currentUser, logout, history) => (
 );
 
 const Greeting = (props) => {
-  
   return (
-  props.currentUser ? personalGreeting(props.currentUser, props.logout, props.history) : sessionLinks()
-);
+    props.currentUser
+      ? personalGreeting(props.currentUser, props.logout, props.history)
+      : sessionLinks()
+  );
 };
-
-
 
 export default Greeting;

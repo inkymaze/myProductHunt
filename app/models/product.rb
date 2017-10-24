@@ -1,4 +1,4 @@
- class Product < ApplicationRecord
+class Product < ApplicationRecord
   validates :name, :description, :product_URL, presence: true
   validates :name, uniqueness: true
 
@@ -13,15 +13,14 @@
     class_name: "Upvote"
 
   has_many :comments, dependent: :destroy,
-  primary_key: :id,
-  foreign_key: :product_id,
-  class_name: "Comment"
+    primary_key: :id,
+    foreign_key: :product_id,
+    class_name: "Comment"
 
 
   def self.search(query)
     query = query.split("+").join(" ").downcase
     query = "%#{query}%"
-
     self.where("lower(name) LIKE ? OR lower(description) LIKE ?", query, query)
   end
 
