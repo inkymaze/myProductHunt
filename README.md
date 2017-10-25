@@ -4,7 +4,7 @@
 
 My version of Product Hunt is a full-stack web application attempting to make a pixel perfect clone of the original. The backend uses Ruby on Rails with a PostgreSQL database. The frontend implements a Redux framework through React.js.
 
-![homescreen](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501261154/Screen_Shot_2017-07-28_at_9.58.12_AM_waegtc.png)
+![homescreen](https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1508974585/Screen_Shot_2017-10-25_at_4.35.50_PM_mr8gyf.png)
 
 ## Features & Implementation
 
