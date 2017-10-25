@@ -26,8 +26,8 @@ When logged in the user can click the '+' sign in the header to open a model the
 
 ### User Profile Pages
 
-When logged in the user profile can be reached by clicking on the username in the header. This will only appear when there is an active user. The edit button allows the user to change there image and/or there usernam<
-![homescreen](http://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1501266403/Screen_Shot_2017-07-28_at_11.26.06_AM_gnndjv.png)
+When logged in the user profile can be reached by clicking on the username in the header. This will only appear when there is an active user. The edit button allows the user to change there image and/or there username
+![homescreen](https://res.cloudinary.com/dbyoymbpd/image/upload/c_scale,w_1366/v1508974280/Screen_Shot_2017-10-25_at_4.30.22_PM_zt1ec0.png)
 
 ### Future Improvements
 
