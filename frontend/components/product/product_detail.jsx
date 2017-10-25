@@ -87,7 +87,7 @@ class ProductDetail extends React.Component {
   render() {
     const { products } = this.props;
     if (!products) return null;
-    
+
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
@@ -99,7 +99,7 @@ class ProductDetail extends React.Component {
         <div className="product-show">
           <section className="product-detail">
             <div className="product-show-info">
-              <figure>
+              <figure className="product-logo">
                 <img src={products.image_url} alt={products.name} />
               </figure>
               <ul>

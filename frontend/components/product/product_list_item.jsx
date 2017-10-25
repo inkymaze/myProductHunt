@@ -35,9 +35,12 @@ class ProductListItem extends React.Component {
         <div>
           <Link to={`/products/${products.id}`}>
             <div className="products-list-item">
-              <div className="product-img">
+
+                <figure className="product-logo">
                   <img src={products.image_url} alt={products.name} />
-              </div>
+                </figure>
+
+              
               <div className="product-description">
                 <ul>
                   <li className="product-name">{ products.name } </li>
