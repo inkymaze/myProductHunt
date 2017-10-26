@@ -87,7 +87,6 @@ class ProductDetail extends React.Component {
   render() {
     const { products } = this.props;
     if (!products) return null;
-    console.log('prod Detail', products);
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
