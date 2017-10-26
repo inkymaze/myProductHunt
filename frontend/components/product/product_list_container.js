@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
   currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id
                 : null,
-  upvotedByUser:(state.session.currentUser)
+  upvotedByUser: (state.session.currentUser)
                 ? state.session.currentUser.upvoted_products_ids
                 : null,
 });

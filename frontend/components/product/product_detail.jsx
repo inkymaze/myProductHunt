@@ -87,7 +87,7 @@ class ProductDetail extends React.Component {
   render() {
     const { products } = this.props;
     if (!products) return null;
-
+    console.log('prod Detail', products);
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
@@ -121,18 +121,18 @@ class ProductDetail extends React.Component {
           </section>
           <section className="showProductImages">
             <div className="product-show-info">
-              <figure>
+              <figure className="product-detail-img">
                 <img src={products.image_two_url} />
               </figure>
-              <figure>
+              <figure className="product-detail-img">
                 <img src={products.image_three_url} />
               </figure>
             </div>
             <div className="product-show-info">
-              <figure>
+              <figure className="product-detail-img">
                 <img src={products.image_four_url}/>
               </figure>
-              <figure>
+              <figure className="product-detail-img">
                 <img src={products.image_five_url} />
               </figure>
             </div>
@@ -141,10 +141,7 @@ class ProductDetail extends React.Component {
               <li className="productHunterListItem">Hunter</li>
               <div className="hunterInfo">
                 <Link className="productHunterLink" to={`/user/${products.hunter_id}`} >
-
-
                       <img src={products.hunter_image} className='hunterImage'/>
-
                   <div>
                     <li className="hunterInfoName">@{products.hunter}</li>
                   </div>

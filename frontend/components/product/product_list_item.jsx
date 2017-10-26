@@ -8,8 +8,9 @@ class ProductListItem extends React.Component {
     }
 
     handleUpvote(e) {
-      const { currentUserId, products, upvotedByUser } = this.props;
+      const { currentUserId, products, upvotedByUser, requestUpvote } = this.props;
       e.preventDefault();
+      e.stopPropagation();
 
       if (currentUserId) {
         if (!upvotedByUser.includes(products.id)) {
@@ -19,7 +20,7 @@ class ProductListItem extends React.Component {
             product_id: products.id
           }
         };
-          this.props.requestUpvote(vote);
+          requestUpvote(vote);
         } else {
           alert("You can only vote once!");
         }
@@ -40,7 +41,7 @@ class ProductListItem extends React.Component {
                   <img src={products.image_url} alt={products.name} />
                 </figure>
 
-              
+
               <div className="product-description">
                 <ul>
                   <li className="product-name">{ products.name } </li>

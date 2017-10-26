@@ -23,11 +23,11 @@ const ProductReducer = (state = _defaultState, action) => {
   switch(action.type) {
 
     case RECEIVE_PRODUCTS:
-      newObj = merge({},state);
-      newObj.byId = action.products;
-      newObj.allIds = Object.keys(action.products);
-
-      return newObj;
+      action.products.forEach( product => {
+        allIds.push(product.id);
+        byId[product.id] = product;
+      });
+      return merge({}, state, { byId }, { allIds });
 
     case RECEIVE_PRODUCT:
       return merge({},
@@ -36,7 +36,7 @@ const ProductReducer = (state = _defaultState, action) => {
 
     case RECEIVE_PRODUCT_ERRORS:
       return merge({}, _defaultState, { errors: action.errors });
-      
+
     case CLEAR_PRODUCT_ERRORS:
       return merge({}, _defaultState, { errors: [] });
 
