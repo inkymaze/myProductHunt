@@ -108,21 +108,21 @@
 
  .whole-carousel {
    padding: 20px;
-   height: 400px;
+   height: 405px;
    max-width: 700px
  }
 
  .single-carousel-img {
-  height: 380px;
-  width: 720px;
+  height: 405px;
+  width: 700px;
   min-width: 0px;
   min-height: 0px;
   min-height: 0;
   min-width: 0;
   cursor: pointer;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
   background-size: contain;
 }
 
@@ -133,10 +133,6 @@
   display: flex;
   justify-content: space-around;
   margin: 30px;
-}
-
-.product-detail-img {
-  // flex-grow: 1;
 }
 
 .hunterInfo {
@@ -453,6 +449,7 @@ img {
 .userProfileProducts {
   width: 68%;
   min-width: 770px;
+  padding-bottom: 50px;
 }
 
 .user-show-info {
@@ -1072,6 +1069,7 @@ form.login-form-box {
   width: 460px;
   margin-right: 248px;
   margin-left: 10px;
+  min-width: 200px;
 }
 
 .intro-span {
@@ -1084,7 +1082,8 @@ form.login-form-box {
 }
 
 .kitty img{
-  width: 220px;
+  width: 240px;
+  height: 220px;
   display: flex;
   justify-content: flex-end;
 }
