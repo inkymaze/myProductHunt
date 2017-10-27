@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
-// import Slider from 'react-slick';
+import Slider from 'react-slick';
 import CommentSectionContainer from '../comment/comment_section_container';
 
 const customStyles = {
@@ -87,6 +87,33 @@ class ProductDetail extends React.Component {
   render() {
     const { products } = this.props;
     if (!products) return null;
+
+    const settings = {
+      autoplay: true,
+      autoplaySpeed: 7000,
+      speed: 500,
+      dots: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    let productImgs = [];
+
+    [ products.image_two_url,
+      products.image_three_url,
+      products.image_four_url,
+      products.image_five_url ].forEach((image, idx) => {
+        if (image) {
+          productImgs.push((
+            <div
+              className="single-carousel-img"
+              key={idx}
+              style={{ backgroundImage: `url(${image})`}}>
+            </div>
+          ));
+        }
+      });
     return (
       <div>
       <button className="modalCloseButton"  onClick={this.closeModal}>X</button>
@@ -119,21 +146,10 @@ class ProductDetail extends React.Component {
               </div>
           </section>
           <section className="showProductImages">
-            <div className="product-show-info">
-              <figure className="product-detail-img">
-                <img src={products.image_two_url} />
-              </figure>
-              <figure className="product-detail-img">
-                <img src={products.image_three_url} />
-              </figure>
-            </div>
-            <div className="product-show-info">
-              <figure className="product-detail-img">
-                <img src={products.image_four_url}/>
-              </figure>
-              <figure className="product-detail-img">
-                <img src={products.image_five_url} />
-              </figure>
+            <div className='whole-carousel'>
+              <Slider {...settings}>
+                { productImgs.map( img => img ) }
+              </Slider>
             </div>
           </section>
           <section className='productHuntedInfo'>

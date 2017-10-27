@@ -106,6 +106,26 @@
   margin-bottom: 20px;
  }
 
+ .whole-carousel {
+   padding: 20px;
+   height: 400px;
+   max-width: 700px
+ }
+
+ .single-carousel-img {
+  height: 380px;
+  width: 720px;
+  min-width: 0px;
+  min-height: 0px;
+  min-height: 0;
+  min-width: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  background-size: contain;
+}
+
 
 .product-show-info {
   display: flex;
