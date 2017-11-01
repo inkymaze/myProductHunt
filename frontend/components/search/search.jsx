@@ -12,8 +12,8 @@ class Search extends React.Component {
   }
 
   handleQuery(e) {
-      let query = { query: this.state.query };
-      this.props.requestQueryProducts(query);
+    let query = { query: this.state.query };
+    this.props.requestQueryProducts(query);
   }
 
   updateQuery(e) {
@@ -22,6 +22,7 @@ class Search extends React.Component {
   }
 
   render() {
+    console.log('search props', this.props);
     return (
       <div className="search">
         <div className="search-form">

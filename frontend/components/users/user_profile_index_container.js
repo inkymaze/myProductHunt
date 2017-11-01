@@ -7,6 +7,7 @@ import _ from 'lodash';
 
 const mapStateToProps = (state, ownProps) => ({
   allProducts: state.products.byId,
+  searchResults: state.search.allIds || null,
   userId: ownProps.userId,
   currentUserId: (state.session.currentUser)
                 ? state.session.currentUser.id

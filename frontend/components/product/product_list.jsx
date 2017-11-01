@@ -17,7 +17,7 @@ class ProductList extends React.Component {
   }
 
   render() {
-
+  
     const { products } = this.props;
     if (this.state.pending) {
       return (<div className="loading-message">Hunting down results...</div>);

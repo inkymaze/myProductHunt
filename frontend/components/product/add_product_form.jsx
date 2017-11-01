@@ -72,6 +72,7 @@ class AddProductForm extends React.Component {
   }
 
   render () {
+      console.log('add prod props', this.props);
     return (
         <div className="outerProductForm">
           <button className="formCloseButton" onClick={this.handleClose}>X</button>

@@ -13,12 +13,6 @@ const mapDispatchToProps = dispatch => ({
   updateQuery: (query) => dispatch(updateQuery(query))
 });
 
-// export default withRouter(connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Search));
-
-
 const SearchContainer = connect(
   mapStateToProps,
   mapDispatchToProps
