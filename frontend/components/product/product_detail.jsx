@@ -88,10 +88,10 @@ class ProductDetail extends React.Component {
     const { products } = this.props;
     if (!products) return null;
 
-    const settings = {
+    const sliderSettings = {
       autoplay: true,
       autoplaySpeed: 7000,
-      speed: 500,
+      speed: 550,
       dots: true,
       arrows: false,
       slidesToShow: 1,
@@ -147,7 +147,7 @@ class ProductDetail extends React.Component {
           </section>
           <section className="showProductImages">
             <div className='whole-carousel'>
-              <Slider {...settings}>
+              <Slider {...sliderSettings}>
                 { productImgs.map( img => img ) }
               </Slider>
             </div>

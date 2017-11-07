@@ -12,7 +12,15 @@ class UserProfileIndex extends React.Component {
       .then( () => this.setState({ pending: false }));
   }
 
+  // componentWillReceiveProps(nextProps) {
+  //
+  //   if (this.props.userId !== nextProps.userId) {
+  //     this.props.requestUserProducts(nextProps.userId);
+  //   }
+  // }
+
   render () {
+    console.log('user profile index props', this.props);
     let userHuntedProducts = "";
     if (this.state.pending) {
       return (

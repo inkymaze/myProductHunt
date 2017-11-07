@@ -34,11 +34,8 @@ const SessionReducer = (state = nullUser, action) => {
       upVotes = state.currentUser.upvoted_products_ids;
       upVotes.push(action.upvote.productId);
       return merge({}, state, { currentUser: { upvoted_products_ids: upVotes}});
-
-
     default:
       return state;
-
   }
 };
 
