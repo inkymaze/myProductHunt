@@ -20,7 +20,7 @@ class UserProfileIndex extends React.Component {
   }
 
   render () {
-    console.log('user profile index props', this.props);
+    
     let userHuntedProducts = "";
     if (this.state.pending) {
       return (

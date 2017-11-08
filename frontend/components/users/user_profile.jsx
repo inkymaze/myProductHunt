@@ -47,7 +47,7 @@ class UserProfile extends React.Component {
   render() {
     const { user, loggedIn, currentUserId, products } = this.props;
     if (!user || !products) return null;
-    console.log('user.hunted_ids', user.hunted_ids);
+    
     if (this.state.isEditing) {
       return (
       <div className="editProfilePage">
