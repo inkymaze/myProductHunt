@@ -1,11 +1,7 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import {
   Route,
-  Redirect,
-  Switch,
-  Link,
-  HashRouter
+  Switch
 } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -16,7 +12,6 @@ import ProductDetailContainer from './product/product_detail_container';
 import UserProfileContainer from './users/user_profile_container';
 import SearchContainer from './search/search_container';
 import GreetingContainer from './greeting/greeting_container';
-
 import Header from './header/header';
 
 
