@@ -17,7 +17,7 @@ class ProductList extends React.Component {
   }
 
   render() {
-    
+
     const { products } = this.props;
     if (this.state.pending) {
       return (<div className="loading-message">Hunting down results...</div>);
@@ -30,20 +30,22 @@ class ProductList extends React.Component {
       );
     }
     return (
-      <section className="product-section">
-        <div className="allproducts">
-          <ul>
-            {products.allIds.map(id => <li key={id}>
-              <ProductListItem
-                key={id}
-                products={products.byId[id]}
-                requestUpvote={this.props.requestUpvote}
-                currentUserId={this.props.currentUserId}
-                upvotedByUser={this.props.upvotedByUser}
-              /></li>)}
-          </ul>
-        </div>
-      </section>
+      <div className="outer-products-container">
+        <section className="product-section">
+          <div className="allproducts">
+            <ul>
+              {products.allIds.map(id => <li key={id}>
+                <ProductListItem
+                  key={id}
+                  products={products.byId[id]}
+                  requestUpvote={this.props.requestUpvote}
+                  currentUserId={this.props.currentUserId}
+                  upvotedByUser={this.props.upvotedByUser}
+                /></li>)}
+            </ul>
+          </div>
+        </section>
+      </div>
     );
   }
 }

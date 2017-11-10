@@ -109,7 +109,8 @@
  .whole-carousel {
    padding: 20px;
    height: 405px;
-   max-width: 700px
+   max-width: 700px;
+
  }
 
  .single-carousel-img {
@@ -699,12 +700,14 @@ border-bottom: 1px solid #999;
 }
 
 .nav-bar {
-  min-width: 770px;
-  padding: 10px 80px;
   display: flex;
-  align-items: center;
-  border-bottom: 1px solid #e8e8e8;
-  justify-content: space-around;
+padding: 15px 0;
+position: relative;
+height: 32px;
+-webkit-box-pack: justify;
+justify-content: space-between;
+align-items: center;
+min-width: 770px;
 }
 
 .logoWithTitle {
@@ -874,17 +877,34 @@ border-bottom: 1px solid #999;
   padding: 5px 0;
 }
 
-.product-section {
+.outer-products-container {
   background-color: #f9f9f9;
+}
+
+.product-section {
   padding: 25px 200px 100px 200px;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  max-width: 1100px;
 }
 
 .allproducts {
   width: 750px;
   min-width: 350px;
   background-color: white;
+}
+
+.nav-outer-container {
+  max-width: 1100px;
+box-sizing: border-box;
+margin-left: auto;
+margin-right: auto;
+min-width: 320px;
+padding: 0 15px;
+}
+
+.header {
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .products-list-item {
@@ -1066,18 +1086,23 @@ form.login-form-box {
 
 .intro-greeting {
   width: 460px;
-  margin-right: 248px;
-  margin-left: 10px;
+  margin-right: 260px;
   min-width: 200px;
 }
 
+.intro-outer-container {
+  border-bottom: 1px solid #e8e8e8;
+}
+
 .intro-span {
+  max-width: 1100px;
   min-width: 500px;
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  border-bottom: 1px solid #e8e8e8;
-  padding: 60px 20% 60px 125px;
+  padding: 60px 15px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 770px;
 }
 
 .kitty img{

@@ -17,10 +17,14 @@ import Header from './header/header';
 
 const App = () => (
   <div>
-      <div className="nav-bar">
-        <Header />
-        <SearchContainer />
-        <GreetingContainer />
+      <div className="header">
+        <div className="nav-outer-container">
+          <div className="nav-bar">
+            <Header />
+            <SearchContainer />
+            <GreetingContainer />
+          </div>
+        </div>
       </div>
       <WelcomeContainer />
 
