@@ -35,7 +35,7 @@
    font-weight: 600;
    border-bottom-color: #999;
    color: #999;
-   padding-top: 25px;
+   padding-top: 17px;
  }
 
  .user-product-idx-header {
@@ -130,10 +130,9 @@
 
 .product-show-info {
   display: flex;
-  padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
-  margin: 30px;
+  margin: 12px;
 }
 
 .hunterInfo {
@@ -392,7 +391,7 @@ img {
 
 .productHuntedInfo {
   background: #fff;
-  padding: 20px;
+  padding: 12px 20px;
   margin-top: 10px;
   border-radius: 3px;
   border: 1px solid #e8e8e8;
@@ -846,7 +845,6 @@ min-width: 770px;
 }
 
 .product-show {
-  padding-top: 25px;
   min-width: 550px;
 }
 
