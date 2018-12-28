@@ -1,6 +1,5 @@
 # Product Hunt Clone
 
-[Live](https://myproducthunt.herokuapp.com/#/)
 
 My version of Product Hunt is a full-stack web application attempting to make a pixel perfect clone of the original. The backend uses Ruby on Rails with a PostgreSQL database. The frontend implements a Redux framework through React.js.
 
